@@ -1,9 +1,16 @@
 import React from 'react';
+import AlgoMenu from './AlgoMenu'
+import MenuAndExample from './MenuAndExample'
 
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
+        
+        < MenuAndExample />
+        < AlgoMenu />
+
+        <br></br>
         these are the project requirement
         <ul>Container Component 1</ul>
         <ul>Container Component 2</ul>
@@ -13,6 +20,7 @@ class App extends React.Component {
         <ul>Stateless Component 3</ul>
         <ul>Stateless Component 4</ul>
         <ul>Stateless Component 5</ul>
+        
         <ul>__</ul>
         <ul>Route 1, use fetch, also integrate with redux-thunk</ul>
         <ul>Route 2, use fetch, also integrate with redux-thunk</ul>
