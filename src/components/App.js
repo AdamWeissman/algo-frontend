@@ -1,6 +1,6 @@
 import React from 'react';
 import AlgoMenuAndExampleMenu from './AlgoMenuAndExampleMenu'
-import ExampleContent from './ExampleContent'
+import ExampleContentContainer from './ExampleContentContainer'
 
 class App extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class App extends React.Component {
       <div className="inverted ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
         
         < AlgoMenuAndExampleMenu />
-        < ExampleContent />
+        < ExampleContentContainer />
 
         <br></br>
         these are the project requirement
