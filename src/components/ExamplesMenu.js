@@ -1,5 +1,6 @@
 import React from 'react';
 import ExampleMenuItem from './ExampleMenuItem'
+import axios from 'axios';
 
 class ExamplesMenu extends React.Component {
   render () {
