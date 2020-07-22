@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuAndExample from './MenuAndExample'
+import AlgoMenuAndExampleMenu from './AlgoMenuAndExampleMenu'
 import ExampleContent from './ExampleContent'
 
 class App extends React.Component {
@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
       <div className="inverted ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
         
-        < MenuAndExample />
+        < AlgoMenuAndExampleMenu />
         < ExampleContent />
 
         <br></br>

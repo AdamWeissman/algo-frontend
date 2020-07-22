@@ -3,7 +3,7 @@ import AlgoMenu from './AlgoMenu'
 import ExamplesMenu from './ExamplesMenu'
 import EitherOrButton from './EitherOrButton'
 
-class MenuAndExample extends React.Component {
+class AlgoMenuAndExampleMenu extends React.Component {
   render () {
     return (
       <div className="ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
@@ -26,4 +26,4 @@ class MenuAndExample extends React.Component {
 
 }
 
-export default MenuAndExample;
+export default AlgoMenuAndExampleMenu;

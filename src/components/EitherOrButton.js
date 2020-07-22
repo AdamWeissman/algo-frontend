@@ -6,7 +6,7 @@ class EitherOrButton extends React.Component {
       <div class="ui large buttons">
         <button class="teal ui button active">EXPLORE</button>
         <div class="or"></div>
-        <button class="black ui button" style={{color: "#49fb35"}}>CONTRIBUTE</button>
+        <button class="black ui button" style={{color: "#49fb35"}}>CREATE</button>
       </div>
   )
   }
