@@ -13,7 +13,7 @@ class MenuAndExample extends React.Component {
           </div>
           <div className="column">
             <ExamplesMenu />
-            <center>ADD AN EXAMPLE -- hover info, to add an example you must be in create mode</center>
+            <center>ADD OR VIEW AN EXAMPLE... functionality determined by state of browse or create on left panel</center>
           </div>
         </div>
         <div className="ui vertical divider">
