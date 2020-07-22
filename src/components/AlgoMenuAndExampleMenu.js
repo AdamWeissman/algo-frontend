@@ -8,7 +8,7 @@ import ToShowOrNotToShow from './ToShowOrNotToShow'
 class AlgoMenuAndExampleMenu extends React.Component {
   render () {
     return (
-      <div className="ui segment" style={ {marginTop: '25px', marginLeft: '200px', marginRight: '200px'} }>
+      <div className="ui segment" style={ {marginTop: '5px', marginLeft: '200px', marginRight: '200px'} }>
         <div className="ui two column very relaxed grid">
           <div className="circular middle aligned column">
             <center>

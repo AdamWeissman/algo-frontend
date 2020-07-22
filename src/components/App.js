@@ -6,7 +6,7 @@ import EitherOrButton from './EitherOrButton'
 class App extends React.Component {
   render() {
     return (
-      <div className="inverted ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
+      <div className="inverted ui segment" style={ {marginTop: '15px', marginLeft: '75px', marginRight: '75px'} }>
         
         <center><EitherOrButton /></center>
         < AlgoMenuAndExampleMenu />

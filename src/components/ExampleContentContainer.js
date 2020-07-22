@@ -1,6 +1,7 @@
 import React from 'react'
 import ExampleContent from './ExampleContent'
 import ToShowOrNotToShow from './ToShowOrNotToShow'
+import Flair from './Flair'
 import SaveButton from './SaveButton'
 
 class ExampleContentContainer extends React.Component {
@@ -15,11 +16,11 @@ class ExampleContentContainer extends React.Component {
           </center>
         </div>
         </center>
-          <br />
-
+        <br />
           <center>
-          <div className="circular ui inverted segment">
+          <div className="circular ui raised segment">
             <ToShowOrNotToShow />
+            <Flair />
             
           </div>
           </center>

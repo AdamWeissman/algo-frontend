@@ -1,10 +1,11 @@
 import React from 'react';
 import EitherOrButton from './EitherOrButton'
+import SaveButton from './SaveButton'
 
 class ToShowOrNotToShow extends React.Component {
   render () {
     return (
-      <div>EITHER OR BUTTON OR SAVE BUTTON</div>
+      <div>SAVE BUTTON IF CONTRIBUTE EXAMPLE IS ON </div>
     );
   }
 }
