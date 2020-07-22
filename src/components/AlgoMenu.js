@@ -16,9 +16,8 @@ class AlgoMenu extends React.Component {
   }
 
   render () {
-
     const algorithms = this.state.algorithms.map(algorithm => {
-      return <AlgoMenuItem key={algorithm.id} algotype={algorithm.algotype}/>
+      return <AlgoMenuItem key={algorithm.id} id={algorithm.id} algotype={algorithm.algotype} />
     })
 
     return (

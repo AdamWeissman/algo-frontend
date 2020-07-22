@@ -3,7 +3,7 @@ import React from 'react';
 const algoMenuItem = (props) => {
   
   const cHandler = () => {
-    console.log("I was clicked");
+    console.log(props);
   }
 
   return (
