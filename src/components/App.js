@@ -1,12 +1,14 @@
 import React from 'react';
 import AlgoMenuAndExampleMenu from './AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExampleContentContainer'
+import EitherOrButton from './EitherOrButton'
 
 class App extends React.Component {
   render() {
     return (
       <div className="inverted ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
         
+        <center><EitherOrButton /></center>
         < AlgoMenuAndExampleMenu />
         < ExampleContentContainer />
 

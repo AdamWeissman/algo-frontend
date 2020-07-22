@@ -2,6 +2,7 @@ import React from 'react';
 import AlgoMenu from './AlgoMenu'
 import ExamplesMenu from './ExamplesMenu'
 import EitherOrButton from './EitherOrButton'
+import ToShowOrNotToShow from './ToShowOrNotToShow'
 
 class AlgoMenuAndExampleMenu extends React.Component {
   render () {
@@ -10,11 +11,9 @@ class AlgoMenuAndExampleMenu extends React.Component {
         <div className="ui two column very relaxed grid">
           <div className="bottom aligned column">
             <AlgoMenu />
-            <center>< EitherOrButton /></center>
           </div>
           <div className="bottom aligned column">
             <ExamplesMenu />
-            <center>< EitherOrButton /></center>
           </div>
         </div>
         <div className="ui vertical divider">
