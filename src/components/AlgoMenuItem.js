@@ -1,16 +1,26 @@
 import React from 'react';
 
-const AlgoMenuItem = (props) => (
-<div>{props.algotype}</div>
-);
+const algoMenuItem = (props) => {
+  
+  const cHandler = () => {
+    console.log("I was clicked");
+  }
 
+  return (
+    <div>
+    <button className="circular ui inverted green basic button" onClick={cHandler} >{props.algotype}</button>
+    </div>
+  )
+}
 
 // class AlgoMenuItem extends React.Component {
 //   render () {
 //     return (
-//       <div>this is an algo menu item</div>
+//       <div>
+//       <button className="circular ui inverted green basic button">{this.props.algotype}</button>
+//       </div>
 //     )
 //   }
 // }
 
-export default AlgoMenuItem;
+export default algoMenuItem;
