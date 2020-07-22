@@ -3,7 +3,7 @@ import React from 'react';
 class EitherOrButton extends React.Component {
   render () {
     return (
-      <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '75px', marginRight: '75px'} }>
+      <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '105px', marginRight: '105px'} }>
         <div className="circular ui center compact segment" style={{backgroundColor: "ivory"}} >
         <div className="circular ui raised segment">
               TOGGLE TO EXPLORE ALGORITHIMS<br />

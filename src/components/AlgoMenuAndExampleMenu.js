@@ -8,9 +8,9 @@ import ToShowOrNotToShow from './ToShowOrNotToShow'
 class AlgoMenuAndExampleMenu extends React.Component {
   render () {
     return (
-      <div className="ui segment" style={ {marginTop: '5px', marginLeft: '200px', marginRight: '200px'} }>
+      <div className="ui segment" style={ {marginTop: '5px', marginLeft: '89px', marginRight: '89px'} }>
         <div className="ui two column very relaxed grid">
-          <div className="circular middle aligned column">
+          <div className="circular bottom aligned column">
             <center>
             <Flair />
             </center>
@@ -19,7 +19,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <Flair />
             </center>
           </div>
-          <div className="circular middle aligned column">          
+          <div className="circular bottom aligned column">          
             <center>
             <Flair />
             </center>
@@ -30,7 +30,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
           </div>
         </div>
         <div className="ui vertical divider">
-          <Flair />
+        熊
         </div>
       </div>
     )

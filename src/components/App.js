@@ -6,13 +6,14 @@ import EitherOrButton from './EitherOrButton'
 class App extends React.Component {
   render() {
     return (
-      <div className="inverted ui segment" style={ {marginTop: '15px', marginLeft: '75px', marginRight: '75px'} }>
+      <center>
+      <div className="circular inverted ui segment" style={ {marginTop: '35px', marginLeft: '75px', marginRight: '75px'} }>
         
         <center><EitherOrButton /></center>
         < AlgoMenuAndExampleMenu />
         < ExampleContentContainer />
 
-        <br></br>
+        {/* <br></br>
         these are the project requirement
         <ul>Container Component 1 (maintains state)</ul>
         <ul>Container Component 2 (maintains state)</ul>
@@ -32,9 +33,9 @@ class App extends React.Component {
         <ul>Redux and redux-thunk middleware are being used to modify state change and make use of async actions to send data and receive data from the server</ul>
         <ul><strong>DONE </strong>Use of Rails API backend to persist data for the application </ul>
         <br></br> Also... Good understanding of the react/redux state flow; Good understanding of state and props in React' Knowledge of async JS with Promises 
-      
-      
+       */}
       </div>
+      </center>
     );
   }
 }
