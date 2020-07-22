@@ -1,23 +1,23 @@
 import React from 'react';
 import AlgoMenu from './AlgoMenu'
+import ExamplesMenu from './ExamplesMenu'
 
 class MenuAndExample extends React.Component {
   render () {
     return (
-      <div class="ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
-        <div class="ui two column very relaxed grid">
-          <div class="column">
+      <div className="ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
+        <div className="ui two column very relaxed grid">
+          <div className="column">
             <AlgoMenu />
+            <center> BROWSE | CREATE </center>
           </div>
-          <div class="column">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+          <div className="column">
+            <ExamplesMenu />
+            <center>ADD AN EXAMPLE -- hover info, to add an example you must be in create mode</center>
           </div>
         </div>
-        <div class="ui vertical divider">
-          and
+        <div className="ui vertical divider">
+          
         </div>
       </div>
     )

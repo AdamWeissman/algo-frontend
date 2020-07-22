@@ -1,19 +1,17 @@
 import React from 'react';
-import AlgoMenu from './AlgoMenu'
 import MenuAndExample from './MenuAndExample'
 
 class App extends React.Component {
   render() {
     return (
-      <div className="ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
+      <div className="inverted ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
         
         < MenuAndExample />
-        < AlgoMenu />
 
         <br></br>
         these are the project requirement
-        <ul>Container Component 1</ul>
-        <ul>Container Component 2</ul>
+        <ul>Container Component 1 (maintains state)</ul>
+        <ul>Container Component 2 (maintains state)</ul>
         <ul>__</ul>
         <ul>Stateless Component 1</ul>
         <ul>Stateless Component 2</ul>
