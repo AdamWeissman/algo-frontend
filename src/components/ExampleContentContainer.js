@@ -18,9 +18,8 @@ class ExampleContentContainer extends React.Component {
 
           <center>
           <div className="circular ui inverted segment">
-            <ToShowOrNotToShow>
-            <button class="circular ui inverted teal button">SAVE</button>
-            </ToShowOrNotToShow>
+            <ToShowOrNotToShow />
+            
           </div>
           </center>
           
