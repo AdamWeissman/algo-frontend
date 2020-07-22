@@ -8,7 +8,7 @@ class AlgoMenu extends React.Component {
   }
 
   componentDidMount () {
-    axios.get('http://localhost:3001/api/v1/algorithms')
+    axios.get('http://localhost:3001/api/v1/algorithms/idxe')
       .then(response => {
           this.setState({algorithms: response.data});
           console.log(response)
