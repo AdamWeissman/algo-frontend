@@ -14,7 +14,7 @@ class MenuAndExample extends React.Component {
           </div>
           <div className="column">
             <ExamplesMenu />
-            <center>ADD OR VIEW AN EXAMPLE... functionality determined by state of browse or create on left panel</center>
+            <center>< EitherOrButton /></center>
           </div>
         </div>
         <div className="ui vertical divider">
