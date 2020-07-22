@@ -8,11 +8,11 @@ class MenuAndExample extends React.Component {
     return (
       <div className="ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
         <div className="ui two column very relaxed grid">
-          <div className="column">
+          <div className="bottom aligned column">
             <AlgoMenu />
             <center>< EitherOrButton /></center>
           </div>
-          <div className="column">
+          <div className="bottom aligned column">
             <ExamplesMenu />
             <center>< EitherOrButton /></center>
           </div>
