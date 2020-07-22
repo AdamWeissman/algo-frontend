@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Example extends React.Component {
+class ExampleContent extends React.Component {
   render () {
     return (
       <div className="ui segment" style={ {marginTop: '0px', marginLeft: '75px', marginRight: '75px'} }>
@@ -17,4 +17,4 @@ class Example extends React.Component {
 
 }
 
-export default Example; 
+export default ExampleContent; 
