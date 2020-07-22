@@ -1,6 +1,7 @@
 import React from 'react';
 import AlgoMenu from './AlgoMenu'
 import ExamplesMenu from './ExamplesMenu'
+import EitherOrButton from './EitherOrButton'
 
 class MenuAndExample extends React.Component {
   render () {
@@ -9,7 +10,7 @@ class MenuAndExample extends React.Component {
         <div className="ui two column very relaxed grid">
           <div className="column">
             <AlgoMenu />
-            <center> BROWSE | CREATE </center>
+            <center>< EitherOrButton /></center>
           </div>
           <div className="column">
             <ExamplesMenu />
@@ -17,7 +18,7 @@ class MenuAndExample extends React.Component {
           </div>
         </div>
         <div className="ui vertical divider">
-          
+        O
         </div>
       </div>
     )
