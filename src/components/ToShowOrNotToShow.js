@@ -1,6 +1,7 @@
 import React from 'react';
 import EitherOrButton from './EitherOrButton'
-import SaveButton from './SaveButton'
+import SaveButton from './SaveButton' 
+// SaveButton should go in the div
 
 class ToShowOrNotToShow extends React.Component {
   render () {

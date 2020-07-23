@@ -5,6 +5,7 @@ import Flair from './Flair'
 import SaveButton from './SaveButton'
 
 class ExampleContentContainer extends React.Component {
+  
   render () {
     return (
       <center>
@@ -12,7 +13,7 @@ class ExampleContentContainer extends React.Component {
         <center>
         <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '0px', marginLeft: '50px', marginRight: '50px'} }>
           <center>
-           <ExampleContent />
+           <ExampleContent content={this.props.example.content}/>
           </center>
         </div>
         </center>

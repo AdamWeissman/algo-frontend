@@ -1,11 +1,9 @@
 import React from 'react';
 
-class ExampleContent extends React.Component {
-  render () {
+const exampleContent = (props) => {
     return (
-      <div>This is example content</div>
+      <div>{props.content}</div>
     );
   }
-}
 
-export default ExampleContent;
+export default exampleContent;

@@ -37,8 +37,6 @@ class App extends React.Component {
   }
 
 
-
-
   render() {
     return (
       <center>
@@ -53,7 +51,7 @@ class App extends React.Component {
         />
         
         < ExampleContentContainer
-          examples={this.state.examples}
+          example={this.state.example}
         />
 
        
