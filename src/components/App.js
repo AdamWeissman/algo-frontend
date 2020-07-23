@@ -13,7 +13,19 @@ class App extends React.Component {
         < AlgoMenuAndExampleMenu />
         < ExampleContentContainer />
 
-        {/* <br></br>
+       
+      </div>
+      </center>
+    );
+  }
+}
+
+export default App;
+
+
+
+
+ {/* <br></br>
         these are the project requirement
         <ul>Container Component 1 (maintains state)</ul>
         <ul>Container Component 2 (maintains state)</ul>
@@ -34,10 +46,3 @@ class App extends React.Component {
         <ul><strong>DONE </strong>Use of Rails API backend to persist data for the application </ul>
         <br></br> Also... Good understanding of the react/redux state flow; Good understanding of state and props in React' Knowledge of async JS with Promises 
        */}
-      </div>
-      </center>
-    );
-  }
-}
-
-export default App;

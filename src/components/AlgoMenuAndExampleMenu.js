@@ -2,11 +2,32 @@ import React from 'react';
 import AlgoMenu from './AlgoMenu'
 import ExamplesMenu from './ExamplesMenu'
 import Flair from './Flair'
+import axios from 'axios';
 // import EitherOrButton from './EitherOrButton'
 // import ToShowOrNotToShow from './ToShowOrNotToShow'
 
 class AlgoMenuAndExampleMenu extends React.Component {
 
+  state = {
+    algorithms: [],
+    examples: []
+  }
+
+  componentDidMount () {
+    axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+      .then(response => {
+          this.setState({algorithms: response.data});
+          console.log(response)
+      });
+  }
+
+  algoClickHandler = async(this_one) => {
+    await axios.get(`http://localhost:3001/api/v1/algorithms/${this_one}/examples`)
+      .then(response => {
+          this.setState({examples: response.data});
+          console.log(response)
+      });
+  }
 
   
   render () {
@@ -17,7 +38,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <AlgoMenu />
+            <AlgoMenu algorithms={this.state.algorithms} />
             <center>
             <Flair />
             </center>
@@ -26,7 +47,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <ExamplesMenu />
+            <ExamplesMenu examples={this.state.examples} />
             <center>
             <Flair />
             </center>
