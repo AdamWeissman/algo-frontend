@@ -1,5 +1,6 @@
 import React from 'react';
 import AlgoMenuItem from './AlgoMenuItem'
+import ExampleMenuItem from './ExampleMenuItem'
 import axios from 'axios';
 
 class AlgoMenu extends React.Component {
@@ -27,6 +28,10 @@ class AlgoMenu extends React.Component {
   render () {
     const algorithms = this.state.algorithms.map(algorithm => {
       return <AlgoMenuItem key={algorithm.id} id={algorithm.id} algotype={algorithm.algotype} exampleGrabber={this.algoClickHandler} />
+    })
+
+    const examples = this.state.examples.map(example => {
+      return <ExampleMenuItem key={example.id} id={example.id} title={example.title} content={example.content} />
     })
 
     return (

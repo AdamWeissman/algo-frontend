@@ -6,6 +6,9 @@ import Flair from './Flair'
 // import ToShowOrNotToShow from './ToShowOrNotToShow'
 
 class AlgoMenuAndExampleMenu extends React.Component {
+
+
+  
   render () {
     return (
       <div className="ui segment" style={ {marginTop: '5px', marginLeft: '89px', marginRight: '89px'} }>
