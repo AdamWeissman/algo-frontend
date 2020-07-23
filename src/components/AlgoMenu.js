@@ -9,7 +9,7 @@ class AlgoMenu extends React.Component {
 
     return (
       <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '5px', marginBottom: '10px', marginLeft: '2px', marginRight: '5px', height: '300px'}}>
-        <div align="left">
+        <div className="circular" align="center" style={{ maxHeight: '175px', maxWidth: '175px', overflow: 'scroll'}}>
           {algorithms}
         </div>
       </div>
