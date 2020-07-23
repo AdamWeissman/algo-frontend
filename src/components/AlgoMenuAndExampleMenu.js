@@ -21,7 +21,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
       });
   }
 
-  algoClickHandler = async(this_one) => {
+  algoGetExamplesClickHandler = async(this_one) => {
     await axios.get(`http://localhost:3001/api/v1/algorithms/${this_one}/examples`)
       .then(response => {
           this.setState({examples: response.data});
@@ -38,7 +38,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <AlgoMenu algorithms={this.state.algorithms} />
+            <AlgoMenu algorithms={this.state.algorithms} exampleGrabber={this.algoGetExamplesClickHandler} />
             <center>
             <Flair />
             </center>

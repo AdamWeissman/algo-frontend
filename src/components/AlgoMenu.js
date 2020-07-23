@@ -27,12 +27,10 @@ class AlgoMenu extends React.Component {
 
   render () {
     const algorithms = this.props.algorithms.map(algorithm => {
-      return <AlgoMenuItem key={algorithm.id} id={algorithm.id} algotype={algorithm.algotype} exampleGrabber={this.algoClickHandler} />
+      return <AlgoMenuItem key={algorithm.id} id={algorithm.id} algotype={algorithm.algotype} exampleGrabber={this.props.exampleGrabber} />
     });
 
-    // const examples = this.props.examples.map(example => {
-    //   return <ExampleMenuItem key={example.id} id={example.id} title={example.title} content={example.content} />
-    // });
+
 
     return (
       <div className="circular ui inverted segment" align='right' style={{color: "#49fb35", marginTop: '5px', marginBottom: '10px', marginLeft: '2px', marginRight: '5px', height: '300px'}}>
