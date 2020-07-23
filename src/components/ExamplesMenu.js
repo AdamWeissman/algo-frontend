@@ -13,7 +13,7 @@ class ExamplesMenu extends React.Component {
     return (
       <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '5px', marginBottom: '10px', marginRight: '2px', marginLeft: '2px', height: '300px'}}>
         <div align="left">
-           {this.examples}
+           {examples}
         </div>
       </div>
     );
