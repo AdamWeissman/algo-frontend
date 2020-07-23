@@ -1,7 +1,5 @@
 import React from 'react';
 import AlgoMenuItem from './AlgoMenuItem'
-import ExampleMenuItem from './ExampleMenuItem'
-import axios from 'axios';
 
 class AlgoMenu extends React.Component {
    render () {
