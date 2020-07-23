@@ -21,13 +21,25 @@ class AlgoMenuAndExampleMenu extends React.Component {
       });
   }
 
-  algoGetExamplesClickHandler = async(this_one) => {
-    await axios.get(`http://localhost:3001/api/v1/algorithms/${this_one}/examples`)
+  algoGetExamplesClickHandler = async(the_algorithm) => {
+    await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`)
       .then(response => {
           this.setState({examples: response.data});
           console.log(response)
       });
   }
+
+  examplesGetContentClickHandler = async(the_algorithm, the_example) => {
+    await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`)
+      .then(response => {
+          this.setState({examples: response.data});
+          console.log(response)
+      });
+  }
+
+  
+
+
 
   
   render () {
@@ -47,7 +59,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <ExamplesMenu examples={this.state.examples} />
+            <ExamplesMenu examples={this.state.examples} exampleContentGrabber={this.examplesGetContentClickHandler} />
             <center>
             <Flair />
             </center>
