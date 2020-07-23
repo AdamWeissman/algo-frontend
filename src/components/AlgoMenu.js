@@ -4,7 +4,8 @@ import axios from 'axios';
 
 class AlgoMenu extends React.Component {
   state = {
-    algorithms: []
+    algorithms: [],
+    examples: []
   }
 
   componentDidMount () {
@@ -15,9 +16,17 @@ class AlgoMenu extends React.Component {
       });
   }
 
+  algoClickHandler = async(this_one) => {
+    await axios.get(`http://localhost:3001/api/v1/algorithms/${this_one}/examples`)
+      .then(response => {
+          this.setState({examples: response.data});
+          console.log(response)
+      });
+  }
+
   render () {
     const algorithms = this.state.algorithms.map(algorithm => {
-      return <AlgoMenuItem key={algorithm.id} id={algorithm.id} algotype={algorithm.algotype} />
+      return <AlgoMenuItem key={algorithm.id} id={algorithm.id} algotype={algorithm.algotype} exampleGrabber={this.algoClickHandler} />
     })
 
     return (

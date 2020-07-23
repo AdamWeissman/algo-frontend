@@ -2,8 +2,8 @@ import React from 'react';
 import AlgoMenu from './AlgoMenu'
 import ExamplesMenu from './ExamplesMenu'
 import Flair from './Flair'
-import EitherOrButton from './EitherOrButton'
-import ToShowOrNotToShow from './ToShowOrNotToShow'
+// import EitherOrButton from './EitherOrButton'
+// import ToShowOrNotToShow from './ToShowOrNotToShow'
 
 class AlgoMenuAndExampleMenu extends React.Component {
   render () {
@@ -33,7 +33,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
         熊
         </div>
       </div>
-    )
+    );
   }
 
 }

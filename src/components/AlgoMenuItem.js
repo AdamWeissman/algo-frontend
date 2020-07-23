@@ -1,14 +1,10 @@
 import React from 'react';
 
 const algoMenuItem = (props) => {
-  
-  const algoClickHandler = () => {
-    console.log(props.id);
-  }
 
   return (
     <div>
-    <button className="circular ui inverted green basic button" onClick={algoClickHandler} >{props.algotype}</button>
+    <button className="circular ui inverted green basic button" onClick={() => props.exampleGrabber(`${props.id}`)} >{props.algotype}</button>
     </div>
   )
 }
