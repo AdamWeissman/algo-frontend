@@ -10,7 +10,8 @@ class AlgoMenuAndExampleMenu extends React.Component {
 
   state = {
     algorithms: [],
-    examples: []
+    examples: [],
+    example: []
   }
 
   componentDidMount () {
@@ -32,7 +33,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
   examplesGetContentClickHandler = async(the_algorithm, the_example) => {
     await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`)
       .then(response => {
-          this.setState({examples: response.data});
+          this.setState({example: response.data});
           console.log(response)
       });
   }
