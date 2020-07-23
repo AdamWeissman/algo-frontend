@@ -2,7 +2,7 @@ import React from 'react';
 
 const exampleContent = (props) => {
     return (
-      <div>{props.content}</div>
+      <div style={{maxHeight: '200px', maxWidth: '200px', overflow: 'scroll'}}>{props.content}</div>
     );
   }
 

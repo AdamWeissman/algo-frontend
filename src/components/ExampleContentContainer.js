@@ -11,7 +11,7 @@ class ExampleContentContainer extends React.Component {
       <center>
       <div className="circular ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
         <center>
-        <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '0px', marginLeft: '50px', marginRight: '50px'} }>
+        <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '0px', marginLeft: '50px', marginRight: '50px', maxWidth: '200px'} }>
           <center>
            <ExampleContent content={this.props.example.content}/>
           </center>
