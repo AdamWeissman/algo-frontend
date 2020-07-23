@@ -8,14 +8,4 @@ const algoMenuItem = (props) => {
   )
 }
 
-// class AlgoMenuItem extends React.Component {
-//   render () {
-//     return (
-//       <div>
-//       <button className="circular ui inverted green basic button">{this.props.algotype}</button>
-//       </div>
-//     )
-//   }
-// }
-
 export default algoMenuItem;
