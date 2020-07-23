@@ -1,12 +1,20 @@
 import React from 'react';
 
-class ExampleMenuItem extends React.Component {
-  render () {
-    return (
-      <div>this is an example menu item</div>
-    )
-  }
-
+const exampleMenuItem = (props) => {
+  return (
+    <div>
+    <button className="circular ui inverted green basic button" > {props} </button>
+    </div>
+  )
 }
 
-export default ExampleMenuItem;
+// class ExampleMenuItem extends React.Component {
+//   render () {
+//     return (
+//       <div>this is an example menu item</div>
+//     )
+//   }
+
+// }
+
+export default exampleMenuItem;
