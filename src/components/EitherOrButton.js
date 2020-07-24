@@ -1,6 +1,13 @@
 import React from 'react';
+import axios from 'axios';
 
 const eitherOrButton = (props) => {
+    let algorithms = props.algorithms 
+    // I seem to be passing props the wrong way from above...
+    
+    let allAlgos = props.allAlgos
+    let algosLimited = props.algosLimited 
+
     return (
       <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '85px', marginRight: '85px'} }>
         <div className="circular ui center green compact segment" style={{backgroundColor: "ivory"}} >
@@ -9,9 +16,17 @@ const eitherOrButton = (props) => {
             </div>
             <br />
           <div className="ui fitted slider checkbox">
-            <input type="checkbox" 
-              onInput={() => console.log("on input")}
-              onChange={() => console.log("on change")}
+            <input type="checkbox"
+              id="myCheck"
+              onClick={() => {
+                if (document.getElementById("myCheck").checked == true) {
+                  console.log(algorithms)
+                } else {
+                  console.log("this is the else")
+                  debugger;
+                } 
+
+              }}
              />
             <label></label>
           </div>

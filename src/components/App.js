@@ -20,20 +20,23 @@ class App extends React.Component {
       });
   }
 
-  // componentDidUpdate () {
-  //   const exploreMode = axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-  //     .then(response => {
-  //         this.setState({algorithms: response.data});
-  //         console.log(response)
-  //     });
+  allAlgorithms = () => {
+    axios.get('http://localhost:3001/api/v1/algorithms/')
+    .then(response => {
+        this.setState({algorithms: response.data});
+        console.log(response)
+      });
+  } 
+
+  algorithmsWithExamplesOnly = () => {
+    axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+    .then(response => {
+        this.setState({algorithms: response.data});
+        console.log(response)
+      });
+  } 
 
 
-  //   const createMode = axios.get('http://localhost:3001/api/v1/algorithms/')
-  //     .then(response => {
-  //         this.setState({algorithms: response.data});
-  //         console.log(response)
-  //     });
-  // }
 
   algoGetExamplesClickHandler = async(the_algorithm) => {
     await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`)
@@ -58,7 +61,11 @@ class App extends React.Component {
       <div className="circular inverted ui segment" style={ {marginTop: '35px', marginLeft: '75px', marginRight: '75px'} }>
         
         <center>
-          <EitherOrButton />
+          <EitherOrButton
+          algorithms={this.state.algorithms}
+          allAlgos={this.allAlgorithms}
+          algosLimited={this.algorithmsWithExamplesOnly}
+          />
         </center>
 
         < AlgoMenuAndExampleMenu 
