@@ -20,23 +20,21 @@ class App extends React.Component {
       });
   }
 
-  allAlgorithms = () => {
-    axios.get('http://localhost:3001/api/v1/algorithms/')
+  allAlgorithms = async() => {
+    await axios.get('http://localhost:3001/api/v1/algorithms/')
     .then(response => {
         this.setState({algorithms: response.data});
         console.log(response)
       });
   } 
 
-  algorithmsWithExamplesOnly = () => {
-    axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+  algorithmsWithExamplesOnly = async() => {
+    await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
     .then(response => {
         this.setState({algorithms: response.data});
         console.log(response)
       });
   } 
-
-
 
   algoGetExamplesClickHandler = async(the_algorithm) => {
     await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`)
