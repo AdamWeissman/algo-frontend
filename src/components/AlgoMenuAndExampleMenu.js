@@ -2,7 +2,7 @@ import React from 'react';
 import AlgoMenu from './AlgoMenu'
 import ExamplesMenu from './ExamplesMenu'
 import Flair from './Flair'
-import axios from 'axios';
+// import axios from 'axios';
 // import EitherOrButton from './EitherOrButton'
 // import ToShowOrNotToShow from './ToShowOrNotToShow'
 

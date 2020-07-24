@@ -1,7 +1,6 @@
 import React from 'react';
 
-class EitherOrButton extends React.Component {
-  render () {
+const eitherOrButton = (props) => {
     return (
       <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '85px', marginRight: '85px'} }>
         <div className="circular ui center green compact segment" style={{backgroundColor: "ivory"}} >
@@ -10,14 +9,16 @@ class EitherOrButton extends React.Component {
             </div>
             <br />
           <div className="ui fitted slider checkbox">
-            <input type="checkbox"/>
+            <input type="checkbox" 
+              onInput={() => console.log("on input")}
+              onChange={() => console.log("on change")}
+             />
             <label></label>
           </div>
             
         </div>
       </div>
     );
-  }
 }
 
-export default EitherOrButton;
+export default eitherOrButton;
