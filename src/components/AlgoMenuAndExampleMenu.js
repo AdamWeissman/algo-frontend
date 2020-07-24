@@ -7,11 +7,12 @@ import axios from 'axios';
 // import ToShowOrNotToShow from './ToShowOrNotToShow'
 
 class AlgoMenuAndExampleMenu extends React.Component {
-
- 
+  
   render () {
+    
+
     return (
-      <div className="ui segment" style={ {marginTop: '5px', marginLeft: '89px', marginRight: '89px'} }>
+      <div className="ui green segment" style={ {marginTop: '5px', marginLeft: '89px', marginRight: '89px'} }>
         <div className="ui two column very relaxed grid">
           <div className="circular bottom aligned column">
             <center>

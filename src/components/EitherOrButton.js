@@ -3,11 +3,10 @@ import React from 'react';
 class EitherOrButton extends React.Component {
   render () {
     return (
-      <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '105px', marginRight: '105px'} }>
-        <div className="circular ui center compact segment" style={{backgroundColor: "ivory"}} >
-        <div className="circular ui raised segment">
-              TOGGLE TO EXPLORE ALGORITHIMS<br />
-              OR, CONTRIBUTE AN EXAMPLE...
+      <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '85px', marginRight: '85px'} }>
+        <div className="circular ui center green compact segment" style={{backgroundColor: "ivory"}} >
+        <div className="circular ui raised green segment">
+              <strong>EXPLORE OR CREATE</strong>
             </div>
             <br />
           <div className="ui fitted slider checkbox">

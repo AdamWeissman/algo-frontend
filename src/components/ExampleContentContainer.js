@@ -9,7 +9,7 @@ class ExampleContentContainer extends React.Component {
   render () {
     return (
       <center>
-      <div className="circular ui segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
+      <div className="circular ui green segment" style={ {marginTop: '75px', marginLeft: '75px', marginRight: '75px'} }>
         <center>
         <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '0px', marginLeft: '50px', marginRight: '50px', maxWidth: '200px'} }>
           <center>
@@ -19,7 +19,7 @@ class ExampleContentContainer extends React.Component {
         </center>
         <br />
           <center>
-          <div className="circular ui raised segment">
+          <div className="circular ui raised red segment">
             <ToShowOrNotToShow />
             <Flair />
             
