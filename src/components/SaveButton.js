@@ -1,8 +1,21 @@
 import React from 'react';
 
-const saveButton = () => {
+const saveButton = (props) => {
     return(
-      <button class="circular ui inverted teal button">SAVE</button>
+      <center>
+      <div className="circular ui inverted segment">
+        <br />
+          <button className="circular ui red button" 
+          onClick={() => {
+           props.submit()
+          }}>SAVE</button>
+        <br />
+        <button className="circular ui red button" 
+          onClick={() => {
+           props.reloadRefresh()
+          }}>REFRESH</button>
+      </div>
+      </center> 
     )
 }
 
