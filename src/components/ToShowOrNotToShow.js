@@ -3,24 +3,26 @@
 // OR, a refresh button.  Save Button only if in CREATE mode instead of explore
 
 import React from 'react';
-import EitherOrButton from './EitherOrButton'
 import SaveButton from './SaveButton' 
-// SaveButton should go in the div
+
 
 const toShowOrNotToShow = (props) => {
   const initialMessage = "CLICK HERE TO BEGIN"
-  
+  const exploreMessage = "REFRESH"
+
   if (props.whichMode == "") {
     return (
       <button onClick={ () => props.switch() }> {initialMessage} </button>
       )
   } else if (props.whichMode == "EXPLORE") {
     return (
-      <button onClick={ () => props.switch() }> {initialMessage} </button>
+      <button onClick={ () => props.switch() }> {exploreMessage} </button>
       )
-  } else if () {
+  } else if (props.whichMode == "CREATE") {
     return (
-      <button onClick={ () => props.switch() }> {initialMessage} </button>
+      <div>
+      <SaveButton />
+      </div>
       )
   }
   
