@@ -6,7 +6,7 @@ const eitherOrButton = (props) => {
     // I seem to be passing props the wrong way from above...
     
     let allAlgos = props.allAlgos
-    let algosLimited = props.algosLimited 
+    let algosLimited = props.algosLimited
 
     return (
       <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '85px', marginRight: '85px'} }>
@@ -20,10 +20,10 @@ const eitherOrButton = (props) => {
               id="myCheck"
               onClick={() => {
                 if (document.getElementById("myCheck").checked == true) {
-                  console.log(algorithms)
+                  allAlgos()
                 } else {
                   console.log("this is the else")
-                  debugger;
+                  algosLimited()
                 } 
 
               }}

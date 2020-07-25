@@ -13,27 +13,29 @@ class App extends React.Component {
     mode: ""
   }
 
-  // componentDidMount () {
-  //   axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-  //     .then(response => {
-  //         this.setState({algorithms: response.data});
-  //         console.log(response)
-  //     });
-  // }
+  componentDidMount () {
+    // axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+    //   .then(response => {
+    //       this.setState({algorithms: response.data});
+    //       console.log(response)
+    //   });
+
+    //this.allAlgorithms() this line works...
+  }
 
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
     .then(response => {
-        this.setState({algorithms: response.data});
-        console.log(response)
+        this.setState({algorithms: response.data, mode: "CREATE"});
+        console.log(this.state)
       });
   } 
 
   algorithmsWithExamplesOnly = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
     .then(response => { 
-        this.setState({algorithms: response.data});
-        console.log(response)
+        this.setState({algorithms: response.data, mode: "EXPLORE"});
+        console.log(this.state)
       });
   } 
 
@@ -64,6 +66,7 @@ class App extends React.Component {
           algorithms={this.state.algorithms}
           allAlgos={this.allAlgorithms}
           algosLimited={this.algorithmsWithExamplesOnly}
+          whichMode={this.state.mode}
           />
         </center>
 
@@ -72,11 +75,25 @@ class App extends React.Component {
           exampleGrabber={this.algoGetExamplesClickHandler}
           examples={this.state.examples}
           exampleContentGrabber={this.examplesGetContentClickHandler}
+          whichMode = {this.state.mode}
         />
         
         < ExampleContentContainer
           example={this.state.example}
-          reloadToHome = {this.allAlgorithms}
+          reloadToHome = { () => {
+              if (this.state.mode == "") {
+                this.algorithmsWithExamplesOnly();
+              } else if (this.state.mode == "EXPLORE") {
+                this.algorithmsWithExamplesOnly();
+              } else if (this.state.mode == "CREATE") {
+                this.allAlgorithms();
+              }
+              this.state.examples = []
+              this.state.example = [] 
+            }
+          }
+          whichMode = {this.state.mode}
+          //reloadToHome should actually contain conditional logic
         />
 
        
