@@ -6,6 +6,6 @@ const exampleMenuItem = (props) => {
     <button className="circular ui inverted green basic button" onClick={() => props.contentGrabber(`${props.algorithm_id}`, `${props.id}`)}> {props.title} </button>
     </div>
   )
-}
+} 
 
 export default exampleMenuItem;

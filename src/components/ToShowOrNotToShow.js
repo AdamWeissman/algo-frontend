@@ -12,7 +12,7 @@ const toShowOrNotToShow = (props) => {
 
   if (props.whichMode == "") {
     return (
-      <button onClick={ () => props.reloadRefresh() }> {initialMessage} </button>
+      <button className="circular ui red button" onClick={ () => props.reloadRefresh() }> {initialMessage} </button>
       )
   } else if (props.whichMode === "EXPLORE") {
     return (
@@ -21,7 +21,7 @@ const toShowOrNotToShow = (props) => {
   } else if (props.whichMode === "CREATE") {
     return (
       <div>
-      <SaveButton reloadRefresh={props.reloadRefresh} submit={() => console.log("A SUBMIT BUTTON WILL GO HERE")} />
+      <SaveButton reloadRefresh={props.reloadRefresh} submit={() => console.log("A SUBMIT ACTION WILL OCCUR HERE")} />
       </div>
       )
   }

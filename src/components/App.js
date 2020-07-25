@@ -10,7 +10,8 @@ class App extends React.Component {
     algorithms: [],
     examples: [],
     example: [],
-    mode: ""
+    mode: "", //re: explore or create
+    algorithmSelected: ""
   }
 
   componentDidMount () {
@@ -26,7 +27,7 @@ class App extends React.Component {
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
     .then(response => {
-        this.setState({algorithms: response.data, mode: "CREATE"});
+        this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""});
         console.log(this.state)
       });
   } 
@@ -34,7 +35,7 @@ class App extends React.Component {
   algorithmsWithExamplesOnly = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
     .then(response => { 
-        this.setState({algorithms: response.data, mode: "EXPLORE"});
+        this.setState({algorithms: response.data, mode: "EXPLORE", algorithmSelected: ""});
         console.log(this.state)
       });
   } 
@@ -42,7 +43,7 @@ class App extends React.Component {
   algoGetExamplesClickHandler = async(the_algorithm) => {
     await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`)
       .then(response => {
-          this.setState({examples: response.data});
+          this.setState({examples: response.data, algorithmSelected: "YES"});
           console.log(response)
       });
   }
@@ -80,6 +81,7 @@ class App extends React.Component {
           examples={this.state.examples}
           exampleContentGrabber={this.examplesGetContentClickHandler}
           whichMode = {this.state.mode}
+          algoSelected={this.state.algorithmSelected}
         />
         
         < ExampleContentContainer

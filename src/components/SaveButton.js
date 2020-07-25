@@ -5,15 +5,15 @@ const saveButton = (props) => {
       <center>
       <div className="circular ui inverted segment">
         <br />
-          <button className="circular ui inverted red button" 
+          <button className="circular ui red button" 
           onClick={() => {
            props.submit()
           }}>SAVE</button>
         <br />
-        <button className="circular ui inverted red button" 
+        <button className="circular ui red button" 
           onClick={() => {
            props.reloadRefresh()
-          }}>GO BACK</button>
+          }}>REFRESH</button>
       </div>
       </center> 
     )

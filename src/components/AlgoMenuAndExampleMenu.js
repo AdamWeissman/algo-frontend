@@ -26,7 +26,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <ExamplesMenu examples={this.props.examples} exampleContentGrabber={this.props.exampleContentGrabber} />
+            <ExamplesMenu examples={this.props.examples} exampleContentGrabber={this.props.exampleContentGrabber} whichMode={this.props.whichMode} algoSelected={this.props.algoSelected}/>
             <center>
             <Flair />
             </center>
