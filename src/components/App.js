@@ -8,6 +8,7 @@ class App extends React.Component {
 
   state = {
     algorithms: [],
+    algorithm: "",
     examples: [],
     example: [],
     mode: "", //re: explore or create
@@ -43,7 +44,7 @@ class App extends React.Component {
   algoGetExamplesClickHandler = async(the_algorithm) => {
     await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`)
       .then(response => {
-          this.setState({examples: response.data, algorithmSelected: "YES"});
+          this.setState({examples: response.data, algorithmSelected: "YES", algorithm: the_algorithm });
           console.log(response)
       });
   }
@@ -82,6 +83,7 @@ class App extends React.Component {
           exampleContentGrabber={this.examplesGetContentClickHandler}
           whichMode = {this.state.mode}
           algoSelected={this.state.algorithmSelected}
+          algorithm={this.state.algorithm}
         />
         
         < ExampleContentContainer

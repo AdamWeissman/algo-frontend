@@ -1,6 +1,6 @@
 import React from 'react';
-import AlgoMenu from './AlgoMenu'
 import ExampleMenuItem from './ExampleMenuItem'
+import CreateExampleTitle from './CreateExampleTitle'
 // import axios from 'axios';
 
 class ExamplesMenu extends React.Component {
@@ -23,7 +23,7 @@ class ExamplesMenu extends React.Component {
       return ( 
         <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '5px', marginBottom: '10px', marginRight: '2px', marginLeft: '2px', height: '300px'}}>
          <div className="circular" align="left" style={{ maxHeight: '175px', maxWidth: '175px', overflow: 'scroll' }}>
-            CREATE MODE EXAMPLE SELECTED
+            <CreateExampleTitle algorithm={this.props.algorithm} />
          </div>
        </div>
       )
@@ -31,7 +31,11 @@ class ExamplesMenu extends React.Component {
       return (
         <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '5px', marginBottom: '10px', marginRight: '2px', marginLeft: '2px', height: '300px'}}>
         <div className="circular" align="left" style={{ maxHeight: '175px', maxWidth: '175px', overflow: 'scroll' }}>
-           CREATE MODE EXAMPLE NOT SELECTED
+          <div className="circular ui segment">
+            <div className="circular ui inverted segment" align="bottom">
+              O
+            </div>
+          </div>
         </div>
       </div>
       )
