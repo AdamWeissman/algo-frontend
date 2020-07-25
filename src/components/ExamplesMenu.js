@@ -11,7 +11,7 @@ class ExamplesMenu extends React.Component {
 
     return (
       <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '5px', marginBottom: '10px', marginRight: '2px', marginLeft: '2px', height: '300px'}}>
-        <div align="left">
+        <div className="circular" align="left" style={{ maxHeight: '175px', maxWidth: '175px', overflow: 'scroll' }}>
            {examples}
         </div>
       </div>
