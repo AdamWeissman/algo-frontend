@@ -55,6 +55,10 @@ class App extends React.Component {
       });
   }
 
+  submitExample = () => {
+    console.log("this is a placeholder")
+  }
+
 
   render() {
     return (

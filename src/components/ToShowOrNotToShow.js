@@ -12,16 +12,16 @@ const toShowOrNotToShow = (props) => {
 
   if (props.whichMode == "") {
     return (
-      <button onClick={ () => props.switch() }> {initialMessage} </button>
+      <button onClick={ () => props.reloadRefresh() }> {initialMessage} </button>
       )
-  } else if (props.whichMode == "EXPLORE") {
+  } else if (props.whichMode === "EXPLORE") {
     return (
-      <button onClick={ () => props.switch() }> {exploreMessage} </button>
+      <button className="circular ui red button" onClick={ () => props.reloadRefresh() }> {exploreMessage} </button>
       )
-  } else if (props.whichMode == "CREATE") {
+  } else if (props.whichMode === "CREATE") {
     return (
       <div>
-      <SaveButton />
+      <SaveButton reloadRefresh={props.reloadRefresh} submit={() => console.log("A SUBMIT BUTTON WILL GO HERE")} />
       </div>
       )
   }
