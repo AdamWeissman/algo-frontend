@@ -2,7 +2,6 @@ import React from 'react'
 import ExampleContent from './ExampleContent'
 import ToShowOrNotToShow from './ToShowOrNotToShow'
 import Flair from './Flair'
-import SaveButton from './SaveButton'
 
 class ExampleContentContainer extends React.Component {
   
@@ -20,7 +19,7 @@ class ExampleContentContainer extends React.Component {
         <br />
           <center>
           <div className="circular ui raised red segment">
-            <ToShowOrNotToShow />
+            <ToShowOrNotToShow switch={this.props.reloadToHome} />
             <Flair />
             
           </div>

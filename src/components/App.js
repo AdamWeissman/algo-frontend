@@ -9,16 +9,17 @@ class App extends React.Component {
   state = {
     algorithms: [],
     examples: [],
-    example: []
+    example: [],
+    mode: ""
   }
 
-  componentDidMount () {
-    axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-      .then(response => {
-          this.setState({algorithms: response.data});
-          console.log(response)
-      });
-  }
+  // componentDidMount () {
+  //   axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+  //     .then(response => {
+  //         this.setState({algorithms: response.data});
+  //         console.log(response)
+  //     });
+  // }
 
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
@@ -30,7 +31,7 @@ class App extends React.Component {
 
   algorithmsWithExamplesOnly = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-    .then(response => {
+    .then(response => { 
         this.setState({algorithms: response.data});
         console.log(response)
       });
@@ -75,6 +76,7 @@ class App extends React.Component {
         
         < ExampleContentContainer
           example={this.state.example}
+          reloadToHome = {this.allAlgorithms}
         />
 
        
