@@ -92,6 +92,7 @@ class App extends React.Component {
           whichMode = {this.state.mode}
           algoSelected={this.state.algorithmSelected}
           algorithm={this.state.algorithm}
+          submitExampleTitle={this.submitExampleTitle}
         />
         
         < ExampleContentContainer

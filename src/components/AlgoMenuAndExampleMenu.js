@@ -17,7 +17,10 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <AlgoMenu algorithms={this.props.algorithms} exampleGrabber={this.props.exampleGrabber} />
+            <AlgoMenu 
+              algorithms={this.props.algorithms}
+              exampleGrabber={this.props.exampleGrabber}
+            />
             <center>
             <Flair />
             </center>
@@ -26,7 +29,14 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <ExamplesMenu examples={this.props.examples} exampleContentGrabber={this.props.exampleContentGrabber} whichMode={this.props.whichMode} algoSelected={this.props.algoSelected} algorithm={this.props.algorithm}/>
+            <ExamplesMenu 
+              examples={this.props.examples}
+              exampleContentGrabber={this.props.exampleContentGrabber}
+              whichMode={this.props.whichMode}
+              algoSelected={this.props.algoSelected}
+              algorithm={this.props.algorithm}
+              submitExampleTitle={this.props.submitExampleTitle}
+            />
             <center>
             <Flair />
             </center>
