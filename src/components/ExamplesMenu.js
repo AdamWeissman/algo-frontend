@@ -27,6 +27,8 @@ class ExamplesMenu extends React.Component {
             <CreateExampleTitle 
               algorithm={this.props.algorithm}
               submitExampleTitle={this.props.submitExampleTitle}
+              exampleTitle={this.props.exampleTitle}
+              exampleContent={this.props.exampleContent}
             />
          </div>
        </div>

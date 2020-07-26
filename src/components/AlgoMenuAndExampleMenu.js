@@ -36,6 +36,8 @@ class AlgoMenuAndExampleMenu extends React.Component {
               algoSelected={this.props.algoSelected}
               algorithm={this.props.algorithm}
               submitExampleTitle={this.props.submitExampleTitle}
+              exampleTitle={this.props.exampleTitle}
+              exampleContent={this.props.exampleContent}
             />
             <center>
             <Flair />

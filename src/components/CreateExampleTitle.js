@@ -2,8 +2,12 @@ import React from 'react'
 
 const createExampleTitle = (props) => {
 
+  console.log(() => props.SubmitExampleTitle)
+  console.log(() => props.exampleTitle)
+  console.log(() => props.exampleContent)
+
   return(
-    <div>placeholder</div>
+    <div>{props.algorithm}</div>
   )
 
 }

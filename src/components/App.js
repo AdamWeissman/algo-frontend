@@ -11,6 +11,8 @@ class App extends React.Component {
     algorithm: "",
     examples: [],
     example: [],
+    exampleTitle: "",
+    exampleContent: "",
     mode: "", //re: explore or create
     algorithmSelected: ""
   }
@@ -49,12 +51,11 @@ class App extends React.Component {
   }
 
   submitExampleTitle = (the_algorithm, title) => { 
-    axios.post((`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/`, {
-      title: `${title}`,
-      content: "enter your own content here..."
-    })).then(response => {
-      console.log(response);
-    });
+    // axios.post
+  }
+
+  submitExampleContent = () => {
+    return console.log("OK")
   }
 
 
@@ -81,6 +82,8 @@ class App extends React.Component {
           algoSelected={this.state.algorithmSelected}
           algorithm={this.state.algorithm}
           submitExampleTitle={this.submitExampleTitle}
+          exampleTitle={this.state.exampleTitle}
+          exampleContent={this.state.exampleTitle}
         />
         
         < ExampleContentContainer
@@ -98,7 +101,8 @@ class App extends React.Component {
             }
           }
           whichMode = {this.state.mode}
-          //reloadToHome should actually contain conditional logic
+          exampleTitle={this.state.exampleTitle}
+          exampleContent={this.state.exampleTitle}
         />
 
        
