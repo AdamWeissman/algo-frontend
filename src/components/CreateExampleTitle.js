@@ -1,21 +1,43 @@
 import React from 'react'
 
-const createExampleTitle = (props) => {
+class CreateExampleTitle extends React.Component {
+
+  //constructor(props) {
+    //super(props);
+    state = {
+      value: ''
+    };
+
+    handleChange = this.handleChange.bind(this);
+    handleSubmit = this.handleSubmit.bind(this);
+  // }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+ 
+  handleSubmit(props) {
+    // alert('A name was submitted: ' + this.state.value);
+    // event.preventDefault();
+    props.submitExampleTitle(props.algorithm, this.state.value)
+  }
 
   // onSubmit={() => props.submitExampleTitle(props.algorithm, this.name)}
 
-  return (
-    <div>
-      <input type="text"
-      id="title"
-      name="title"
-      placeholder="Enter a title."
-      onSubmit={() => console.log(props.name)}>
-      </input>
-    </div>
-  )
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
 }
 
 //need to set up POST request here
 
-export default createExampleTitle;
+export default CreateExampleTitle;
