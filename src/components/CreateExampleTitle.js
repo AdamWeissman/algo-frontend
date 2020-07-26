@@ -1,18 +1,29 @@
 import React from 'react'
 
-const createExampleTitle = (props) => {
+class CreateExampleTitle extends React.Component {
 
-  return (
+  state = {
+    firstName: '',
+    lastName: '',
+    /* Initialize all text fields with empty strings. */
+  }
+
+
+
+  render() {
+  
+    return (
     <div>
       <input type="text"
-      name="title"
+      value=""
       placeholder="Enter a title."
-      onSubmit={props.submitExampleTitle(`${props.algorithm}`, "title test")}>
+      onSubmit={() => this.props.submitExampleTitle(`${this.props.algorithm}`, this.props.value)}>
       </input>
     </div>
-  )
+    );
+  }
 }
 
 //need to set up POST request here
 
-export default createExampleTitle;
+export default CreateExampleTitle;
