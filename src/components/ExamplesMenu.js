@@ -1,10 +1,10 @@
 import React from 'react';
 import ExampleMenuItem from './ExampleMenuItem'
 import CreateExampleTitle from './CreateExampleTitle'
-// import axios from 'axios';
 // not sure if we need to put POST request here using State
 
-class ExamplesMenu extends React.Component {
+class ExamplesMenu extends React.Component {  
+  
   render () {
 
     if ((this.props.whichMode === "EXPLORE") || (this.props.whichMode === "") ) {

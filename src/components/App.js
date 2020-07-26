@@ -15,7 +15,7 @@ class App extends React.Component {
     algorithmSelected: ""
   }
 
-  componentDidMount () {
+  // componentDidMount () {
     // axios.get('http://localhost:3001/api/v1/algorithms/idxe')
     //   .then(response => {
     //       this.setState({algorithms: response.data});
@@ -23,7 +23,7 @@ class App extends React.Component {
     //   });
 
     //this.allAlgorithms() this line works...
-  }
+  // }
 
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
@@ -57,8 +57,16 @@ class App extends React.Component {
       });
   }
 
-  submitExample = () => {
-    console.log("this is a placeholder")
+  submitExampleTitle = (the_algorithm, the_example, title) => { 
+    axios.post((`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`, {
+      title: `${title}`,
+      content: 'enter your own content here...'
+    }).then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    }));
   }
 
 
@@ -89,11 +97,11 @@ class App extends React.Component {
         < ExampleContentContainer
           example={this.state.example}
           reloadToHome = { () => {
-              if (this.state.mode == "") {
+              if (this.state.mode === "") {
                 this.algorithmsWithExamplesOnly();
-              } else if (this.state.mode == "EXPLORE") {
+              } else if (this.state.mode === "EXPLORE") {
                 this.algorithmsWithExamplesOnly();
-              } else if (this.state.mode == "CREATE") {
+              } else if (this.state.mode === "CREATE") {
                 this.allAlgorithms();
               }
               this.state.examples = []
