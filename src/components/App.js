@@ -18,8 +18,15 @@ class App extends React.Component {
     algorithmSelected: ""
   }
 
-  onCreateTitle(title) {
+  onCreateTitle(the_algorithm, title) {
     console.log(title);
+    axios.post(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`, {
+      title: `${title}`,
+      content: "this is some temporary content to be replaced"
+    })
+      .then(response => {
+        console.log(response)
+      })
   }  
 
   allAlgorithms = async() => {

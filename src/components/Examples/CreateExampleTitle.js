@@ -10,7 +10,7 @@ class CreateExampleTitle extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    this.props.onCreateTitle(this.state.title)
+    this.props.onCreateTitle(this.props.algorithm, this.state.title)
   }
 
   render () {
