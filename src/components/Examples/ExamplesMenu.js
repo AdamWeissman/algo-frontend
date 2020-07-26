@@ -26,6 +26,7 @@ class ExamplesMenu extends React.Component {
          <div className="circular" align="left" style={{ maxHeight: '175px', maxWidth: '175px', overflow: 'scroll' }}>
             <CreateExampleTitle 
               algorithm={this.props.algorithm}
+              onCreateTitle={this.props.onCreateTitle}
             />
          </div>
        </div>

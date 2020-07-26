@@ -18,6 +18,10 @@ class App extends React.Component {
     algorithmSelected: ""
   }
 
+  onCreateTitle(title) {
+    console.log(title);
+  }  
+
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
     .then(response => {
@@ -74,6 +78,7 @@ class App extends React.Component {
           whichMode = {this.state.mode}
           algoSelected={this.state.algorithmSelected}
           algorithm={this.state.algorithm}
+          onCreateTitle={this.onCreateTitle}
         />
         
         < ExampleContentContainer

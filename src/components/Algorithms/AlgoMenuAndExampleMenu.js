@@ -35,6 +35,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
               whichMode={this.props.whichMode}
               algoSelected={this.props.algoSelected}
               algorithm={this.props.algorithm}
+              onCreateTitle={this.props.onCreateTitle}
             />
             <center>
             <Flair />
