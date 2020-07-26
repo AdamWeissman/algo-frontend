@@ -3,8 +3,7 @@ import React from 'react'
 class CreateExampleTitle extends React.Component {
 
   state = {
-    title: '',
-    content: '',
+    title: ''
     /* Initialize all text fields with empty strings. */
   }
 
@@ -12,8 +11,7 @@ class CreateExampleTitle extends React.Component {
 
   render() {
     const {
-      title, 
-      content
+      title
     } = this.state
   
     return (
