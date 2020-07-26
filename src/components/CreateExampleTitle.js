@@ -1,6 +1,9 @@
 import React from 'react'
 
 const createExampleTitle = (props) => {
+
+  // props.createExampleTitle(`${props.algorithm}`, `${title}`)
+  
   return (
     <div>{props.algorithm}</div>
   )

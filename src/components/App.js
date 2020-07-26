@@ -57,8 +57,8 @@ class App extends React.Component {
       });
   }
 
-  submitExampleTitle = (the_algorithm, the_example, title) => { 
-    axios.post((`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`, {
+  submitExampleTitle = (the_algorithm, title) => { 
+    axios.post((`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`, {
       title: `${title}`,
       content: 'enter your own content here...'
     }).then(function (response) {
