@@ -1,15 +1,21 @@
 import React from 'react'
 
-const createExampleTitle = (props) => {
+class CreateExampleTitle extends React.Component {
 
-  return(
-    <div>
-      {props.algorithm}
-    </div>
-  )
-
+  render () {
+    return(
+      <div>
+        <center>{this.props.algorithm}</center>
+        <form className="ui form">
+          <div className="field">
+          <input type="text" />
+          </div>
+        </form>
+      </div>
+    )
+  }
 }
 
 //need to set up POST request here
 
-export default createExampleTitle;
+export default CreateExampleTitle;
