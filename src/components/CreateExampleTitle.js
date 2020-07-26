@@ -2,10 +2,15 @@ import React from 'react'
 
 const createExampleTitle = (props) => {
 
-  // props.createExampleTitle(`${props.algorithm}`, `${title}`)
   
   return (
-    <div>{props.algorithm}</div>
+    <div>
+      <input type="text"
+      name="title"
+      placeholder="Enter a title."
+      onSubmit={props.submitExampleTitle(`${props.algorithm}`)}>
+      </input>
+    </div>
   )
 }
 
