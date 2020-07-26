@@ -1,7 +1,7 @@
 import React from 'react'
 import ExampleContent from './ExampleContent'
-import ToShowOrNotToShow from './ToShowOrNotToShow'
-import Flair from './Flair'
+import ToShowOrNotToShow from '../ToShowOrNotToShow'
+import Flair from '../Flair/Flair'
 
 class ExampleContentContainer extends React.Component {
   

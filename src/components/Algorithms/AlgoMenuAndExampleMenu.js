@@ -1,7 +1,7 @@
 import React from 'react';
 import AlgoMenu from './AlgoMenu'
-import ExamplesMenu from './ExamplesMenu'
-import Flair from './Flair'
+import ExamplesMenu from '../Examples/ExamplesMenu'
+import Flair from '../Flair/Flair'
 // import axios from 'axios';
 // import EitherOrButton from './EitherOrButton'
 // import ToShowOrNotToShow from './ToShowOrNotToShow'

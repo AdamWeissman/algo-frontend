@@ -1,6 +1,6 @@
 import React from 'react';
-import AlgoMenuAndExampleMenu from './AlgoMenuAndExampleMenu'
-import ExampleContentContainer from './ExampleContentContainer'
+import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
+import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './EitherOrButton'
 import axios from 'axios';
 
