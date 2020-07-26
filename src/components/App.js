@@ -15,15 +15,6 @@ class App extends React.Component {
     algorithmSelected: ""
   }
 
-  // componentDidMount () {
-    // axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-    //   .then(response => {
-    //       this.setState({algorithms: response.data});
-    //       console.log(response)
-    //   });
-
-    //this.allAlgorithms() this line works...
-  // }
 
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
@@ -61,12 +52,9 @@ class App extends React.Component {
     axios.post((`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`, {
       title: `${title}`,
       content: 'enter your own content here...'
-    }).then(function (response) {
+    })).then(response => {
       console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    }));
+    });
   }
 
 
@@ -142,3 +130,13 @@ export default App;
         
         <br></br> Also... Good understanding of the react/redux state flow; Good understanding of state and props in React' Knowledge of async JS with Promises 
        */}
+
+        // componentDidMount () {
+    // axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+    //   .then(response => {
+    //       this.setState({algorithms: response.data});
+    //       console.log(response)
+    //   });
+
+    //this.allAlgorithms() this line works...
+  // }
