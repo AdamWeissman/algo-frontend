@@ -8,6 +8,8 @@ class CreateExampleTitle extends React.Component {
     /* Initialize all text fields with empty strings. */
   }
 
+  onChange = e => this.setState({ [e.target.name]: e.target.value })
+
 
 
   render() {
