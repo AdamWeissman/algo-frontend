@@ -2,6 +2,7 @@ import React from 'react';
 import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './EitherOrButton'
+//import { BrowserRouter } from 'react-router-dom'
 import axios from 'axios';
 
 class App extends React.Component {
@@ -9,12 +10,13 @@ class App extends React.Component {
   state = {
     algorithms: [],
     algorithm: "",
+    exampleTitle: "",
+    exampleContent: "",
     examples: [],
     example: [],
     mode: "", //re: explore or create
     algorithmSelected: ""
   }
-
 
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
@@ -51,6 +53,7 @@ class App extends React.Component {
 
   render() {
     return (
+      // <BrowserRouter>
       <center>
       <div className="circular inverted ui segment" style={ {marginTop: '35px', marginLeft: '75px', marginRight: '75px'} }>
         
@@ -94,6 +97,7 @@ class App extends React.Component {
        
       </div>
       </center>
+      // </BrowserRouter> 
     );
   }
 }
