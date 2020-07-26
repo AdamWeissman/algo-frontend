@@ -7,7 +7,7 @@ const createExampleTitle = (props) => {
   console.log(() => props.exampleContent)
 
   return(
-    <div>{props.algorithm}</div>
+    <div>{props.exampleTitle}</div>
   )
 
 }
