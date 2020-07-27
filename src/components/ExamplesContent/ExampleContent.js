@@ -1,6 +1,7 @@
 import React from 'react';
 import CreateExampleContent from './CreateExampleContent'
 
+
 const exampleContent = (props) => {
 
   if (props.whichMode == "") {
@@ -20,7 +21,8 @@ const exampleContent = (props) => {
       <CreateExampleContent
         algorithm={props.algorithm}
         example={props.example}
-        exampleContent={props.exampleContent}
+        // exampleContent={props.exampleContent}
+        // algosAll={props.algosAll} 
         onCreateContent={props.onCreateContent}
       />
     </div>

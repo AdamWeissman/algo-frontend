@@ -103,6 +103,7 @@ class App extends React.Component {
         
         < ExampleContentContainer
           algorithm={this.state.algorithm}
+          algosAll={this.allAlgorithms}
           example={this.state.example}
           exampleContent={this.state.exampleContent}
           reloadToHome = { () => {

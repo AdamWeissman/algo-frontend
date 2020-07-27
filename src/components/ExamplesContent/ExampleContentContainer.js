@@ -17,7 +17,8 @@ class ExampleContentContainer extends React.Component {
               algorithm={this.props.algorithm}
               example={this.props.example}
               whichMode={this.props.whichMode}
-              exampleContent={this.props.exampleContent}
+              // exampleContent={this.props.exampleContent}
+              // algosAll ={this.props.algosAll}
               onCreateContent={this.props.onCreateContent} 
             />
           </center>
@@ -26,7 +27,11 @@ class ExampleContentContainer extends React.Component {
         <br />
           <center>
           <div className="circular ui raised red segment">
-            <ToShowOrNotToShow reloadRefresh={this.props.reloadToHome} whichMode={this.props.whichMode}  />
+            <ToShowOrNotToShow 
+            reloadRefresh={this.props.reloadToHome} 
+            whichMode={this.props.whichMode} 
+            algosAll={this.props.algosAll} 
+            />
             <Flair />
             
           </div>
