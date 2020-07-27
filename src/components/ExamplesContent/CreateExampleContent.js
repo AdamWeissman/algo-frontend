@@ -10,10 +10,18 @@ class CreateExampleContent extends React.Component {
     event.preventDefault();
 
     this.props.onCreateContent(this.props.algorithm, this.props.example, this.state.content)
-    this.setState({content: ""})
+    this.setState({content: "-O-"})
   }
 
+
   render () {
+
+    if (this.state.title === "-O-") {
+      return (
+        <div className="circular ui inverted segment">
+        </div>
+      )
+    } else { 
     return(
       <div>
         <form
@@ -31,7 +39,7 @@ class CreateExampleContent extends React.Component {
         </form>
       </div>
     );
-    
+    }
   }
 }
 
