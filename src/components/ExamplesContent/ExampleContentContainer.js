@@ -25,7 +25,7 @@ class ExampleContentContainer extends React.Component {
         <br />
           <center>
           <div className="circular ui raised red segment">
-            <ToShowOrNotToShow reloadRefresh={this.props.reloadToHome} whichMode={this.props.whichMode} />
+            <ToShowOrNotToShow reloadRefresh={this.props.reloadToHome} whichMode={this.props.whichMode} exampleContent={this.props.exampleContent} />
             <Flair />
             
           </div>

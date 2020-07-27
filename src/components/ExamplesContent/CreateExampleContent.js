@@ -3,7 +3,7 @@ import React from 'react'
 class CreateExampleContent extends React.Component {
 
   state = { 
-    content: ''
+    content: `${this.props.exampleContent}`
   };
 
   onFormSubmit = (event) => {
@@ -16,11 +16,11 @@ class CreateExampleContent extends React.Component {
 
   render () {
 
-    if (this.state.title === "-O-") {
+    if (this.state.content === "-O-") {
       return (
         <div className="circular ui inverted segment">
         </div>
-      )
+        )
     } else { 
     return(
       <div>

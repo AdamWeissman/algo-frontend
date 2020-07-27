@@ -5,7 +5,8 @@ const exampleContent = (props) => {
 
   if (props.whichMode == "") {
     return (
-      <div>no mode</div>
+      <div className="circular ui segment">
+      </div>
       )
   } else if (props.whichMode === "EXPLORE") {
     return (
@@ -19,6 +20,7 @@ const exampleContent = (props) => {
       <CreateExampleContent
         algorithm={props.algorithm}
         example={props.example}
+        exampleContent={props.exampleContent}
         onCreateContent={props.onCreateContent}
       />
     </div>

@@ -104,6 +104,7 @@ class App extends React.Component {
         < ExampleContentContainer
           algorithm={this.state.algorithm}
           example={this.state.example}
+          exampleContent={this.state.exampleContent}
           reloadToHome = { () => {
               if (this.state.mode === "") {
                 this.algorithmsWithExamplesOnly();
@@ -113,7 +114,8 @@ class App extends React.Component {
                 this.allAlgorithms();
               }
               this.state.examples = []
-              this.state.example = [] 
+              this.state.example = ""
+              this.state.exampleContent ="" 
             }
           }
           whichMode = {this.state.mode}
