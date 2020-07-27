@@ -1,3 +1,5 @@
+import React from 'react'
+
 class CreateExampleContent extends React.Component {
 
   state = { 
