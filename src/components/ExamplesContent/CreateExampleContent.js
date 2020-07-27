@@ -10,6 +10,7 @@ class CreateExampleContent extends React.Component {
     event.preventDefault();
 
     this.props.onCreateContent(this.props.algorithm, this.props.example, this.state.content)
+    this.setState({content: ""})
   }
 
   render () {
@@ -30,6 +31,7 @@ class CreateExampleContent extends React.Component {
         </form>
       </div>
     );
+    
   }
 }
 

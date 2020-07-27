@@ -11,9 +11,17 @@ class CreateExampleTitle extends React.Component {
     event.preventDefault();
 
     this.props.onCreateTitle(this.props.algorithm, this.state.title)
+    this.setState({title: "-O-"})
   }
 
   render () {
+
+    if (this.state.title === "-O-") {
+      return (
+        <div className="circular ui inverted segment">
+        </div>
+      )
+    } else { 
     return(
       <div>
         <center>{this.props.algorithm}</center>
@@ -31,7 +39,7 @@ class CreateExampleTitle extends React.Component {
           </div>
         </form>
       </div>
-    )
+    ) }
   }
 }
 

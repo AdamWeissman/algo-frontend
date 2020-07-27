@@ -13,32 +13,31 @@ class App extends React.Component {
     exampleTitle: "",
     exampleContent: "",
     examples: [],
-    example: [],
+    example: "",
     mode: "", //re: explore or create
     algorithmSelected: ""
   }
 
-  onCreateTitle(the_algorithm, title) {
+  onCreateTitle = (the_algorithm, title) => {
     console.log(title);
     axios.post(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`, {
       title: `${title}`,
       content: "this is some temporary content to be replaced"
     })
       .then(response => {
-        //need to set state here
-        console.log(response)
-      })
+        this.setState({example: response.data});
+        console.log("This is the response data", this.state, response.data)
+      }); 
   }
 
   // this is actually a put request but treated as create content from the user perspective
   onCreateContent(the_algorithm, the_example, content)  {
     console.log(content);
-    axios.put(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}/`, {
+    axios.patch(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`, {
       content: `${content}`
     })
       .then(response => {
-        this.setState({example: response.data.id});
-        console.log(this.state)
+        console.log(response)
       })
   }
 
