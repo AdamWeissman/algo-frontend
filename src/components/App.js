@@ -115,7 +115,7 @@ class App extends React.Component {
               }
               this.state.examples = []
               this.state.example = ""
-              this.state.exampleContent ="" 
+              this.state.exampleContent = "" 
             }
           }
           whichMode = {this.state.mode}
