@@ -27,7 +27,19 @@ class App extends React.Component {
       .then(response => {
         console.log(response)
       })
-  }  
+  }
+
+  // this is actually a put request but treated as create content from the user perspective
+  onCreateContent(the_algorithm, the_example, content)  {
+    console.log(content);
+    axios.put(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}/`, {
+      content: `${content}`
+    })
+      .then(response => {
+        console.log(response)
+      })
+  }
+
 
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
@@ -103,7 +115,7 @@ class App extends React.Component {
             }
           }
           whichMode = {this.state.mode}
-  
+          onCreateContent={this.onCreateContent}
         />
 
        
