@@ -25,6 +25,7 @@ class App extends React.Component {
       content: "this is some temporary content to be replaced"
     })
       .then(response => {
+        //need to set state here
         console.log(response)
       })
   }
@@ -36,7 +37,8 @@ class App extends React.Component {
       content: `${content}`
     })
       .then(response => {
-        console.log(response)
+        this.setState({example: response.data.id});
+        console.log(this.state)
       })
   }
 
@@ -101,6 +103,7 @@ class App extends React.Component {
         />
         
         < ExampleContentContainer
+          algorithm={this.state.algorithm}
           example={this.state.example}
           reloadToHome = { () => {
               if (this.state.mode === "") {

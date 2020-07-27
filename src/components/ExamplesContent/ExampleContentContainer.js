@@ -14,6 +14,8 @@ class ExampleContentContainer extends React.Component {
           <center>
             <ExampleContent 
               content={this.props.example.content}
+              algorithm={this.props.algorithm}
+              example={this.props.example}
               whichMode={this.props.whichMode}
               onCreateContent={this.props.onCreateContent} 
             />

@@ -9,7 +9,7 @@ class CreateExampleContent extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    this.props.onCreateContent(this.props.algorithm, this.props.example,this.state.content)
+    this.props.onCreateContent(this.props.algorithm, this.props.example, this.state.content)
   }
 
   render () {
@@ -24,13 +24,13 @@ class CreateExampleContent extends React.Component {
             type="text"
             value={this.state.content}
             placeholder="enter your content here"
-            onChange={(e) => this.setState({ title: e.target.value})}
+            onChange={(e) => this.setState({ content: e.target.value})}
           />
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default CreateExampleContent
+export default CreateExampleContent;

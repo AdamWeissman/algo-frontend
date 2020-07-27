@@ -16,7 +16,11 @@ const exampleContent = (props) => {
   } else if (props.whichMode === "CREATE") {
     return (
       <div style={{maxHeight: '200px', maxWidth: '200px', overflow: 'scroll'}}>
-      <CreateExampleContent />
+      <CreateExampleContent
+        algorithm={props.algorithm}
+        example={props.example}
+        onCreateContent={props.onCreateContent}
+      />
     </div>
       )
   }

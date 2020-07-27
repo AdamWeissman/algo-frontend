@@ -21,11 +21,12 @@ const toShowOrNotToShow = (props) => {
   } else if (props.whichMode === "CREATE") {
     return (
       <div>
-      <SaveButton reloadRefresh={props.reloadRefresh} submit={() => console.log("A SUBMIT ACTION WILL OCCUR HERE")} />
+        <button className="circular ui red button" onClick={ () => props.reloadRefresh() }> {exploreMessage} </button>
       </div>
       )
   }
   
+  // THIS WAS FORMERLY IN === CREATE <SaveButton reloadRefresh={props.reloadRefresh} submit={() => console.log("A SUBMIT ACTION WILL OCCUR HERE")} />
   
 }
 
