@@ -2,26 +2,40 @@ import React from 'react'
 
 class CreateExampleContent extends React.Component {
 
-  state = { 
-    content: ''
-  };
+  //need to make the state here controlled by the parent
+
+  // state = { 
+  //   content: ''
+  // };
 
   onFormSubmit = (event) => {
     event.preventDefault();
 
     this.props.onCreateContent(this.props.algorithm, this.props.example, this.state.content)
-    this.setState({content: "-O-"})
+    
+    //this.setState({content: "-O-"})
+    this.props.CreateExampleSetter("-O-")
+    
   }
 
   resetState = (event) => {
-    this.setState({content: ""})
+    //this.setState({content: ""})
+    this.props.CreateExampleSetter('')
   }
 
   render () {
-    if (this.state.content === "-O-") {
+    if (this.props.content === "") {
       return (
-        <div className="circular ui inverted blue segment">
-          {document.querySelector("#theRefreshButton").addEventListener('click', this.setState({content: ''}))}
+        <div className="circular ui inverted yellow segment">
+          original state
+        </div>
+        )
+    }
+    else if (this.props.content === "-O-") {
+      return (
+        <div className="circular ui inverted yellow segment">
+          the -0- state
+          {/* {document.querySelector("#theRefreshButton").addEventListener('onClick', this.setState({content: ''}))} */}
         </div>
         )
     } else { 
@@ -34,7 +48,7 @@ class CreateExampleContent extends React.Component {
           <div className="field">
           <input 
             type="text"
-            value={this.state.content}
+            value={this.props.content}
             placeholder="enter your content here"
             onChange={(e) => this.setState({ content: e.target.value})}
           />

@@ -12,7 +12,8 @@ class ExampleContentContainer extends React.Component {
         <center>
         <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '0px', marginLeft: '50px', marginRight: '50px', maxWidth: '200px'} }>
           <center>
-            <ExampleContent 
+            <ExampleContent
+              createExampleSetter={this.props.createExampleSetter} 
               content={this.props.example.content}
               algorithm={this.props.algorithm}
               example={this.props.example}
@@ -26,6 +27,7 @@ class ExampleContentContainer extends React.Component {
           <center>
           <div className="circular ui raised red segment">
             <RefreshButton
+            createExampleSetter={this.createExampleSetter}
             reloadRefresh={this.props.reloadToHome} 
             whichMode={this.props.whichMode} 
             />

@@ -7,6 +7,12 @@ import axios from 'axios';
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props)
+
+    this.createExampleSetter = this.createExampleSetter.bind(this)
+  }
+
   state = {
     algorithms: [],
     algorithm: "",
@@ -18,6 +24,11 @@ class App extends React.Component {
     mode: "", //re: explore or create
     
   }
+
+  createExampleSetter() {
+    this.setState({exampleContent: ''})
+  }
+
 
   onCreateTitle = (the_algorithm, title) => {
     console.log(title);
@@ -103,6 +114,7 @@ class App extends React.Component {
         />
         
         < ExampleContentContainer
+          createExampleSetter={this.createExampleSetter}
           algorithm={this.state.algorithm}
           algosAll={this.allAlgorithms}
           example={this.state.example}
