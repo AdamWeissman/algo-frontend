@@ -24,21 +24,21 @@ class CreateExampleContent extends React.Component {
   }
 
   render () {
-    if (this.props.content === "") {
+    if (this.props.content === undefined) {
       return (
         <div className="circular ui inverted yellow segment">
-          original state
+          ORIGINAL
         </div>
         )
     }
     else if (this.props.content === "-O-") {
       return (
         <div className="circular ui inverted yellow segment">
-          the -0- state
+          -O-
           {/* {document.querySelector("#theRefreshButton").addEventListener('onClick', this.setState({content: ''}))} */}
         </div>
         )
-    } else { 
+    } else if (this.props.content === 'X') { 
     return(
       <div>
         <form

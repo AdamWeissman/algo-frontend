@@ -7,11 +7,11 @@ import axios from 'axios';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props)
+  // constructor(props) {
+  //   super(props)
 
-    this.createExampleSetter = this.createExampleSetter.bind(this)
-  }
+  //   this.createExampleSetter = this.createExampleSetter.bind(this)
+  // }
 
   state = {
     algorithms: [],
@@ -25,8 +25,9 @@ class App extends React.Component {
     
   }
 
-  createExampleSetter() {
-    this.setState({exampleContent: ''})
+  createExampleSetter = (thing) => {
+    this.setState({exampleContent: `${thing}`})
+    console.log(this.state)
   }
 
 
@@ -95,6 +96,7 @@ class App extends React.Component {
         
         <center>
           <EitherOrButton
+          
           algorithms={this.state.algorithms}
           allAlgos={this.allAlgorithms}
           algosLimited={this.algorithmsWithExamplesOnly}
@@ -111,6 +113,7 @@ class App extends React.Component {
           algoSelected={this.state.algorithmSelected}
           algorithm={this.state.algorithm}
           onCreateTitle={this.onCreateTitle}
+          createExampleContentSetter={this.createExampleSetter}
         />
         
         < ExampleContentContainer

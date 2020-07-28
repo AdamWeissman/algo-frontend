@@ -2,9 +2,7 @@ import React from 'react';
 import AlgoMenu from './AlgoMenu'
 import ExamplesMenu from '../Examples/ExamplesMenu'
 import Flair from '../Flair/Flair'
-// import axios from 'axios';
-// import EitherOrButton from './EitherOrButton'
-// import ToShowOrNotToShow from './ToShowOrNotToShow'
+
 
 class AlgoMenuAndExampleMenu extends React.Component {
   
@@ -36,6 +34,7 @@ class AlgoMenuAndExampleMenu extends React.Component {
               algoSelected={this.props.algoSelected}
               algorithm={this.props.algorithm}
               onCreateTitle={this.props.onCreateTitle}
+              createExampleContentSetter={this.props.createExampleContentSetter}
             />
             <center>
             <Flair />

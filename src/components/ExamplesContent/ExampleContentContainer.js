@@ -27,7 +27,6 @@ class ExampleContentContainer extends React.Component {
           <center>
           <div className="circular ui raised red segment">
             <RefreshButton
-            createExampleSetter={this.createExampleSetter}
             reloadRefresh={this.props.reloadToHome} 
             whichMode={this.props.whichMode} 
             />
