@@ -14,13 +14,13 @@ class CreateExampleContent extends React.Component {
     this.props.onCreateContent(this.props.algorithm, this.props.example, this.state.content)
     
     //this.setState({content: "-O-"})
-    this.props.CreateExampleSetter("-O-")
+    this.props.createExampleSetter("-O-")
     
   }
 
   resetState = (event) => {
     //this.setState({content: ""})
-    this.props.CreateExampleSetter('')
+    this.props.createExampleSetter('')
   }
 
   render () {
