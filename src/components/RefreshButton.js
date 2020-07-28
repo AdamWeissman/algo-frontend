@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-const theRefreshButton = (props) => {
+const refreshButton = (props) => {
   const initialMessage = "CLICK HERE TO BEGIN"
   const exploreMessage = "REFRESH"
 
@@ -19,7 +19,7 @@ const theRefreshButton = (props) => {
   } else if (props.whichMode === "CREATE") {
     return (
       <div>
-        <button className="circular ui red button" onClick={ () => props.reloadRefresh() }> {exploreMessage} </button>
+        <button id="theRefreshButton" className="circular ui red button" onClick={ () => props.reloadRefresh() }> {exploreMessage} </button>
       </div>
       )
   }
@@ -28,4 +28,4 @@ const theRefreshButton = (props) => {
   
 }
 
-export default theRefreshButton;
+export default refreshButton;

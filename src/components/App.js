@@ -10,12 +10,13 @@ class App extends React.Component {
   state = {
     algorithms: [],
     algorithm: "",
+    algorithmSelected: "",
     exampleTitle: "",
     exampleContent: "",
     examples: [],
     example: "",
     mode: "", //re: explore or create
-    algorithmSelected: ""
+    
   }
 
   onCreateTitle = (the_algorithm, title) => {
@@ -30,7 +31,7 @@ class App extends React.Component {
       }); 
   }
 
-  // this is actually a put request but treated as create content from the user perspective
+  // this is actually a patch request but treated as create content from the user perspective
   onCreateContent(the_algorithm, the_example, content)  {
     console.log(content);
     axios.patch(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`, {
