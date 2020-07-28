@@ -14,6 +14,7 @@ class ExampleContentContainer extends React.Component {
           <center>
             <ExampleContent
               createExampleSetter={this.props.createExampleSetter} 
+              cSwitch={this.props.exampleContent}
               content={this.props.example.content}
               algorithm={this.props.algorithm}
               example={this.props.example}

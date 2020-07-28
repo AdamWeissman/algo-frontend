@@ -3,7 +3,6 @@ import React from 'react'
 class CreateExampleContent extends React.Component {
 
   //need to make the state here controlled by the parent
-
   // state = { 
   //   content: ''
   // };
@@ -11,34 +10,27 @@ class CreateExampleContent extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    this.props.onCreateContent(this.props.algorithm, this.props.example, this.state.content)
+    this.props.onCreateContent(this.props.algorithm, this.props.example, this.props.cSwitch)
     
     //this.setState({content: "-O-"})
     this.props.createExampleSetter("-O-")
     
   }
 
-  resetState = (event) => {
-    //this.setState({content: ""})
-    this.props.createExampleSetter('')
-  }
+  // resetState = (event) => {
+  //   //this.setState({content: ""})
+  //   this.props.createExampleSetter('')
+  // }
 
   render () {
-    if (this.props.content === undefined) {
-      return (
-        <div className="circular ui inverted yellow segment">
-          ORIGINAL
-        </div>
-        )
-    }
-    else if (this.props.content === "-O-") {
+    if (this.props.cSwitch === "-O-") {
       return (
         <div className="circular ui inverted yellow segment">
           -O-
           {/* {document.querySelector("#theRefreshButton").addEventListener('onClick', this.setState({content: ''}))} */}
         </div>
         )
-    } else if (this.props.content === 'X') { 
+    } else if (this.props.cSwitch === "X") { 
     return(
       <div>
         <form
@@ -48,7 +40,7 @@ class CreateExampleContent extends React.Component {
           <div className="field">
           <input 
             type="text"
-            value={this.props.content}
+            value={this.props.tempContent}
             placeholder="enter your content here"
             onChange={(e) => this.setState({ content: e.target.value})}
           />
@@ -56,9 +48,16 @@ class CreateExampleContent extends React.Component {
         </form>
       </div>
     );
+    } else {
+        return (
+          <div className="circular ui inverted yellow segment">
+            ORIGINAL
+          </div>
+          );
+      }
     }
   }
 
-}
+
 
 export default CreateExampleContent;
