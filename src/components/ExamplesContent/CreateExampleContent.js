@@ -21,7 +21,7 @@ class CreateExampleContent extends React.Component {
     if (this.state.content === "-O-") {
       return (
         <div className="circular ui inverted blue segment">
-          {document.querySelector("#theRefreshButton").addEventListener('click', console.log("does this work"))}
+          {document.querySelector("#theRefreshButton").addEventListener('click', this.setState({content: ''}))}
         </div>
         )
     } else { 
