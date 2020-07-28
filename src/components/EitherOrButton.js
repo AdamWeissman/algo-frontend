@@ -1,8 +1,6 @@
 import React from 'react';
 
 const eitherOrButton = (props) => {
-    // let algorithms = props.algorithms 
-    // I seem to be passing props the wrong way from above...
     
     let allAlgos = props.allAlgos
     let algosLimited = props.algosLimited

@@ -21,8 +21,6 @@ const exampleContent = (props) => {
       <CreateExampleContent
         algorithm={props.algorithm}
         example={props.example}
-        // exampleContent={props.exampleContent}
-        // algosAll={props.algosAll} 
         onCreateContent={props.onCreateContent}
       />
     </div>
