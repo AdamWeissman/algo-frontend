@@ -1,9 +1,10 @@
 import React from 'react';
 import ExampleMenuItem from './ExampleMenuItem'
 import CreateExampleTitle from './CreateExampleTitle'
-// import axios from 'axios';
+// not sure if we need to put POST request here using State
 
-class ExamplesMenu extends React.Component {
+class ExamplesMenu extends React.Component {  
+  
   render () {
 
     if ((this.props.whichMode === "EXPLORE") || (this.props.whichMode === "") ) {
@@ -23,7 +24,10 @@ class ExamplesMenu extends React.Component {
       return ( 
         <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '5px', marginBottom: '10px', marginRight: '2px', marginLeft: '2px', height: '300px'}}>
          <div className="circular" align="left" style={{ maxHeight: '175px', maxWidth: '175px', overflow: 'scroll' }}>
-            <CreateExampleTitle algorithm={this.props.algorithm} />
+            <CreateExampleTitle 
+              algorithm={this.props.algorithm}
+              onCreateTitle={this.props.onCreateTitle}
+            />
          </div>
        </div>
       )

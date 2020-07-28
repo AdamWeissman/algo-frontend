@@ -1,7 +1,8 @@
 import React from 'react';
-import AlgoMenuAndExampleMenu from './AlgoMenuAndExampleMenu'
-import ExampleContentContainer from './ExampleContentContainer'
+import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
+import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './EitherOrButton'
+//import { BrowserRouter } from 'react-router-dom'
 import axios from 'axios';
 
 class App extends React.Component {
@@ -9,21 +10,37 @@ class App extends React.Component {
   state = {
     algorithms: [],
     algorithm: "",
+    exampleTitle: "",
+    exampleContent: "",
     examples: [],
-    example: [],
+    example: "",
     mode: "", //re: explore or create
     algorithmSelected: ""
   }
 
-  componentDidMount () {
-    // axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-    //   .then(response => {
-    //       this.setState({algorithms: response.data});
-    //       console.log(response)
-    //   });
-
-    //this.allAlgorithms() this line works...
+  onCreateTitle = (the_algorithm, title) => {
+    console.log(title);
+    axios.post(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`, {
+      title: `${title}`,
+      content: "this is some temporary content to be replaced"
+    })
+      .then(response => {
+        this.setState({example: response.data});
+        console.log("This is the response data", this.state, response.data)
+      }); 
   }
+
+  // this is actually a put request but treated as create content from the user perspective
+  onCreateContent(the_algorithm, the_example, content)  {
+    console.log(content);
+    axios.patch(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`, {
+      content: `${content}`
+    })
+      .then(response => {
+        console.log(response)
+      })
+  }
+
 
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
@@ -57,13 +74,10 @@ class App extends React.Component {
       });
   }
 
-  submitExample = () => {
-    console.log("this is a placeholder")
-  }
-
 
   render() {
     return (
+      // <BrowserRouter>
       <center>
       <div className="circular inverted ui segment" style={ {marginTop: '35px', marginLeft: '75px', marginRight: '75px'} }>
         
@@ -84,29 +98,35 @@ class App extends React.Component {
           whichMode = {this.state.mode}
           algoSelected={this.state.algorithmSelected}
           algorithm={this.state.algorithm}
+          onCreateTitle={this.onCreateTitle}
         />
         
         < ExampleContentContainer
+          algorithm={this.state.algorithm}
+          algosAll={this.allAlgorithms}
           example={this.state.example}
+          exampleContent={this.state.exampleContent}
           reloadToHome = { () => {
-              if (this.state.mode == "") {
+              if (this.state.mode === "") {
                 this.algorithmsWithExamplesOnly();
-              } else if (this.state.mode == "EXPLORE") {
+              } else if (this.state.mode === "EXPLORE") {
                 this.algorithmsWithExamplesOnly();
-              } else if (this.state.mode == "CREATE") {
+              } else if (this.state.mode === "CREATE") {
                 this.allAlgorithms();
               }
               this.state.examples = []
-              this.state.example = [] 
+              this.state.example = ""
+              this.state.exampleContent = "" 
             }
           }
           whichMode = {this.state.mode}
-          //reloadToHome should actually contain conditional logic
+          onCreateContent={this.onCreateContent}
         />
 
        
       </div>
       </center>
+      // </BrowserRouter> 
     );
   }
 }
@@ -133,3 +153,13 @@ export default App;
         
         <br></br> Also... Good understanding of the react/redux state flow; Good understanding of state and props in React' Knowledge of async JS with Promises 
        */}
+
+        // componentDidMount () {
+    // axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+    //   .then(response => {
+    //       this.setState({algorithms: response.data});
+    //       console.log(response)
+    //   });
+
+    //this.allAlgorithms() this line works...
+  // }

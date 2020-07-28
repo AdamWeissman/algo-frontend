@@ -1,7 +1,7 @@
 import React from 'react';
 import AlgoMenu from './AlgoMenu'
-import ExamplesMenu from './ExamplesMenu'
-import Flair from './Flair'
+import ExamplesMenu from '../Examples/ExamplesMenu'
+import Flair from '../Flair/Flair'
 // import axios from 'axios';
 // import EitherOrButton from './EitherOrButton'
 // import ToShowOrNotToShow from './ToShowOrNotToShow'
@@ -17,7 +17,10 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <AlgoMenu algorithms={this.props.algorithms} exampleGrabber={this.props.exampleGrabber} />
+            <AlgoMenu 
+              algorithms={this.props.algorithms}
+              exampleGrabber={this.props.exampleGrabber}
+            />
             <center>
             <Flair />
             </center>
@@ -26,7 +29,14 @@ class AlgoMenuAndExampleMenu extends React.Component {
             <center>
             <Flair />
             </center>
-            <ExamplesMenu examples={this.props.examples} exampleContentGrabber={this.props.exampleContentGrabber} whichMode={this.props.whichMode} algoSelected={this.props.algoSelected} algorithm={this.props.algorithm}/>
+            <ExamplesMenu 
+              examples={this.props.examples}
+              exampleContentGrabber={this.props.exampleContentGrabber}
+              whichMode={this.props.whichMode}
+              algoSelected={this.props.algoSelected}
+              algorithm={this.props.algorithm}
+              onCreateTitle={this.props.onCreateTitle}
+            />
             <center>
             <Flair />
             </center>

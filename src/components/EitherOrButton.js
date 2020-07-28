@@ -1,8 +1,7 @@
 import React from 'react';
-import axios from 'axios';
 
 const eitherOrButton = (props) => {
-    let algorithms = props.algorithms 
+    // let algorithms = props.algorithms 
     // I seem to be passing props the wrong way from above...
     
     let allAlgos = props.allAlgos
@@ -19,7 +18,7 @@ const eitherOrButton = (props) => {
             <input type="checkbox"
               id="myCheck"
               onClick={() => {
-                if (document.getElementById("myCheck").checked == true) {
+                if (document.getElementById("myCheck").checked === true) {
                   allAlgos()
                 } else {
                   console.log("this is the else")
