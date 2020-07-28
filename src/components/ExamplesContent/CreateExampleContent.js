@@ -2,25 +2,17 @@ import React from 'react'
 
 class CreateExampleContent extends React.Component {
 
-  //need to make the state here controlled by the parent
-  // state = { 
-  //   content: ''
-  // };
+  state = {
+    content: ''
+  }
+
 
   onFormSubmit = (event) => {
     event.preventDefault();
-
-    this.props.onCreateContent(this.props.algorithm, this.props.example, this.props.cSwitch)
-    
-    //this.setState({content: "-O-"})
+    this.props.onCreateContent(this.props.algorithm, this.props.example, this.state.content)
     this.props.createExampleSetter("-O-")
     
   }
-
-  // resetState = (event) => {
-  //   //this.setState({content: ""})
-  //   this.props.createExampleSetter('')
-  // }
 
   render () {
     if (this.props.cSwitch === "-O-") {
@@ -41,7 +33,8 @@ class CreateExampleContent extends React.Component {
           <input 
             type="text"
             value={this.props.tempContent}
-            placeholder="enter your content here"
+            placeholder="enter content"
+            //onChange={(e) => this.props.setState({ content: e.target.value})}
             onChange={(e) => this.setState({ content: e.target.value})}
           />
           </div>
@@ -51,7 +44,7 @@ class CreateExampleContent extends React.Component {
     } else {
         return (
           <div className="circular ui inverted yellow segment">
-            ORIGINAL
+            O O
           </div>
           );
       }
