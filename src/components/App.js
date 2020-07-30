@@ -2,8 +2,17 @@ import React from 'react';
 import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './EitherOrButton'
-//import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import axios from 'axios';
+
+const PageOne = () => {
+  return <div>PAGE ONE</div>
+}
+
+const PageTwo = () => {
+  return <div>PAGE ONE</div>
+}
+
 
 class App extends React.Component {
 
