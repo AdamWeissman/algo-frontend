@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
+import App from './App'
 
 const AboutPage = () => {
   return <div>ABOUT PAGE</div>
@@ -14,6 +15,7 @@ const Navigation = () => {
     <div>
       <BrowserRouter>
         <div>
+          <Route path="/" exact component={App} />
           <Route path="/about" component={AboutPage} />
           <Route path="/rules" component={RulesPage} />
         </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './EitherOrButton'
-import Navigation from './Navigation'
+// import Navigation from './Navigation'
 import axios from 'axios';
 
 
@@ -95,10 +95,10 @@ class App extends React.Component {
     return (
 
       <center>
-      <div>
+      {/* <div>
       <Navigation />
-      </div>
-      
+      </div> */}
+
       <div className="circular inverted ui segment" style={ {marginTop: '35px', marginLeft: '75px', marginRight: '75px'} }>
         
         <center>
