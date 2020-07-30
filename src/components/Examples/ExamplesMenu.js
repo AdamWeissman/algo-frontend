@@ -27,6 +27,7 @@ class ExamplesMenu extends React.Component {
             <CreateExampleTitle 
               algorithm={this.props.algorithm}
               onCreateTitle={this.props.onCreateTitle}
+              createExampleContentSetter={this.props.createExampleContentSetter}
             />
          </div>
        </div>

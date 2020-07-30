@@ -7,16 +7,29 @@ import axios from 'axios';
 
 class App extends React.Component {
 
+  // constructor(props) {
+  //   super(props)
+
+  //   this.createExampleSetter = this.createExampleSetter.bind(this)
+  // }
+
   state = {
     algorithms: [],
     algorithm: "",
+    algorithmSelected: "",
     exampleTitle: "",
     exampleContent: "",
     examples: [],
     example: "",
     mode: "", //re: explore or create
-    algorithmSelected: ""
+    
   }
+
+  createExampleSetter = (thing) => {
+    this.setState({exampleContent: `${thing}`})
+    console.log(this.state)
+  }
+
 
   onCreateTitle = (the_algorithm, title) => {
     console.log(title);
@@ -30,7 +43,7 @@ class App extends React.Component {
       }); 
   }
 
-  // this is actually a put request but treated as create content from the user perspective
+  // this is actually a patch request but treated as create content from the user perspective
   onCreateContent(the_algorithm, the_example, content)  {
     console.log(content);
     axios.patch(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`, {
@@ -83,6 +96,7 @@ class App extends React.Component {
         
         <center>
           <EitherOrButton
+          
           algorithms={this.state.algorithms}
           allAlgos={this.allAlgorithms}
           algosLimited={this.algorithmsWithExamplesOnly}
@@ -99,9 +113,11 @@ class App extends React.Component {
           algoSelected={this.state.algorithmSelected}
           algorithm={this.state.algorithm}
           onCreateTitle={this.onCreateTitle}
+          createExampleContentSetter={this.createExampleSetter}
         />
         
         < ExampleContentContainer
+          createExampleSetter={this.createExampleSetter}
           algorithm={this.state.algorithm}
           algosAll={this.allAlgorithms}
           example={this.state.example}

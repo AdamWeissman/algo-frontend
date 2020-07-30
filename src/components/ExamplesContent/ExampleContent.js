@@ -19,10 +19,11 @@ const exampleContent = (props) => {
     return (
       <div style={{maxHeight: '200px', maxWidth: '200px', overflow: 'scroll'}}>
       <CreateExampleContent
+        createExampleSetter={props.createExampleSetter}
+        cSwitch={props.cSwitch}
         algorithm={props.algorithm}
         example={props.example}
-        // exampleContent={props.exampleContent}
-        // algosAll={props.algosAll} 
+        tempContent={props.content}
         onCreateContent={props.onCreateContent}
       />
     </div>

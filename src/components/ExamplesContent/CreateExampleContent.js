@@ -2,28 +2,27 @@ import React from 'react'
 
 class CreateExampleContent extends React.Component {
 
-  state = { 
+  state = {
     content: ''
-  };
+  }
+
 
   onFormSubmit = (event) => {
     event.preventDefault();
-
     this.props.onCreateContent(this.props.algorithm, this.props.example, this.state.content)
-    this.setState({content: "-O-"})
-  }
-
-  resetState = (event) => {
-    this.setState({content: ""})
+    this.props.createExampleSetter("-O-")
+    
   }
 
   render () {
-    if (this.state.content === "-O-") {
+    if (this.props.cSwitch === "-O-") {
       return (
-        <div className="circular ui inverted blue segment">
+        <div className="circular ui inverted yellow segment">
+          -O-
+          {/* {document.querySelector("#theRefreshButton").addEventListener('onClick', this.setState({content: ''}))} */}
         </div>
         )
-    } else { 
+    } else if (this.props.cSwitch === "X") { 
     return(
       <div>
         <form
@@ -33,17 +32,25 @@ class CreateExampleContent extends React.Component {
           <div className="field">
           <input 
             type="text"
-            value={this.state.content}
-            placeholder="enter your content here"
+            value={this.props.tempContent}
+            placeholder="enter content"
+            //onChange={(e) => this.props.setState({ content: e.target.value})}
             onChange={(e) => this.setState({ content: e.target.value})}
           />
           </div>
         </form>
       </div>
     );
+    } else {
+        return (
+          <div className="circular ui inverted yellow segment">
+            O O
+          </div>
+          );
+      }
     }
   }
 
-}
+
 
 export default CreateExampleContent;

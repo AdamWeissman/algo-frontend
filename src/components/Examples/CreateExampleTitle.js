@@ -12,6 +12,7 @@ class CreateExampleTitle extends React.Component {
 
     this.props.onCreateTitle(this.props.algorithm, this.state.title)
     this.setState({title: "-O-"})
+    this.props.createExampleContentSetter('X')
   }
 
   render () {
