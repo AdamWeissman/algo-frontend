@@ -2,7 +2,6 @@ import React from 'react';
 import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './EitherOrButton'
-// import Navigation from './Navigation'
 import axios from 'axios';
 
 
