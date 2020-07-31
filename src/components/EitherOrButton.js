@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 const eitherOrButton = (props) => {
     
@@ -9,7 +10,7 @@ const eitherOrButton = (props) => {
       <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '85px', marginRight: '85px'} }>
         
       <center>
-      <a href="/about">ABOUT</a> | <a href="/rules">RULES</a> | <a href="/">APP</a> 
+      <Link to="/about">ABOUT</Link> | <Link to="/rules">RULES</Link> | <Link to="/">APP</Link> 
       </center>
 
 

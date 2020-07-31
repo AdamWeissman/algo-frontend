@@ -1,11 +1,12 @@
 import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 const AboutPage = () => {
   return(
   <center>
   <div className="circular inverted ui segment" style={ {marginTop: '100px', marginLeft: '75px', marginRight: '75px'} }>
     <center>
-    <a href="/about">ABOUT</a> | <a href="/rules">RULES</a> | <a href="/">APP</a>  
+    <Link to="/about">ABOUT</Link> | <Link to="/rules">RULES</Link> | <Link to="/">APP</Link>   
     </center>
   </div>
   <br></br>
