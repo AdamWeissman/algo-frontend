@@ -18,7 +18,7 @@ const RulesPage = () => {
   return (<center>
     <div className="circular inverted ui segment" style={ {marginTop: '35px', marginLeft: '75px', marginRight: '75px'} }>
       <center>
-      <a href="/rules">RULES</a> | <a href="/rules">ABOUT</a> | <a href="/">APP</a> 
+      <a href="/rules">RULES</a> | <a href="/about">ABOUT</a> | <a href="/">APP</a> 
       </center>
     </div>
     </center>)
