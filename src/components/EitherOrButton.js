@@ -9,7 +9,7 @@ const eitherOrButton = (props) => {
       <div className="ui inverted segment" style={ { marginTop: '5px', marginLeft: '85px', marginRight: '85px'} }>
         
       <center>
-      <a href="/rules">RULES</a> | <a href="/about">ABOUT</a> | <a href="/">APP</a> 
+      <a href="/about">ABOUT</a> | <a href="/rules">RULES</a> | <a href="/">APP</a> 
       </center>
 
 
