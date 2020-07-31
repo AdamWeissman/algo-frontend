@@ -5,7 +5,7 @@ const AboutPage = () => {
   <center>
   <div className="circular inverted ui segment" style={ {marginTop: '100px', marginLeft: '75px', marginRight: '75px'} }>
     <center>
-    <a href="/about">ABOUT</a> | <a href="/rules">RULES</a> | <a href="/">APP</a> 
+    <a href="/about">ABOUT</a> | <a href="/rules">RULES</a> | <a href="/">APP</a>  
     </center>
   </div>
   <br></br>
