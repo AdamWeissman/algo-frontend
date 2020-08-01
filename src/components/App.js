@@ -160,11 +160,9 @@ export default App;
 
  {/* <br></br>
         these are the project requirement
-        <ul>Container Component 2 (maintains state)</ul>
-  
-        
+              
         <ul>__</ul>
-        <ul>Route 1, use fetch, also integrate with redux-thunk</ul>
+        <ul>Route 1, use fetch, also integrate with redux-thunk</ul> may need to add some data to router for fetch request.
         <ul>Route 2, use fetch, also integrate with redux-thunk</ul>
         <ul>Route 3, use fetch, also integrate with redux-thunk</ul>
         <ul>__</ul>
