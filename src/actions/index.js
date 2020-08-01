@@ -1,1 +1,5 @@
-// not sure what to put here
+export const fetchAllAlgorithms = () => {
+  return {
+    type: 'FETCH_ALL_ALGORITHMS'
+  }
+};
