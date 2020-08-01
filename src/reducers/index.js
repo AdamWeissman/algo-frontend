@@ -1,14 +1,3 @@
-// import { combineReducers } from 'redux'; 
+import { combineReducers } from 'redux';
 
-// const rAlgorithmsReducer = () => {
-//   return [
-//     { algorithms: ''}
-//   ];
-// };
-
-// const rChooseAlgorithmReducer = () => {
-//   return [
-//     { algorithms: ''}
-//   ];
-// };
-
+export default combineReducers ({});

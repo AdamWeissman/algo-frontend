@@ -2,19 +2,12 @@ import React from 'react';
 import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './AppLevel/EitherOrButton'
-//import Navigation from './Navigation'
 import axios from 'axios';
 //import actions from '../actions'; //don't need to write index because index.js inside of actions is automatically found
 
 
 
 class App extends React.Component {
-
-  // constructor(props) {
-  //   super(props)
-
-  //   this.createExampleSetter = this.createExampleSetter.bind(this)
-  // }
 
   state = {
     algorithms: [],
