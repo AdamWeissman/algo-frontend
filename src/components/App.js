@@ -1,9 +1,9 @@
 import React from 'react';
 import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
-import EitherOrButton from './EitherOrButton'
+import EitherOrButton from './AppLevel/EitherOrButton'
 import axios from 'axios';
-
+//import actions from '../actions'; //don't need to write index because index.js inside of actions is automatically found
 
 
 
@@ -19,9 +19,9 @@ class App extends React.Component {
     algorithms: [],
     algorithm: "",
     algorithmSelected: "",
+    examples: [],
     exampleTitle: "",
     exampleContent: "",
-    examples: [],
     example: "",
     mode: "", //re: explore or create
     
@@ -162,24 +162,9 @@ export default App;
         these are the project requirement
               
         <ul>__</ul>
-        <ul>Route 1, use fetch, also integrate with redux-thunk</ul> may need to add some data to router for fetch request.
-        <ul>Route 2, use fetch, also integrate with redux-thunk</ul>
-        <ul>Route 3, use fetch, also integrate with redux-thunk</ul>
-        <ul>__</ul>
-        
-        <ul>REACT ROUTER USED with proper restful routing</ul>
+        <ul>Routes 1.2.3, use fetch, also integrate with redux-thunk</ul> may need to add some data to router for fetch request.
         
         <ul>Redux and redux-thunk middleware are being used to modify state change and make use of async actions to send data and receive data from the server</ul>
         
         <br></br> Also... Good understanding of the react/redux state flow; Good understanding of state and props in React' Knowledge of async JS with Promises 
        */}
-
-        // componentDidMount () {
-    // axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-    //   .then(response => {
-    //       this.setState({algorithms: response.data});
-    //       console.log(response)
-    //   });
-
-    //this.allAlgorithms() this line works...
-  // }
