@@ -51,7 +51,6 @@ class App extends React.Component {
       })
   }
 
-
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
     .then(response => {
