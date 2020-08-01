@@ -2,8 +2,10 @@ import React from 'react';
 import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './EitherOrButton'
-//import { BrowserRouter } from 'react-router-dom'
 import axios from 'axios';
+
+
+
 
 class App extends React.Component {
 
@@ -90,8 +92,12 @@ class App extends React.Component {
 
   render() {
     return (
-      // <BrowserRouter>
+
       <center>
+      {/* <div>
+      <Navigation />
+      </div> */}
+
       <div className="circular inverted ui segment" style={ {marginTop: '35px', marginLeft: '75px', marginRight: '75px'} }>
         
         <center>
@@ -139,12 +145,12 @@ class App extends React.Component {
           onCreateContent={this.onCreateContent}
         />
 
-       
       </div>
       </center>
-      // </BrowserRouter> 
+
+   
     );
-  }
+  };
 }
 
 export default App;
