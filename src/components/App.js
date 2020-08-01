@@ -3,22 +3,21 @@ import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './AppLevel/EitherOrButton'
 import axios from 'axios';
-import { connect } from 'react-redux'
-import { fetchAllAlgorithms } from '../actions'; //don't need to write index because index.js inside of actions is automatically found
-
+// import { connect } from 'react-redux'
+// import { whichMode } from '../actions'; //don't need to write index because index.js inside of actions is automatically found
 
 
 class App extends React.Component {
 
   state = {
-    algorithms: [],
+    algorithms: [], // send to reducer/redux/store ... this.props.algorithms
     algorithm: "",
     algorithmSelected: "",
     examples: [],
     exampleTitle: "",
     exampleContent: "",
     example: "",
-    mode: "", //re: explore or create
+    mode: "", //re: explore or create ... this is also for the reducer/redux/store START HERE
     
   }
 
@@ -51,10 +50,20 @@ class App extends React.Component {
       })
   }
 
+  // come up with action types
+  // action creators
+  // build reducer to hit each action type
+  // introduce thunk functionality (probably an action that returns as an object)
+
+  //MOST DIFFICULT PART is likely creating the reducers and the thunks
+  //EASIEST PART is boiler plate code for creating the connection
+
+
+  // from here
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
     .then(response => {
-        this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""});
+        this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""}); // this would be the reducer where I set global state
         console.log(this.state)
       });
   } 
@@ -66,6 +75,11 @@ class App extends React.Component {
         console.log(this.state)
       });
   } 
+  // to here would be action creators... mapDispatchToProps ... the above two functions would be thunks
+
+
+
+
 
   algoGetExamplesClickHandler = async(the_algorithm) => {
     await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`)
@@ -96,11 +110,14 @@ class App extends React.Component {
         
         <center>
           <EitherOrButton
-          
+          // refactor redux here
           algorithms={this.state.algorithms}
+          
           allAlgos={this.allAlgorithms}
           algosLimited={this.algorithmsWithExamplesOnly}
+          
           whichMode={this.state.mode}
+
           />
         </center>
 
@@ -139,18 +156,23 @@ class App extends React.Component {
           onCreateContent={this.onCreateContent}
         />
 
+        {/* <div>
+          this.props.fetchAllAlgorithms();
+        </div> */}
+
       </div>
       </center>
-
    
     );
   };
 }
 
-export default connect(
-  null,
-  { fetchAllAlgorithms }
-)(App);
+export default App;
+
+// export default connect(
+//   mapStateToProps,
+//   { thisIsThePropsThatWillEndUpInThisClass }
+// )(App);
 
 
 

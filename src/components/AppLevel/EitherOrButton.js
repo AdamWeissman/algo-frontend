@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+
 const eitherOrButton = (props) => {
     
     let allAlgos = props.allAlgos
@@ -21,13 +22,13 @@ const eitherOrButton = (props) => {
             <br />
           <div className="ui fitted slider checkbox">
             <input type="checkbox"
-              id="myCheck"
+              id="myCheck" 
               onClick={() => {
                 if (document.getElementById("myCheck").checked === true) {
-                  allAlgos()
+                  allAlgos() // this would be where a thunk action is dispatched
                 } else {
                   console.log("this is the else")
-                  algosLimited()
+                  algosLimited() // this would be where a thunk action is dispatched
                 } 
 
               }}

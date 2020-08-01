@@ -9,7 +9,7 @@ import thunk from 'redux-thunk'
 import Navigation from './components/Navigation';
 import reducers from './reducers/'
 
-const store = createStore(reducers, applyMiddleware(thunk));
+const store = createStore(reducers, applyMiddleware(thunk)); // or... create a store.js and import it
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,3 +17,6 @@ ReactDOM.render(
   </Provider>,
   document.querySelector("#root")
 );
+
+//setup store
+//reducers
