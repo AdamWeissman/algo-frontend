@@ -5,18 +5,28 @@ import Navigation from './components/Navigation'; //was formerly app, but using 
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk'
-import reducer from './store/reducers/'
 
+// import thunk from 'redux-thunk'
+import reducers from './reduxRefactor/reducers'
 
-const store = createStore(reducer, applyMiddleware(thunk)); // or... create a store.js and import it
 
 ReactDOM.render(
-  <Provider store={store}>
+  
     <Navigation /> //typically this would be app, but is navigation since router was added after the fact
-  </Provider>,
+  ,
   document.querySelector("#root")
 );
+
+
+
+// const store = createStore(reducer, applyMiddleware(thunk)); // or... create a store.js and import it
+
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <Navigation /> //typically this would be app, but is navigation since router was added after the fact
+//   </Provider>,
+//   document.querySelector("#root")
+// );
 
 //setup store
 //reducers
