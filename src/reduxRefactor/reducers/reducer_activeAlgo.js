@@ -3,6 +3,6 @@ export default function(state = null, action) {
     case 'ALGO_SELECTED':
       return action.payload;
   }
-  
-  return state
+
+  return state;
 }
