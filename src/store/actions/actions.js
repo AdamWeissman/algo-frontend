@@ -1,0 +1,1 @@
+export const WHICH_MODE = "WHICH_MODE"
