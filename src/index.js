@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import App from './components/App';
+
+import Navigation from './components/Navigation'; //was formerly app, but using navigation 08.02.2020
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
+import reducer from './store/reducers/'
 
-import Navigation from './components/Navigation';
-import reducers from './store/reducers/'
 
-const store = createStore(reducers, applyMiddleware(thunk)); // or... create a store.js and import it
+const store = createStore(reducer, applyMiddleware(thunk)); // or... create a store.js and import it
 
 ReactDOM.render(
   <Provider store={store}>
-    <Navigation />
+    <Navigation /> //typically this would be app, but is navigation since router was added after the fact
   </Provider>,
   document.querySelector("#root")
 );
