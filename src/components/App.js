@@ -4,6 +4,8 @@ import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './AppLevel/EitherOrButton'
 import axios from 'axios';
 import { connect } from 'react-redux'
+import { selectAlgorithm } from '../reduxRefactor/actions/'
+import { bindActionCreators } from 'redux';
 // import { whichMode } from '../actions'; //don't need to write index because index.js inside of actions is automatically found
 
 
@@ -12,7 +14,7 @@ class App extends React.Component {
   state = {
     //algorithms: [], // //refactored to redux DONE
     algorithm: "",
-    algorithmSelected: "",
+    algorithmSelected: "", //this is YES or NO
     examples: [],
     exampleTitle: "",
     exampleContent: "",
@@ -174,7 +176,13 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(App);
+//anything returned from this function will end up as props on the app container
+function mapDispatchToProps(dispatch) {
+  //whenever this is called, the result should be passed to all the reducers
+  return bindActionCreators({ selectAlgorithm: selectAlgorithm }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 
 

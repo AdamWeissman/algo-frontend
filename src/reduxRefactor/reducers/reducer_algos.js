@@ -1,3 +1,4 @@
+
 export default function() {
   return ( 
     [
@@ -10,12 +11,12 @@ export default function() {
 
 
 // allAlgorithms = async() => {
-//   await axios.get('http://localhost:3001/api/v1/algorithms/')
-//   .then(response => {
-//       //this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""}); // this would be the reducer where I set global state
-//       console.log(this.state)
-//     });
-// } 
+// //   await axios.get('http://localhost:3001/api/v1/algorithms/')
+// //   .then(response => {
+// //       //this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""}); // this would be the reducer where I set global state
+// //       console.log(this.state)
+// //     });
+// // } 
 
 // algorithmsWithExamplesOnly = async() => {
 //   await axios.get('http://localhost:3001/api/v1/algorithms/idxe')

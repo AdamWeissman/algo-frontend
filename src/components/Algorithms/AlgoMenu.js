@@ -9,11 +9,11 @@ class AlgoMenu extends Component {
     });
   }
 
-  renderList2() {
-    return this.props.algorithms.map(algorithm => {
-      return <p key={algorithm.algotype}>{algorithm.algotype}</p>
-    });
-  }
+  // renderList2() {
+  //   return this.props.algorithms.map(algorithm => {
+  //     return <p key={algorithm.algotype}>{algorithm.algotype}</p>
+  //   });
+  // }
   
   
   
