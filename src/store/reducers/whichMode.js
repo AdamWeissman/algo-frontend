@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions';
+import * as actionTypes from '../actions/actions';
 
 export default function controlMode( state = {
   mode: ""
