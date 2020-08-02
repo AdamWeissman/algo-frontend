@@ -18,8 +18,8 @@ class AlgoMenuAndExampleMenu extends React.Component {
            
             <AlgoMenu 
               algorithms={this.props.algorithms}
-              algoSelector={this.props.algoSelector}
-              //exampleGrabber={this.props.exampleGrabber}
+              //algoSelector={this.props.algoSelector}
+              exampleGrabber={this.props.exampleGrabber}
             />
            
             <center>

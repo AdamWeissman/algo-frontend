@@ -7,11 +7,11 @@ class AlgoMenu extends Component {
     return this.props.algorithms.map(algorithm => {
       return (
       <AlgoMenuItem 
-        algoSelector={this.props.algoSelector}
-        // key={algorithm.id}
-        // id={algorithm.id}
+        //algoSelector={this.props.algoSelector}
+        key={algorithm.id}
+        id={algorithm.id}
         algotype={algorithm.algotype}
-        //exampleGrabber={this.props.exampleGrabber} 
+        exampleGrabber={this.props.exampleGrabber} 
         />
       )
     });
