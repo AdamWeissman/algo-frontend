@@ -3,16 +3,18 @@ import AlgoMenuAndExampleMenu from './Algorithms/AlgoMenuAndExampleMenu'
 import ExampleContentContainer from './ExamplesContent/ExampleContentContainer'
 import EitherOrButton from './AppLevel/EitherOrButton'
 import axios from 'axios';
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
+import { selectAlgorithm } from '../reduxRefactor/actions/'
+import { bindActionCreators } from 'redux';
 // import { whichMode } from '../actions'; //don't need to write index because index.js inside of actions is automatically found
 
 
 class App extends React.Component {
 
   state = {
-    algorithms: [], // send to reducer/redux/store ... this.props.algorithms
-    algorithm: "",
-    algorithmSelected: "",
+    //algorithms: [], // //refactored to redux DONE
+    //algorithm: "",
+    //algorithmSelected: "", //this is YES or NO
     examples: [],
     exampleTitle: "",
     exampleContent: "",
@@ -20,6 +22,7 @@ class App extends React.Component {
     mode: "", //re: explore or create ... this is also for the reducer/redux/store START HERE
     
   }
+
 
   createExampleSetter = (thing) => {
     this.setState({exampleContent: `${thing}`})
@@ -60,24 +63,22 @@ class App extends React.Component {
 
 
   // from here
-  allAlgorithms = async() => {
-    await axios.get('http://localhost:3001/api/v1/algorithms/')
-    .then(response => {
-        this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""}); // this would be the reducer where I set global state
-        console.log(this.state)
-      });
-  } 
+  // allAlgorithms = async() => {
+  //   await axios.get('http://localhost:3001/api/v1/algorithms/')
+  //   .then(response => {
+  //       //this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""}); // this would be the reducer where I set global state
+  //       console.log(this.state)
+  //     });
+  // } 
 
-  algorithmsWithExamplesOnly = async() => {
-    await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-    .then(response => { 
-        this.setState({algorithms: response.data, mode: "EXPLORE", algorithmSelected: ""});
-        console.log(this.state)
-      });
-  } 
+  // algorithmsWithExamplesOnly = async() => {
+  //   await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+  //   .then(response => { 
+  //       //this.setState({algorithms: response.data, mode: "EXPLORE", algorithmSelected: ""});
+  //       console.log(this.state)
+  //     });
+  // } 
   // to here would be action creators... mapDispatchToProps ... the above two functions would be thunks
-
-
 
 
 
@@ -102,16 +103,13 @@ class App extends React.Component {
     return (
 
       <center>
-      {/* <div>
-      <Navigation />
-      </div> */}
-
+  
       <div className="circular inverted ui segment" style={ {marginTop: '35px', marginLeft: '75px', marginRight: '75px'} }>
         
         <center>
           <EitherOrButton
-          // refactor redux here
-          algorithms={this.state.algorithms}
+          // refactor for redux here
+          algorithms={this.props.algorithms} //refactored with redux DONE
           
           allAlgos={this.allAlgorithms}
           algosLimited={this.algorithmsWithExamplesOnly}
@@ -122,13 +120,17 @@ class App extends React.Component {
         </center>
 
         < AlgoMenuAndExampleMenu 
-          algorithms={this.state.algorithms} 
+          algorithms={this.props.algorithms}  //refactored with redux DONE
           exampleGrabber={this.algoGetExamplesClickHandler}
           examples={this.state.examples}
           exampleContentGrabber={this.examplesGetContentClickHandler}
           whichMode = {this.state.mode}
-          algoSelected={this.state.algorithmSelected}
-          algorithm={this.state.algorithm}
+          
+          algoSelector={this.props.selectAlgorithm}
+          // algoSelected={this.state.algorithmSelected}
+          // algorithm={this.state.algorithm}
+          
+          
           onCreateTitle={this.onCreateTitle}
           createExampleContentSetter={this.createExampleSetter}
         />
@@ -167,13 +169,26 @@ class App extends React.Component {
   };
 }
 
-export default App;
+// export default App;
 
-// export default connect(
-//   mapStateToProps,
-//   { thisIsThePropsThatWillEndUpInThisClass }
-// )(App);
 
+function mapStateToProps(state) {
+  
+  console.log("from MapStateToProps", state.algorithms)
+  //Whatever is returned here will show up as props inside of this component/container component
+  return {
+    algorithms: state.algorithms
+  };
+}
+
+//anything returned from this function will end up as props on the app container
+function mapDispatchToProps(dispatch) {
+  //whenever this is called, the result should be passed to all the reducers
+  return bindActionCreators({ selectAlgorithm: selectAlgorithm }, dispatch);
+}
+
+// 
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 
 
