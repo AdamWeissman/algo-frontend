@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component} from 'react';
 import AlgoMenuItem from './AlgoMenuItem'
 
-class AlgoMenu extends React.Component {
+class AlgoMenu extends Component {
    render () {
     const algorithms = this.props.algorithms.map(algorithm => {
       return <AlgoMenuItem key={algorithm.id} id={algorithm.id} algotype={algorithm.algotype} exampleGrabber={this.props.exampleGrabber} />
