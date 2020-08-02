@@ -5,7 +5,15 @@ import AlgoMenuItem from './AlgoMenuItem'
 class AlgoMenu extends Component {
   renderList() {
     return this.props.algorithms.map(algorithm => {
-      return <AlgoMenuItem key={algorithm.id} id={algorithm.id} algotype={algorithm.algotype} exampleGrabber={this.props.exampleGrabber} />
+      return (
+      <AlgoMenuItem 
+        algoSelector={this.props.algoSelector}
+        // key={algorithm.id}
+        // id={algorithm.id}
+        algotype={algorithm.algotype}
+        //exampleGrabber={this.props.exampleGrabber} 
+        />
+      )
     });
   }
 

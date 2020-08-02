@@ -23,9 +23,6 @@ class App extends React.Component {
     
   }
 
-  algoSelector = (algorithm) => {
-    this.props.selectAlgorithm(algorithm)
-  }
 
   createExampleSetter = (thing) => {
     this.setState({exampleContent: `${thing}`})
@@ -129,7 +126,7 @@ class App extends React.Component {
           exampleContentGrabber={this.examplesGetContentClickHandler}
           whichMode = {this.state.mode}
           
-          algoSelector={this.algoSelector}
+          algoSelector={this.props.selectAlgorithm}
           // algoSelected={this.state.algorithmSelected}
           // algorithm={this.state.algorithm}
           
