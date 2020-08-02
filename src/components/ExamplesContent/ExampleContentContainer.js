@@ -1,6 +1,6 @@
 import React from 'react'
 import ExampleContent from './ExampleContent'
-import RefreshButton from '../RefreshButton'
+import RefreshButton from '../AppLevel/RefreshButton'
 import Flair from '../Flair/Flair'
 
 class ExampleContentContainer extends React.Component {

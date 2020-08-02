@@ -4,7 +4,7 @@ import CreateExampleContent from './CreateExampleContent'
 
 const exampleContent = (props) => {
 
-  if (props.whichMode == "") {
+  if (props.whichMode === "") {
     return (
       <div className="circular ui segment">
       </div>

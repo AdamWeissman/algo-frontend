@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
-import AboutPage from './AboutPage'
-import RulesPage from './RulesPage'
+import AboutPage from './AppLevel/AboutPage'
+import RulesPage from './AppLevel/RulesPage'
 import App from './App'
 
 const Navigation = () => {

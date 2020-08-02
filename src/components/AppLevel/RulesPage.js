@@ -15,7 +15,7 @@ const RulesPage = () => {
     <div className="ui blue segment">
     <div className="ui inverted blue segment" align="left" style={{ maxHeight: '520px', maxWidth: '500px', overflow: 'scroll'}}>
       <br />
-      <center><p><h2>RULES</h2></p></center>
+      <center><h2>RULES</h2></center>
       <br />
       <li>The switch on the panda's head is used to switch from "explore" to "create".  In "Explore" mode the left eye will populate only with Algorithms that have Examples.  If in "Create" Mode the left eye will populate with all pre-seeded algorithms.</li>
       <li>If in "Explore" Mode selecting an algorithm from the left eye will cause the Titles of the Examples to populate in the right eye.  If the title of an example is clicked in the right eye, then the nose will populate with the example content.</li>
