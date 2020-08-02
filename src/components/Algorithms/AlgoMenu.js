@@ -21,18 +21,21 @@ class AlgoMenu extends Component {
     return (
       <div className="circular ui inverted segment" style={{color: "#49fb35", marginTop: '5px', marginBottom: '10px', marginLeft: '2px', marginRight: '5px', height: '300px'}}>
         <div className="circular" align="center" style={{ maxHeight: '175px', maxWidth: '175px', overflow: 'scroll'}}>
-          {this.renderList2()}
+          {this.renderList()}
         </div>
       </div>
     )
   }
 }
 
-function mapStateToProps(state) {
-  //Whatever is returned here will show up as props inside of this component/container component
-  return {
-    algorithms: state.algorithms
-  };
-}
 
-export default connect(mapStateToProps)(AlgoMenu);
+export default AlgoMenu;
+
+// function mapStateToProps(state) {
+//   //Whatever is returned here will show up as props inside of this component/container component
+//   return {
+//     algorithms: state.algorithms
+//   };
+// }
+
+// export default connect(mapStateToProps)(AlgoMenu);
