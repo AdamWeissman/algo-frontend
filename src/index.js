@@ -6,10 +6,10 @@ import Navigation from './components/Navigation'; //was formerly app, but using 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 
-// import thunk from 'redux-thunk'
+import thunk from 'redux-thunk'
 import reducers from './reduxRefactor/reducers/'
 
-const createStoreWithMiddleware = applyMiddleware()(createStore); //will probably need to add thunk here later
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore); //will probably need to add thunk here later
 
 
 ReactDOM.render(
