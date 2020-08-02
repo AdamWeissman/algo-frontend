@@ -10,7 +10,7 @@ import axios from 'axios';
 class App extends React.Component {
 
   state = {
-    algorithms: [], // send to reducer/redux/store ... this.props.algorithms
+    //algorithms: [], // send to reducer/redux/store ... this.props.algorithms
     algorithm: "",
     algorithmSelected: "",
     examples: [],
@@ -63,7 +63,7 @@ class App extends React.Component {
   allAlgorithms = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/')
     .then(response => {
-        this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""}); // this would be the reducer where I set global state
+        //this.setState({algorithms: response.data, mode: "CREATE", algorithmSelected: ""}); // this would be the reducer where I set global state
         console.log(this.state)
       });
   } 
@@ -71,7 +71,7 @@ class App extends React.Component {
   algorithmsWithExamplesOnly = async() => {
     await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
     .then(response => { 
-        this.setState({algorithms: response.data, mode: "EXPLORE", algorithmSelected: ""});
+        //this.setState({algorithms: response.data, mode: "EXPLORE", algorithmSelected: ""});
         console.log(this.state)
       });
   } 
