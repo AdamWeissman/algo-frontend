@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AlgoMenuItem from './AlgoMenuItem'
-import { connect } from 'react-redux'
+//import { connect } from 'react-redux'
 
 class AlgoMenu extends Component {
   renderList() {

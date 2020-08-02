@@ -13,14 +13,18 @@ class App extends React.Component {
 
   state = {
     //algorithms: [], // //refactored to redux DONE
-    algorithm: "",
-    algorithmSelected: "", //this is YES or NO
+    //algorithm: "",
+    //algorithmSelected: "", //this is YES or NO
     examples: [],
     exampleTitle: "",
     exampleContent: "",
     example: "",
     mode: "", //re: explore or create ... this is also for the reducer/redux/store START HERE
     
+  }
+
+  algoSelector = (algorithm) => {
+    this.props.selectAlgorithm(algorithm)
   }
 
   createExampleSetter = (thing) => {
@@ -124,8 +128,12 @@ class App extends React.Component {
           examples={this.state.examples}
           exampleContentGrabber={this.examplesGetContentClickHandler}
           whichMode = {this.state.mode}
-          algoSelected={this.state.algorithmSelected}
-          algorithm={this.state.algorithm}
+          
+          algoSelector={this.algoSelector}
+          // algoSelected={this.state.algorithmSelected}
+          // algorithm={this.state.algorithm}
+          
+          
           onCreateTitle={this.onCreateTitle}
           createExampleContentSetter={this.createExampleSetter}
         />
@@ -179,9 +187,10 @@ function mapStateToProps(state) {
 //anything returned from this function will end up as props on the app container
 function mapDispatchToProps(dispatch) {
   //whenever this is called, the result should be passed to all the reducers
-  return bindActionCreators({ selectAlgorithm: selectAlgorithm }, dispatch)
+  return bindActionCreators({ selectAlgorithm: selectAlgorithm }, dispatch);
 }
 
+// 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 
