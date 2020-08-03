@@ -30,8 +30,23 @@ const algorithmSelectedReducer = (selectedAlgo = null, action) => {
   return selectedAlgo;
 };
 
+const examplesListReducer = () => {
+  return "REPLACE THIS CODE"
+};
+
+const exampleSelectedReducer = () => {
+  return "REPLACE THIS CODE"
+};
+
+const exampleContentReducer = () => {
+  return "REPLACE THIS CODE"
+};
+
 export default combineReducers({
-  allAlgos: allAlgorithmsReducer,
   someAlgos: someAlgorithmsReducer,
-  selectedAlgo: algorithmSelectedReducer
+  allAlgos: allAlgorithmsReducer,
+  selectedAlgo: algorithmSelectedReducer,
+  examplesList: examplesListReducer,
+  exampleSelected: exampleSelectedReducer,
+  exampleContent: exampleContentReducer
 });

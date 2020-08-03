@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import AllAlgos from '../components/algorithms/AllAlgorithms'
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+import AllAlgos from '../components/algorithms/AllAlgorithms';
 
 class CreateExample extends Component {
+
+  
   
   render() {
     return (
@@ -28,4 +32,6 @@ class CreateExample extends Component {
 
 }
 
+
 export default CreateExample;
+// export default connect(mapStateToProps, {fetchAllAlgos: fetchAllAlgos})(AllAlgos);  

@@ -1,9 +1,18 @@
 import React, { Component }from 'react';
 import { connect } from 'react-redux';
+
+import { fetchAllAlgos } from '../../actions';
 import { selectAlgorithm } from '../../actions/'
 import axios from 'axios'
 
 class AllAlgos extends Component {
+
+  componentDidMount() {
+    this.props.fetchAllAlgos();
+    console.log("this is where fetch all algos runs")
+  }
+
+
   renderList() {
     return this.props.allAlgos.map((algo) => {
       return (
@@ -34,6 +43,11 @@ const mapStateToProps = (state) => {
   return { allAlgos: state.allAlgos };
 }
 
-export default connect(
-  mapStateToProps, 
-  {selectAlgorithm: selectAlgorithm} )(AllAlgos);
+
+
+
+
+// export default connect(
+//   mapStateToProps, 
+//   {selectAlgorithm: selectAlgorithm} )(AllAlgos);
+export default connect(mapStateToProps, {fetchAllAlgos: fetchAllAlgos})(AllAlgos);  
