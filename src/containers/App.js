@@ -15,7 +15,7 @@ class App extends Component {
         <center><Link to="/about">ABOUT</Link> | <Link to="/">VIEW</Link> | <Link to="/create">CREATE</Link></center>
         </div>
         <center>
-          <div className="ui three column grid container" style={ {marginTop: '0px', marginLeft: '5px', marginRight: '5px'} }>
+          <div className="ui three column grid container" style={ {marginTop: '-15px'} }>
             <div className="ui column">
               <div className="ui raised segment">
                 <SomeAlgos />
