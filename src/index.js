@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './containers/App'; //
+import Navigation from './components/Navigation';
 
 //import { Provider } from 'react-redux';
 //import { createStore, applyMiddleware } from 'redux';
@@ -14,9 +14,10 @@ import App from './containers/App'; //
 
 ReactDOM.render(
   //<Provider store={createStoreWithMiddleware(reducers)}>
-    <App /> //typically this would be app, but is navigation since router was added after the fact
+ 
+    <Navigation />,
+
   //</Provider>
-  ,
   document.querySelector("#root")
 );
 
