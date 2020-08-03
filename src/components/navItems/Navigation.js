@@ -1,8 +1,8 @@
   import React from 'react';
   import { BrowserRouter, Route } from 'react-router-dom'
   import AboutPage from './AboutPage'
-  import App from '../containers/App'
-  import CreateExample from '../containers/CreateExample'
+  import App from '../../containers/App'
+  import CreateExample from '../../containers/CreateExample'
 
   const Navigation = () => {
     return (
