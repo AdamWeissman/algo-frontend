@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-// import { selectAlgorithm } from '../actions/'
-
+import SomeAlgos from '../components/algorithms/SomeAlgorithms'
 
 class App extends Component {
   
@@ -15,7 +14,7 @@ class App extends Component {
         </div>
         <center>
           <div className="ui three column doubling stackable grid container" style={ {marginTop: '0px', marginLeft: '15px', marginRight: '15px'} }>
-            <div className="ui inverted blue column">ALGORITHMS GO HERE</div>
+            <div className="ui inverted blue column"><SomeAlgos /></div>
             <div className="ui inverted blue column">EXAMPLES GO HERE</div>
             <div className="ui inverted blue column">EXAMPLE CONTENT HERE</div>
         </div>

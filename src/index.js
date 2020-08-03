@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
 import Navigation from './components/navItems/Navigation';
+import reducers from './reducers/'
 
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import thunk from 'redux-thunk'
-import reducer from './reducers/'
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+//import thunk from 'redux-thunk'
+
+
+//const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducer)}>
+  <Provider store={createStore(reducers)}>
     <Navigation />
   </Provider>,
   document.querySelector("#root")

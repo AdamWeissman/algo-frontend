@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
 const someAlgorithmsReducer = () => {
   return [
@@ -30,4 +30,8 @@ const algorithmSelectedReducer = (selectedAlgorithm=null, action) => {
   return selectedAlgorithm;
 };
 
-
+export default combineReducers({
+  allAlgos: allAlgorithmsReducer,
+  someAlgos: someAlgorithmsReducer,
+  selectedAlgo: algorithmSelectedReducer
+})
