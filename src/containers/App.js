@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-import { selectAlgorithm } from '../actions/'
+// import { selectAlgorithm } from '../actions/'
 
 
 class App extends Component {
