@@ -22,16 +22,16 @@ const allAlgorithmsReducer = () => {
   ];
 };
 
-const algorithmSelectedReducer = (selectedAlgorithm=null, action) => {
+const algorithmSelectedReducer = (selectedAlgo = null, action) => {
   if (action.type === 'ACTION_ALGORITHM_SELECTED') {
     return action.payload;
   }
 
-  return selectedAlgorithm;
+  return selectedAlgo;
 };
 
 export default combineReducers({
   allAlgos: allAlgorithmsReducer,
   someAlgos: someAlgorithmsReducer,
   selectedAlgo: algorithmSelectedReducer
-})
+});

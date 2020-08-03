@@ -9,7 +9,10 @@ class AllAlgos extends Component {
       return (
         <div className="ui inverted segment" key={algo.algotype}>
          
-            <button className="ui circular button primary">
+            <button 
+              className="ui circular green basic button"
+              onClick={() => this.props.selectAlgorithm(algo.algotype)} 
+            >
               CREATE
             </button>
           
@@ -26,11 +29,11 @@ class AllAlgos extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.allAlgos)
+  console.log(state)
 
   return { allAlgos: state.allAlgos };
 }
 
-export default connect(mapStateToProps, {
-  selectAlgorithm: selectAlgorithm
-} )(AllAlgos);
+export default connect(
+  mapStateToProps, 
+  {selectAlgorithm: selectAlgorithm} )(AllAlgos);

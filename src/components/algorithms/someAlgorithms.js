@@ -1,6 +1,6 @@
 import React, { Component }from 'react';
 import { connect } from 'react-redux';
-import { selectAlgorithm } from '../../actions/'
+import { selectAlgorithm } from '../../actions'
 import axios from 'axios'
 
 class SomeAlgos extends Component {
@@ -8,11 +8,12 @@ class SomeAlgos extends Component {
     return this.props.someAlgos.map((algo) => {
       return (
         <div className="ui inverted segment" key={algo.algotype}>
-        
-            <button className="ui circular button primary">
+            <button 
+              className="ui circular blue basic button"
+              onClick={() => this.props.selectAlgorithm(algo.algotype)}  
+            >
               SELECT
             </button>
-          
         <div className="content">{algo.algotype}</div>
         </div>
       );
@@ -25,12 +26,11 @@ class SomeAlgos extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  console.log(state.someAlgos)
-
+const mapStateToProps = state => {
+  console.log(state);
   return { someAlgos: state.someAlgos };
 }
 
-export default connect(mapStateToProps, {
-  selectAlgorithm: selectAlgorithm
-})(SomeAlgos);  
+export default connect(
+  mapStateToProps, 
+  {selectAlgorithm: selectAlgorithm})(SomeAlgos);  
