@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import AllAlgos from '../components/algorithms/AllAlgorithms'
 
 class CreateExample extends Component {
   
@@ -12,7 +13,7 @@ class CreateExample extends Component {
         </div>
         <center>
           <div className="ui three column doubling stackable grid container" style={ {marginTop: '0px', marginLeft: '15px', marginRight: '15px'} }>
-            <div className="ui inverted blue column">CHOOSE AN ALGORITHM</div>
+            <div className="ui inverted blue column"><AllAlgos /></div>
             <div className="ui inverted blue column">CREATE A KOAN TITLE</div>
             <div className="ui inverted blue column">CREATE AN ALGORITHM KOAN</div>
         </div>
