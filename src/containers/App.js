@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 import SomeAlgos from '../components/algorithms/SomeAlgorithms'
+import ExamplesList from '../components/examples/ExamplesList'
+import ExampleContent from '../components/examples/ExampleContent'
 
 class App extends Component {
   
@@ -19,8 +21,16 @@ class App extends Component {
                 <SomeAlgos />
               </div>
             </div>
-            <div className="ui inverted blue column">EXAMPLES GO HERE</div>
-            <div className="ui inverted blue column">EXAMPLE CONTENT HERE</div>
+            <div className="ui column">
+              <div className="ui raised segment">
+                <ExamplesList />
+              </div>
+            </div>
+            <div className="ui column">
+              <div className="ui raised segment">
+                <ExampleContent />
+              </div>
+            </div>
         </div>
         </center>
       </div>

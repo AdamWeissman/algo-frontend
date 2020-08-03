@@ -31,6 +31,4 @@ const mapStateToProps = state => {
   return { someAlgos: state.someAlgos };
 }
 
-export default connect(
-  mapStateToProps, 
-  {selectAlgorithm: selectAlgorithm})(SomeAlgos);  
+export default connect(mapStateToProps, {selectAlgorithm: selectAlgorithm})(SomeAlgos);  
