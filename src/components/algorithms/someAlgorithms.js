@@ -6,7 +6,7 @@ import axios from 'axios'
 
 class SomeAlgos extends Component {
   componentDidMount() {
-    this.props.fetchSomeAlgos();
+    this.props.fSM();
     console.log("this is where fetch some algos runs")
   }
 
@@ -38,4 +38,4 @@ const mapStateToProps = state => {
 }
 
 // export default connect(mapStateToProps, {selectedAlgo: selectAlgorithm})(SomeAlgos);  
-export default connect(mapStateToProps, {fetchSomeAlgos: fetchSomeAlgos})(SomeAlgos);  
+export default connect(mapStateToProps, {fSM: fetchSomeAlgos})(SomeAlgos);  

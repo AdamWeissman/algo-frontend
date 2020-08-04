@@ -5,9 +5,17 @@ export const selectAlgorithm = algorithm => {
   };
 };
 
+export const testThing = () => {
+  return {
+    type: 'ACTION_TEST_SELECTED',
+    payload: "TEST"
+  };
+};
+
 export const fetchSomeAlgos = () => {
   return {
-    type: 'ACTION_FETCH_SOME_ALGOS'
+    type: 'ACTION_FETCH_SOME_ALGOS',
+    payload: "HELLO FROM PAYLOAD"
   }
 };
 
