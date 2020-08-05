@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 
 import { fetchAllAlgos } from '../../actions';
 import { selectAlgorithm } from '../../actions/'
-import axios from 'axios'
+
 
 class AllAlgos extends Component {
 
   componentDidMount() {
-    this.props.fetchAllAlgos();
+    this.props.fAA();
     console.log("this is where fetch all algos runs")
   }
 
@@ -39,7 +39,6 @@ class AllAlgos extends Component {
 
 const mapStateToProps = (state) => {
   console.log(state)
-
   return { allAlgos: state.allAlgos };
 }
 
@@ -50,4 +49,4 @@ const mapStateToProps = (state) => {
 // export default connect(
 //   mapStateToProps, 
 //   {selectAlgorithm: selectAlgorithm} )(AllAlgos);
-export default connect(mapStateToProps, {fetchAllAlgos: fetchAllAlgos})(AllAlgos);  
+export default connect(mapStateToProps, {fAA: fetchAllAlgos})(AllAlgos);  // named as fAA (as I did fSM on SomeAlgorithms, to reinforce/illustratre how this code is working)

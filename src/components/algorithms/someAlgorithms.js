@@ -1,8 +1,8 @@
 import React, { Component }from 'react';
 import { connect } from 'react-redux';
-import { selectAlgorithm } from '../../actions'
+
 import { fetchSomeAlgos } from '../../actions'
-import axios from 'axios'
+import { selectAlgorithm } from '../../actions'
 
 class SomeAlgos extends Component {
   componentDidMount() {
