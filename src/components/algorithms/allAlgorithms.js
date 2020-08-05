@@ -43,10 +43,8 @@ const mapStateToProps = (state) => {
 }
 
 
-
-
-
 // export default connect(
 //   mapStateToProps, 
 //   {selectAlgorithm: selectAlgorithm} )(AllAlgos);
+
 export default connect(mapStateToProps, {fAA: fetchAllAlgos})(AllAlgos);  // named as fAA (as I did fSM on SomeAlgorithms, to reinforce/illustratre how this code is working)

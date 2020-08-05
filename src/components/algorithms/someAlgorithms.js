@@ -30,9 +30,13 @@ class SomeAlgos extends Component {
     console.log(this.props);
     return <div className="ui divided list">{this.renderList()}</div>
   }
+
+  // render() { 
+  //   return "hi"
+  // }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   console.log(state);
   return { someAlgos: state.someAlgos };
 }
