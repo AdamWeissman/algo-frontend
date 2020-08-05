@@ -16,7 +16,7 @@ class SomeAlgos extends Component {
         <div className="ui inverted segment" key={algo.algotype}>
             <button 
               className="ui circular blue basic button"
-              onClick={() => this.props.selectedAlgo(algo.algotype)}  
+              //onClick={() => this.props.selectedAlgo(algo.algotype)}  
             >
               SELECT
             </button>
