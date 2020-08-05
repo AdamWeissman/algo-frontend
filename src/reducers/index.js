@@ -1,14 +1,11 @@
 import { combineReducers } from 'redux';
 
-const someAlgorithmsReducer = () => {
-  return [
-    { algotype: "SomeAlgo 1" },
-    { algotype: "SomeAlgo 2" },
-    { algotype: "SomeAlgo 3" },
-    { algotype: "SomeAlgo 4" },
-    { algotype: "SomeAlgo 5" },
-    { algotype: "SomeAlgo 6" }
-  ];
+const someAlgorithmsReducer = (someAlgos = null, action) => {
+  if (action.type === 'ACTION_FETCH_SOME_ALGOS') {
+    return action.payload;
+  }
+
+  return someAlgos;
 };
 
 const allAlgorithmsReducer = () => {

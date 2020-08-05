@@ -8,14 +8,10 @@ export const selectAlgorithm = algorithm => {
 };
 
 export const fetchSomeAlgos = () => {
-  return function(dispatch, getState) {
-  const promise = axios.get('http://localhost:3001/api/v1/algorithms/idxe')
-  console.log(promise)
-  
-  return {
-      type: 'ACTION_FETCH_SOME_ALGOS',
-      payload: promise
-    };
+  return async (dispatch) => {
+  const response = axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+  console.log("inside fetch algos")
+  dispatch({ type: 'ACTION_FETCH_SOME_ALGOS', payload: response })
   }
 };
 
