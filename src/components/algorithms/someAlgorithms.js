@@ -16,7 +16,7 @@ class SomeAlgos extends Component {
         <div className="ui inverted segment" key={algo.id}>
             <button 
               className="ui circular blue basic button"
-              //onClick={() => this.props.selectedAlgo(algo.algotype)}  
+              onClick={() => this.props.selectedAlgo(algo.algotype)}  
             >
               SELECT
             </button>
@@ -52,4 +52,4 @@ const mapStateToProps = (state) => {
 // }
 
 // export default connect(mapStateToProps, {selectedAlgo: selectAlgorithm})(SomeAlgos);  
-export default connect(mapStateToProps, { fSM: fetchSomeAlgos} )(SomeAlgos);  
+export default connect(mapStateToProps, { fSM: fetchSomeAlgos, selectedAlgo: selectAlgorithm} )(SomeAlgos);  

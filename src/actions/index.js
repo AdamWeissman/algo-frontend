@@ -1,9 +1,11 @@
 import axios from 'axios';
 
 export const selectAlgorithm = algorithm => {
-  return {
+  return dispatch => {
+    dispatch({
     type: 'ACTION_ALGORITHM_SELECTED',
-    payload: algorithm
+    payload: algorithm}
+  )
   };
 };
 
