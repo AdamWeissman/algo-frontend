@@ -5,7 +5,7 @@ export default (state = [], action) => {
     case 'ACTION_FETCH_ALL_ALGOS':
       return action.payload
     case 'ACTION_ALGORITHM_SELECTED':
-      return action.payload
+       return action.payload
     default:
       return state
   }

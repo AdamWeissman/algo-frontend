@@ -2,7 +2,7 @@ import React, { Component }from 'react';
 import { connect } from 'react-redux';
 
 import { fetchSomeAlgos } from '../../actions'
-import { selectAlgorithm } from '../../actions'
+//import { selectAlgorithm } from '../../actions'
 
 class SomeAlgos extends Component {
   componentDidMount() {
@@ -39,17 +39,17 @@ class SomeAlgos extends Component {
 const mapStateToProps = (state) => {
   console.log(state);
   return { 
-    someAlgos: state.someAlgos,
-    selectedAlgo: state.selectedAlgo
+    someAlgos: state.someAlgos
+    //selectedAlgo: state.selectedAlgo
    };
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fSM: () => dispatch({ type: 'ACTION_FETCH_SOME_ALGOS' }),  
-    sA: () => dispatch({ type: 'ACTION_SELECT_ALGORITHM'  })
-  }
-}
+// const mapDispatchToProps = () => {
+//   return {
+//     fSM: () => dispatch({ type: 'ACTION_FETCH_SOME_ALGOS' }),  
+//     sA: () => dispatch({ type: 'ACTION_SELECT_ALGORITHM'  })
+//   }
+// }
 
 // export default connect(mapStateToProps, {selectedAlgo: selectAlgorithm})(SomeAlgos);  
-export default connect(mapStateToProps, mapDispatchToProps)(SomeAlgos);  
+export default connect(mapStateToProps, { fSM: fetchSomeAlgos} )(SomeAlgos);  
