@@ -1,15 +1,11 @@
 export default (state = [], action) => {
-  if (action.type === 'ACTION_FETCH_SOME_ALGOS') {
-    return action.payload
+  switch (action.type) {
+    case 'ACTION_FETCH_SOME_ALGOS': 
+      return action.payload
+    case 'ACTION_FETCH_ALL_ALGOS':
+      return action.payload
+    default:
+      return state
   }
-
-  return state;
-  
-  // return [
-  //   { algotype: "Some Algo 1" },
-  //   { algotype: "Some Algo 2" },
-  //   { algotype: "Some Algo 3" },
-  //   { algotype: "Some Algo 4" },
-  //   { algotype: "Some Algo 5" },
-  //   { algotype: "Some Algo 6" }]
+ 
 }

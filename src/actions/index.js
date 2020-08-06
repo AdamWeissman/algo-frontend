@@ -17,8 +17,8 @@ export const fetchSomeAlgos = () => {
 
 export const fetchAllAlgos = () => {
   return async (dispatch) => {
-    const response = await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
+    const response = await axios.get('http://localhost:3001/api/v1/algorithms/')
     console.log("inside fetch algos")
-    dispatch({ type: 'ACTION_FETCH_ALL_ALGOS', payload: response })
+    dispatch({ type: 'ACTION_FETCH_ALL_ALGOS', payload: response.data })
     }
 };
