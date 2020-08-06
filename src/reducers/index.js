@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import someAlgorithmsReducer from './someAlgorithmsReducer'
-import allAlgorithmsReducer from './allAlgorithmsReducer'
+import algorithmsReducer from './algorithmsReducer'
+//import allAlgorithmsReducer from './allAlgorithmsReducer'
 
 const algorithmSelectedReducer = (selectedAlgo = null, action) => {
   if (action.type === 'ACTION_ALGORITHM_SELECTED') {
@@ -23,8 +23,8 @@ const exampleContentReducer = () => {
 };
 
 export default combineReducers({
-  someAlgos: someAlgorithmsReducer,
-  allAlgos: allAlgorithmsReducer,
+  someAlgos: algorithmsReducer,
+  allAlgos: algorithmsReducer,
   selectedAlgo: algorithmSelectedReducer,
   examplesList: examplesListReducer,
   exampleSelected: exampleSelectedReducer,
