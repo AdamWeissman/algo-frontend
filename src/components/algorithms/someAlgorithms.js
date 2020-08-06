@@ -38,8 +38,18 @@ class SomeAlgos extends Component {
 
 const mapStateToProps = (state) => {
   console.log(state);
-  return { someAlgos: state.someAlgos };
+  return { 
+    someAlgos: state.someAlgos,
+    selectedAlgo: state.selectedAlgo
+   };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fSM: () => dispatch({ type: 'ACTION_FETCH_SOME_ALGOS' }),  
+    sA: () => dispatch({ type: 'ACTION_SELECT_ALGORITHM'  })
+  }
 }
 
 // export default connect(mapStateToProps, {selectedAlgo: selectAlgorithm})(SomeAlgos);  
-export default connect(mapStateToProps, {fSM: fetchSomeAlgos})(SomeAlgos);  
+export default connect(mapStateToProps, mapDispatchToProps)(SomeAlgos);  
