@@ -13,7 +13,7 @@ class SomeAlgos extends Component {
   renderList() {
     return this.props.someAlgos.map((algo) => {
       return (
-        <div className="ui inverted segment" key={algo.algotype}>
+        <div className="ui inverted segment" key={algo.id}>
             <button 
               className="ui circular blue basic button"
               //onClick={() => this.props.selectedAlgo(algo.algotype)}  

@@ -4,19 +4,16 @@ import { connect } from 'react-redux';
 import { fetchAllAlgos } from '../../actions';
 import { selectAlgorithm } from '../../actions/'
 
-
 class AllAlgos extends Component {
-
   componentDidMount() {
     this.props.fAA();
     console.log("this is where fetch all algos runs")
   }
 
-
   renderList() {
     return this.props.allAlgos.map((algo) => {
       return (
-        <div className="ui inverted segment" key={algo.algotype}>
+        <div className="ui inverted segment" key={algo.id}>
          
             <button 
               className="ui circular green basic button"
