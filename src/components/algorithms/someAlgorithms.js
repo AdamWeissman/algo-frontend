@@ -2,7 +2,7 @@ import React, { Component }from 'react';
 import { connect } from 'react-redux';
 
 import { fetchSomeAlgos } from '../../actions'
-//import { selectAlgorithm } from '../../actions'
+import { selectAlgorithm } from '../../actions'
 
 class SomeAlgos extends Component {
   componentDidMount() {
@@ -39,8 +39,8 @@ class SomeAlgos extends Component {
 const mapStateToProps = (state) => {
   console.log(state);
   return { 
-    someAlgos: state.someAlgos
-    //selectedAlgo: state.selectedAlgo
+    someAlgos: state.someAlgos,
+    selectedAlgo: state.selectedAlgo
    };
 }
 
