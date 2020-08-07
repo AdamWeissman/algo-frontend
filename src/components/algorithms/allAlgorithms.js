@@ -6,31 +6,35 @@ import { selectAlgorithm } from '../../actions/'
 
 class AllAlgos extends Component {
   componentDidMount() {
-    this.props.fAA();
+    //this.props.fAA();
     console.log("this is where fetch all algos runs")
   }
 
-  renderList() {
-    return this.props.allAlgos.map((algo) => {
-      return (
-        <div className="ui inverted segment" key={algo.id}>
+  // renderList() {
+  //   return this.props.allAlgos.map((algo) => {
+  //     return (
+  //       <div className="ui inverted segment" key={algo.id}>
          
-            <button 
-              className="ui circular green basic button"
-              onClick={() => this.props.selectAlgorithm(algo.algotype)} 
-            >
-              CREATE
-            </button>
+  //           <button 
+  //             className="ui circular green basic button"
+  //             onClick={() => this.props.selectAlgorithm(algo.algotype)} 
+  //           >
+  //             CREATE
+  //           </button>
           
-        <div className="content">{algo.algotype}</div>
-        </div>
-      );
-    });
-  } 
+  //       <div className="content">{algo.algotype}</div>
+  //       </div>
+  //     );
+  //   });
+  // } 
   
-  render() {
-    console.log(this.props)
-    return <div className="ui divided list">{this.renderList()}</div>
+  // render() {
+  //   console.log(this.props)
+  //   return <div className="ui divided list">{this.renderList()}</div>
+  // }
+
+  render () {
+    return <h1>hi</h1>
   }
 }
 

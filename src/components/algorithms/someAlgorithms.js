@@ -1,18 +1,32 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchSomeAlgos } from '../../actions'
-import { selectAlgorithm } from '../../actions'
+//import { fetchSomeAlgos } from '../../actions'
+//import { selectAlgorithm } from '../../actions'
+
+const mapStateToProps = (state) => {
+  console.log("this is inside of mapstate to props", state);
+  return { 
+    someAlgos: state.someAlgos
+    // selectedAlgo: state.selectedAlgo
+   };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fSM: () => dispatch({ type: 'FETCH_SOME_ALGOS' })
+  };
+}
 
 class SomeAlgos extends Component {
-  // componentDidMount() {
-  //   this.props.fSM();
-  //   console.log("this is where fetch some algos runs")
-  // }
+  componentDidMount() {
+    this.props.fSM();
+    console.log("this is where fetch some algos runs")
+  }
 
   renderList() {
     this.props.fSM();
-    return this.props.someAlgos.map((algo) => {
+    return this.state.someAlgos.map((algo) => {
       return (
         <div className="ui inverted segment" key={algo.id}>
             <button 
@@ -38,20 +52,7 @@ class SomeAlgos extends Component {
 
 }
 
-const mapStateToProps = (state) => {
-  console.log("this is inside of mapstate to props", state);
-  return { 
-    someAlgos: state.someAlgos
-    // selectedAlgo: state.selectedAlgo
-   };
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fSM: () => dispatch({ type: '' }) 
-    // sA: () => dispatch({ type: 'ACTION_SELECT_ALGORITHM'  })
-  };
-}
 
 // export default connect(mapStateToProps, {selectedAlgo: selectAlgorithm})(SomeAlgos);  
 export default connect( mapStateToProps, mapDispatchToProps )(SomeAlgos);  
