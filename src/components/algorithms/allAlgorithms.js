@@ -33,7 +33,13 @@ class AllAlgos extends Component {
          
             <button 
               className="ui circular yellow basic button"
-              onClick={() => this.props.grabThatAlgo(algo.id)} 
+              onClick={() => {
+                return (
+                  this.props.grabThatAlgo(algo.id),
+                  console.log("something here")
+                )
+              }
+              } 
             >
               CREATE
             </button>

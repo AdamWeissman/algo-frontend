@@ -7,7 +7,6 @@ import AllAlgos from '../components/algorithms/AllAlgorithms';
 class CreateExample extends Component {
 
   
-  
   render() {
     return (
       <div className="ui raised padded text container segment" style={ {marginTop: '35px', marginLeft: '5px', marginRight: '5px'} }>
