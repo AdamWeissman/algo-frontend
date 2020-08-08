@@ -42,6 +42,7 @@ export function fetchExamples(the_algorithm) {
   }
 };
 
+// selectExample is for creating koans
 export function selectExample(the_algorithm, the_example) {
   return async (dispatch) => {
     const response = await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`)
@@ -49,6 +50,7 @@ export function selectExample(the_algorithm, the_example) {
   }
 };
 
+// fetchContent is for viewing koans
 export function fetchContent(the_algorithm, the_example) {
   return async (dispatch) => {
     const response = await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`)
