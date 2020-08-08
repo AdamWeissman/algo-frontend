@@ -34,7 +34,7 @@ class SomeAlgos extends Component {
       return (
         <div className="ui inverted segment" key={algo.id}>
             <button 
-              className="ui circular blue basic button"
+              className="ui circular yellow basic button"
               onClick={
                 () => {
                   return (

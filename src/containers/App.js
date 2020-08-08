@@ -11,23 +11,23 @@ class App extends Component {
     return (
       <div className="ui raised text container segment" style={ {marginTop: '35px', marginLeft: '5px', marginRight: '5px'} }>
         <center><h1>ALGORITHM KOANS</h1></center>
-        <div className="ui blue segment" style={ {marginTop: '25px', marginLeft: '5px', marginRight: '5px'} }>
+        <div className="ui yellow segment" style={ {marginTop: '25px', marginLeft: '5px', marginRight: '5px'} }>
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/create">CREATE</Link></center>
         </div>
         <center>
           <div className="ui three column grid container" style={ {marginTop: '-15px'} }>
             <div className="ui column">
-              <div className="ui raised segment">
+              <div className="ui raised yellow segment">
                 <SomeAlgos />
               </div>
             </div>
             <div className="ui column">
-              <div className="ui raised segment">
+              <div className="ui raised orange segment">
                 <ExamplesList />
               </div>
             </div>
             <div className="ui column">
-              <div className="ui raised segment">
+              <div className="ui raised yellow segment">
                 <ExampleContent />
               </div>
             </div>

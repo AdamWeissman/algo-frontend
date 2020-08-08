@@ -24,7 +24,7 @@ class ExamplesList extends Component {
       return (
         <div className="ui inverted segment" key={example.id}>
             <button 
-              className="ui circular green basic button"
+              className="ui circular orange basic button"
               onClick={
                 () => {
                   return(
