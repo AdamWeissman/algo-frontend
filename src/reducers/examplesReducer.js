@@ -6,7 +6,7 @@ export default (state = {
     case 'FETCH_EXAMPLES': 
       return {
         ...state,
-        examples: action.payload
+        examples: "HEY"
       }
     case 'SELECT_EXAMPLE':
       return {

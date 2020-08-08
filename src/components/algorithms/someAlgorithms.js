@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { fetchSomeAlgos } from '../../actions'
 import { selectAlgorithm } from '../../actions'
+import { fetchExamples } from '../../actions'
+import { selectExample } from '../../actions'
 
 const mapStateToProps = (state) => {
   console.log("this is inside of mapstate to props", state);
@@ -15,7 +17,9 @@ const mapDispatchToProps = (dispatch) => {
   console.log("this is inside of map dispatch to props", dispatch)
   return {
     fetchSomeAlgos: () => dispatch(fetchSomeAlgos()),
-    grabThatAlgo: (choice) => dispatch(selectAlgorithm(choice))
+    grabThatAlgo: (choice) => dispatch(selectAlgorithm(choice)),
+    fetchExamples: (algo) => dispatch(fetchExamples(algo)),
+    selectExample: (algo, example) => dispatch(selectExample(algo, example))
   };
 }
 
@@ -32,7 +36,9 @@ class SomeAlgos extends Component {
         <div className="ui inverted segment" key={algo.id}>
             <button 
               className="ui circular blue basic button"
-              onClick={() => this.props.grabThatAlgo(algo.id)}  
+              onClick={
+                () => this.props.fetchExamples(algo.id)
+              }  
             >
               SELECT
             </button>
