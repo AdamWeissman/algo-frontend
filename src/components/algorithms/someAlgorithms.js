@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { fetchSomeAlgos } from '../../actions'
 import { selectAlgorithm } from '../../actions'
 import { fetchExamples } from '../../actions'
-import { selectExample } from '../../actions'
 
 const mapStateToProps = (state) => {
   console.log("this is inside of mapstate to props", state);
@@ -19,7 +18,6 @@ const mapDispatchToProps = (dispatch) => {
     fetchSomeAlgos: () => dispatch(fetchSomeAlgos()),
     grabThatAlgo: (choice) => dispatch(selectAlgorithm(choice)),
     fetchExamples: (algo) => dispatch(fetchExamples(algo)),
-    selectExample: (algo, example) => dispatch(selectExample(algo, example))
   };
 }
 
@@ -30,7 +28,6 @@ class SomeAlgos extends Component {
   }
 
   renderList() {
-    // this.props.fSM();
     return this.props.state.algorithms.someAlgos.map((algo) => {
       return (
         <div className="ui inverted segment" key={algo.id}>
