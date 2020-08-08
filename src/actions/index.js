@@ -1,5 +1,14 @@
 import axios from 'axios';
 
+export function resetExampleContent () {
+  return (dispatch) => {
+    dispatch({
+      type: 'RESET_EXAMPLE_CONTENT',
+      payload: []
+    })
+  };
+}
+
 export function selectAlgorithm (algorithm) {
   return (dispatch) => {
     console.log(algorithm)

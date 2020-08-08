@@ -39,7 +39,8 @@ class SomeAlgos extends Component {
                 () => {
                   return (
                     this.props.grabThatAlgo(algo.id),
-                    this.props.fetchExamples(algo.id)
+                    this.props.fetchExamples(algo.id),
+                    this.props.resetExampleContent()
                     )
                 }
               }  
