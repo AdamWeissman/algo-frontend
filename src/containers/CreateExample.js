@@ -15,14 +15,18 @@ class CreateExample extends Component {
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/CREATE">CREATE</Link></center>
         </div>
         <center>
-          <div className="ui three column grid container" style={ {marginTop: '-15px'} }>
+          <div className="ui two column grid container" style={ {marginTop: '-15px'} }>
             <div className="ui column">
               <div className="ui raised segment">
                 <AllAlgos />
               </div>
             </div>
-            <div className="ui inverted blue column">CREATE A KOAN TITLE</div>
-            <div className="ui inverted blue column">CREATE AN ALGORITHM KOAN</div>
+            {/* <div className="ui inverted blue column">CREATE A KOAN TITLE</div> */}
+            <div className="ui column">
+              <div className="ui raised segment">
+                create koans
+              </div>
+            </div>
         </div>
         </center>
       </div>
