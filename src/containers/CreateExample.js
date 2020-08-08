@@ -13,7 +13,7 @@ class CreateExample extends Component {
       <div className="ui raised padded text container segment" style={ {marginTop: '35px', marginLeft: '5px', marginRight: '5px'} }>
         <center><h1>CREATE MODE</h1></center>
         <div className="ui blue segment" style={ {marginTop: '25px', marginLeft: '5px', marginRight: '5px'} }>
-        <center><Link to="/about">ABOUT</Link> | <Link to="/">VIEW</Link> | <Link to="/CREATE">CREATE</Link></center>
+        <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/CREATE">CREATE</Link></center>
         </div>
         <center>
           <div className="ui three column grid container" style={ {marginTop: '-15px'} }>

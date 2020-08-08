@@ -8,7 +8,7 @@ export const selectAlgorithm = algorithm => {
   }
 };
 
-export const fetchSomeAlgos = () => {
+export function fetchSomeAlgos() {
   return async (dispatch) => {
   const response = await axios.get('http://localhost:3001/api/v1/algorithms/idxe')
   console.log("inside fetch some algos in actions index")

@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-//import { fetchSomeAlgos } from '../../actions'
+import { fetchSomeAlgos } from '../../actions'
 //import { selectAlgorithm } from '../../actions'
 
 const mapStateToProps = (state) => {
   console.log("this is inside of mapstate to props", state);
-  return { 
-    someAlgos: state.someAlgos
-    // selectedAlgo: state.selectedAlgo
+  return {
+    state
    };
 }
 
 const mapDispatchToProps = (dispatch) => {
+  console.log("this is inside of map dispatch to props", dispatch)
   return {
-    fSM: () => dispatch({ type: 'FETCH_SOME_ALGOS' })
+    fSM: () => dispatch(fetchSomeAlgos())
   };
 }
 
 class SomeAlgos extends Component {
   componentDidMount() {
     this.props.fSM();
-    console.log("this is where fetch some algos runs")
+    console.log("this is where fetch some algos runs", this.props)
   }
 
   renderList() {
-    this.props.fSM();
-    return this.state.someAlgos.map((algo) => {
+    // this.props.fSM();
+    return this.props.state.algorithms.someAlgos.map((algo) => {
       return (
         <div className="ui inverted segment" key={algo.id}>
             <button 
@@ -47,6 +47,7 @@ class SomeAlgos extends Component {
   }
 
   // render() {
+  //   console.log("THIS IS IN RENDER", this.props.state.algorithms.someAlgos  )
   //   return "hi"
   // }
 

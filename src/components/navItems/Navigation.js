@@ -9,8 +9,8 @@
       <div>
         <BrowserRouter>
           <div>
-            <Route path="/" exact component={App} />
-            <Route path="/about" exact component={AboutPage} />
+            <Route path="/" exact component={AboutPage} />
+            <Route path="/view" exact component={App} />
             <Route path="/create" exact component={CreateExample} />
           </div>
         </BrowserRouter>
