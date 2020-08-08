@@ -34,7 +34,12 @@ class SomeAlgos extends Component {
             <button 
               className="ui circular blue basic button"
               onClick={
-                () => this.props.fetchExamples(algo.id)
+                () => {
+                  return (
+                    this.props.grabThatAlgo(algo.id),
+                    this.props.fetchExamples(algo.id)
+                    )
+                }
               }  
             >
               SELECT

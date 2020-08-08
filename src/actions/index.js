@@ -39,3 +39,10 @@ export function selectExample(the_algorithm, the_example) {
     dispatch({ type: 'SELECT_EXAMPLE', payload: response.data })
   }
 };
+
+export function fetchContent(the_algorithm, the_example) {
+  return async (dispatch) => {
+    const response = await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples/${the_example}`)
+    dispatch({ type: 'FETCH_CONTENT', payload: response.data })
+  }
+};
