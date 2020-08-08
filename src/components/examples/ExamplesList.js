@@ -18,29 +18,27 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class ExamplesList extends Component {
+  renderList() {
+    return this.props.state.examples.examples.map((example) => {
+      return (
+        <div className="ui inverted segment" key={example.title}>
+            <button 
+              className="ui circular green basic button"
+              //onClick={() => this.props.selectExample(example.id)}  
+            >
+              SELECT
+            </button>
+        <div className="content">{example.title}</div>
+        </div>
+      );
+    });
+  }
 
   render() {
-    return "hi"
+    console.log(this.props);
+    return <div className="ui divided list">{this.renderList()}</div>
   }
 
 }
-
-  // renderList() {
-  //   return this.props.examples.map((example) => {
-  //     return (
-  //       <div className="ui inverted segment" key={example.title}>
-  //           <button 
-  //             className="ui circular blue basic button"
-  //             onClick={() => this.props.selectExample(example.id)}  
-  //           >
-  //             SELECT
-  //           </button>
-  //       <div className="content">{example.title}</div>
-  //       </div>
-  //     );
-  //   });
-  // }
-
-// 
 
 export default connect( mapStateToProps, mapDispatchToProps )(ExamplesList);
