@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchSomeAlgos } from '../../actions'
 import { selectAlgorithm } from '../../actions'
 import { fetchExamples } from '../../actions'
+import { resetExampleContent } from '../../actions'
 
 const mapStateToProps = (state) => {
   console.log("this is inside of mapstate to props", state);
@@ -18,6 +19,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchSomeAlgos: () => dispatch(fetchSomeAlgos()),
     grabThatAlgo: (choice) => dispatch(selectAlgorithm(choice)),
     fetchExamples: (algo) => dispatch(fetchExamples(algo)),
+    resetExampleContent: () => dispatch(resetExampleContent())
   };
 }
 

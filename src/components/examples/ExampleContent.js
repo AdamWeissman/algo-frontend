@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-const ExampleContent = (props) => {
-  console.log(props)
-  return <div>EXAMPLE CONTENT GOES HERE AND IT MIGHT BE A TON OF STUFF</div>
-}
 
 const mapStateToProps = (state) => {
-  return { selectedAlgo: state.selectedAlgo }
+  return { 
+    state 
+  };
 }
+
+class ExampleContent extends Component {
+  
+  render(){
+    return <div>{this.props.state.examples.exampleContent.content}</div>
+  };
+}
+
+
 
 export default connect(mapStateToProps)(ExampleContent);

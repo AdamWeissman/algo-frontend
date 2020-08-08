@@ -1,7 +1,7 @@
 export default (state = {
   examples: [],
   selectedExample: null,
-  exampleContent: null
+  exampleContent: []
   }, action) => {
   switch (action.type) {
     case 'FETCH_EXAMPLES': 
@@ -15,6 +15,11 @@ export default (state = {
         selectedExample: action.payload
       }
     case 'FETCH_CONTENT':
+      return {
+        ...state,
+        exampleContent: action.payload
+      }
+    case 'RESET_EXAMPLE_CONTENT':
       return {
         ...state,
         exampleContent: action.payload
