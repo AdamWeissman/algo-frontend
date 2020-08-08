@@ -4,48 +4,50 @@ import { connect } from 'react-redux';
 import { fetchAllAlgos } from '../../actions';
 import { selectAlgorithm } from '../../actions/'
 
+const mapStateToProps = (state) => {
+  console.log("this is inside of mapstate to props", state);
+  return {
+    state
+   };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  console.log("this is inside of map dispatch to props", dispatch)
+  return {
+    fAA: () => dispatch(fetchAllAlgos()),
+    grabThatAlgo: (choice) => dispatch(selectAlgorithm(choice))
+  };
+}
+
+
 class AllAlgos extends Component {
   componentDidMount() {
-    //this.props.fAA();
+    this.props.fAA();
     console.log("this is where fetch all algos runs")
   }
 
-  // renderList() {
-  //   return this.props.allAlgos.map((algo) => {
-  //     return (
-  //       <div className="ui inverted segment" key={algo.id}>
+  renderList() {
+    return this.props.state.algorithms.allAlgos.map((algo) => {
+      return (
+        <div className="ui inverted segment" key={algo.id}>
          
-  //           <button 
-  //             className="ui circular green basic button"
-  //             onClick={() => this.props.selectAlgorithm(algo.algotype)} 
-  //           >
-  //             CREATE
-  //           </button>
+            <button 
+              className="ui circular green basic button"
+              onClick={() => this.props.grabThatAlgo(algo.id)} 
+            >
+              CREATE
+            </button>
           
-  //       <div className="content">{algo.algotype}</div>
-  //       </div>
-  //     );
-  //   });
-  // } 
+        <div className="content">{algo.algotype}</div>
+        </div>
+      );
+    });
+  } 
   
-  // render() {
-  //   console.log(this.props)
-  //   return <div className="ui divided list">{this.renderList()}</div>
-  // }
-
-  render () {
-    return <h1>hi</h1>
+  render() {
+    console.log(this.props)
+    return <div className="ui divided list">{this.renderList()}</div>
   }
 }
 
-const mapStateToProps = (state) => {
-  console.log(state)
-  return { allAlgos: state.allAlgos };
-}
-
-
-// export default connect(
-//   mapStateToProps, 
-//   {selectAlgorithm: selectAlgorithm} )(AllAlgos);
-
-export default connect(mapStateToProps, {fAA: fetchAllAlgos})(AllAlgos);  // named as fAA (as I did fSM on SomeAlgorithms, to reinforce/illustratre how this code is working)
+export default connect( mapStateToProps, mapDispatchToProps )(AllAlgos);  

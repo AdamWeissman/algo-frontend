@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-export const selectAlgorithm = algorithm => {
-  return dispatch => {
+export function selectAlgorithm (algorithm) {
+  return (dispatch) => {
+    console.log(algorithm)
     dispatch({
-    type: 'ALGORITHM_SELECTED',
+    type: 'SELECT_ALGO',
     payload: algorithm})
   }
 };
@@ -16,7 +17,7 @@ export function fetchSomeAlgos() {
   }
 };
 
-export const fetchAllAlgos = () => {
+export function fetchAllAlgos() {
   return async (dispatch) => {
     const response = await axios.get('http://localhost:3001/api/v1/algorithms/')
     console.log("inside fetch all algos in actions index")

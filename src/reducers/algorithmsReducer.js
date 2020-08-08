@@ -1,23 +1,24 @@
-// const initialState = {
-  
-//     data: {
-//       algotype: "stupid",
-//       id: 1
-//     } 
-  
-// };
 
-export default (state = { someAlgos: [] }, action) => {
+export default (state = { 
+  someAlgos: [],
+  allAlgos: [],
+  selectedAlgo: null
+  }, action) => {
   switch (action.type) {
     case 'FETCH_SOME_ALGOS': 
       return {
-        // ...state,
+        ...state,
         someAlgos: action.payload
       }
     case 'FETCH_ALL_ALGOS':
       return {
-        // ...state,
+        ...state,
         allAlgos: action.payload
+      }
+    case 'SELECT_ALGO':
+      return {
+        ...state,
+        selectedAlgo: action.payload
       }
     default:
       return state
