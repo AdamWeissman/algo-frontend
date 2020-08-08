@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   console.log("this is inside of map dispatch to props", dispatch)
   return {
-    fAA: () => dispatch(fetchAllAlgos()),
+    fetchAllAlgos: () => dispatch(fetchAllAlgos()),
     grabThatAlgo: (choice) => dispatch(selectAlgorithm(choice))
   };
 }
@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch) => {
 
 class AllAlgos extends Component {
   componentDidMount() {
-    this.props.fAA();
+    this.props.fetchAllAlgos();
     console.log("this is where fetch all algos runs")
   }
 

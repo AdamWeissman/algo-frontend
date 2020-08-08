@@ -25,9 +25,11 @@ export function fetchAllAlgos() {
     }
 };
 
-export const fetchExamples = () => {
-  return dispatch => {
-    dispatch({ type: 'FETCH_EXAMPLES', payload: "Nothing here" })
+export function fetchExamples(the_algorithm) {
+  return async (dispatch) => {
+    const response = await axios.get(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`)
+    console.log("inside fetch examples")
+    dispatch({ type: 'FETCH_EXAMPLES', payload: response.data })
   }
 };
 
