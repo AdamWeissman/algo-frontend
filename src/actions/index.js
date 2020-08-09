@@ -1,5 +1,14 @@
 import axios from 'axios';
 
+export function createExample () {
+  return (dispatch) => {
+    dispatch({
+      type: 'CREATE_EXAMPLE',
+      payload: { someThing: "YO!"}
+    })
+  }
+}
+
 export function resetExampleContent () {
   return (dispatch) => {
     dispatch({
@@ -8,7 +17,7 @@ export function resetExampleContent () {
     })
   };
 }
-
+ 
 export function selectAlgorithm (algorithm) {
   return (dispatch) => {
     console.log(algorithm)

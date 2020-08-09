@@ -24,6 +24,11 @@ export default (state = {
         ...state,
         exampleContent: action.payload
       }
+    case 'CREATE_EXAMPLE': 
+      return {
+        ...state,
+        examples: action.payload
+      }
     default:
       return state
   };
