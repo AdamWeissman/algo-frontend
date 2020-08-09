@@ -32,7 +32,9 @@ class SomeAlgos extends Component {
   renderList() {
     return this.props.state.algorithms.someAlgos.map((algo) => {
       return (
+        
         <div className="ui inverted segment" key={algo.id}>
+
             <button 
               className="ui circular yellow basic button"
               onClick={
@@ -55,7 +57,9 @@ class SomeAlgos extends Component {
 
   render() {
     console.log(this.props);
+    
     return <div className="ui divided list">{this.renderList()}</div>
+    
   }
 
   // render() {

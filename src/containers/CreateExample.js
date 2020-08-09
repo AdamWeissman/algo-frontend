@@ -6,6 +6,7 @@ import AllAlgos from '../components/algorithms/AllAlgorithms';
 
 class CreateExample extends Component {
 
+  // ui raised padded text container segment
   
   render() {
     return (
@@ -15,7 +16,7 @@ class CreateExample extends Component {
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/CREATE">CREATE</Link></center>
         </div>
         <center>
-          <div className="ui two column grid container" style={ {marginTop: '-15px'} }>
+          <div className="ui two column grid container animate__animated animate__fadeIn" style={ {marginTop: '-15px'} }>
             <div className="ui column">
               <div className="ui raised segment">
                 <AllAlgos />
