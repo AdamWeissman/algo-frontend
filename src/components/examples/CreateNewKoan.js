@@ -20,10 +20,19 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class CreateNewKoan extends Component {
-
-
+  // local state for submit form 
   
+  state = { 
+    title: '',
+    content: ''
+  };
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    this.props.fetchPostExample(this.props.state.algorithms.selectedAlgoCreateMode, this.state.title, this.state.content)
+  }
   
+
   koanForm = () => {
     return this.props.state.algorithms.selectedAlgoCreateMode
   }

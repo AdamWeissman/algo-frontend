@@ -59,7 +59,7 @@ export function fetchPostExample (the_algorithm, the_title, the_content) {
     })
     dispatch({
       type: 'CREATE_EXAMPLE',
-      payload: "YOUR KOAN HAS POSTED SUCCESSFULLY. IMAGINE THE SOUND OF ONE HAND APPLAUDING YOUR SUCCESS"
+      payload: "YOUR KOAN HAS POSTED SUCCESSFULLY. IMAGINE THE SOUND OF ONE HAND CLAPPING FOR YOUR SUCCESS"
     })
   }
 }
