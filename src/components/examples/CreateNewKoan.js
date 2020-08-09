@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   console.log("this is inside of map dispatch to props on CreateNewKoan", dispatch)
   return {
-    fetchPostExample: (algo) => dispatch(fetchPostExample(algo))
+    fetchPostExample: (algoId, koanTitle, koanContent) => dispatch(fetchPostExample(algoId, koanTitle, koanContent))
   };
 }
 

@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import AllAlgos from '../components/algorithms/AllAlgorithms';
+import CreateNewKoan from '../components/examples/CreateNewKoan';
+
+
 
 class CreateExample extends Component {
 
@@ -25,7 +28,7 @@ class CreateExample extends Component {
             {/* <div className="ui inverted blue column">CREATE A KOAN TITLE</div> */}
             <div className="ui column">
               <div className="ui raised segment">
-                create koans
+                <CreateNewKoan />
               </div>
             </div>
         </div>
