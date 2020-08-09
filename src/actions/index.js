@@ -1,13 +1,6 @@
 import axios from 'axios';
 
-export function createExample () {
-  return (dispatch) => {
-    dispatch({
-      type: 'CREATE_EXAMPLE',
-      payload: { someThing: "YO!"}
-    })
-  }
-}
+
 
 export function resetExampleContent () {
   return (dispatch) => {
@@ -50,6 +43,15 @@ export function fetchExamples(the_algorithm) {
     dispatch({ type: 'FETCH_EXAMPLES', payload: response.data })
   }
 };
+
+export function fetchPostExample (the_algorithm) {
+  return (dispatch) => {
+    dispatch({
+      type: 'CREATE_EXAMPLE',
+      payload: { someThing: "YO!"}
+    })
+  }
+}
 
 // selectExample is for creating koans
 export function selectExample(the_algorithm, the_example) {
