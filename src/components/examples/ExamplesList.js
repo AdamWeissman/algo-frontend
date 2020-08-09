@@ -22,9 +22,9 @@ class ExamplesList extends Component {
   renderList() {
     return this.props.state.examples.examples.map((example) => {
       return (
-        <div className="ui inverted segment" key={example.id}>
+        <div className="ui inverted segment animate__animated animate__flipInY animate__slow" key={example.id}>
             <button 
-              className="ui circular orange basic button animate__animated animate__flip animate__slower"
+              className="ui circular orange basic button animate__animated animate__fadeIn animate__slower"
               onClick={
                 () => {
                   return(
@@ -35,7 +35,7 @@ class ExamplesList extends Component {
             >
               SELECT
             </button>
-        <div className="content animate__animated animate__flip animate__slow">{example.title}</div>
+        <div className="content animate__animated animate__flip animate__fast">{example.title}</div>
         </div>
       );
     });
