@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
-import { fetchPostExample } from '../../actions/index'
+import { fetchPostExample } from '../../actions/'
+import { resetAlgo } from '../../actions/' //this one ought to run after the form is completed
 
 const mapStateToProps = (state) => {
   console.log("this is inside of mapstate to props on CreateNewKoan", state);
@@ -13,14 +14,18 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   console.log("this is inside of map dispatch to props on CreateNewKoan", dispatch)
   return {
-    fetchPostExample: (algoId, koanTitle, koanContent) => dispatch(fetchPostExample(algoId, koanTitle, koanContent))
+    fetchPostExample: (algoId, koanTitle, koanContent) => dispatch(fetchPostExample(algoId, koanTitle, koanContent)),
+    resetAlgo: () => dispatch(resetAlgo())
   };
 }
 
 class CreateNewKoan extends Component {
+
+
+  
   
   koanForm = () => {
-    return this.props.state.algorithms.selectedAlgo
+    return this.props.state.algorithms.selectedAlgoCreateMode
   }
   
   

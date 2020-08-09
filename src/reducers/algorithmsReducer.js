@@ -19,7 +19,8 @@ export default (state = {
     case 'SELECT_ALGO':
       return {
         ...state,
-        selectedAlgo: action.payload
+        selectedAlgo: action.payload,
+        selectedAlgoCreateMode: action.payload
       }
     case 'RESET_ALGO':
       return {
