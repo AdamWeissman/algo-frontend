@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchAllAlgos } from '../../actions';
 import { selectAlgorithm } from '../../actions/'
+import { resetAlgo } from '../../actions/'
 
 const mapStateToProps = (state) => {
   console.log("this is inside of mapstate to props", state);
@@ -15,7 +16,8 @@ const mapDispatchToProps = (dispatch) => {
   console.log("this is inside of map dispatch to props", dispatch)
   return {
     fetchAllAlgos: () => dispatch(fetchAllAlgos()),
-    grabThatAlgo: (choice) => dispatch(selectAlgorithm(choice))
+    grabThatAlgo: (choice) => dispatch(selectAlgorithm(choice)),
+    resetAlgo: () => dispatch(resetAlgo())
   };
 }
 
@@ -23,6 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 class AllAlgos extends Component {
   componentDidMount() {
     this.props.fetchAllAlgos();
+    this.props.resetAlgo();
     console.log("this is where fetch all algos runs")
   }
 

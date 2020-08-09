@@ -18,8 +18,14 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class CreateNewKoan extends Component {
+  
+  koanForm = () => {
+    return this.props.state.algorithms.selectedAlgo
+  }
+  
+  
   render() {
-    return <div>THIS IS A POSTING FORM THAT USES LOCAL STATE</div>
+    return <div>{this.koanForm()}</div>
   }
 }
 

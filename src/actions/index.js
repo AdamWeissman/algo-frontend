@@ -1,12 +1,19 @@
 import axios from 'axios';
 
-
-
 export function resetExampleContent () {
   return (dispatch) => {
     dispatch({
       type: 'RESET_EXAMPLE_CONTENT',
       payload: []
+    })
+  };
+}
+
+export function resetAlgo () {
+  return (dispatch) => {
+    dispatch({
+      type: 'RESET_ALGO',
+      payload: null
     })
   };
 }
@@ -44,11 +51,15 @@ export function fetchExamples(the_algorithm) {
   }
 };
 
-export function fetchPostExample (the_algorithm) {
+export function fetchPostExample (the_algorithm, the_title, the_content) {
   return (dispatch) => {
+    const response = axios.post(`http://localhost:3001/api/v1/algorithms/${the_algorithm}/examples`, {
+      title: `${the_title}`,
+      content: `${the_content}`
+    })
     dispatch({
       type: 'CREATE_EXAMPLE',
-      payload: { someThing: "YO!"}
+      payload: "YOUR KOAN HAS POSTED SUCCESSFULLY. IMAGINE THE SOUND OF ONE HAND APPLAUDING YOUR SUCCESS"
     })
   }
 }

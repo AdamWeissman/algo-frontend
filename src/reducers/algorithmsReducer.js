@@ -2,7 +2,8 @@
 export default (state = { 
   someAlgos: [],
   allAlgos: [],
-  selectedAlgo: null
+  selectedAlgo: null,
+  selectedAlgoCreateMode: null,
   }, action) => {
   switch (action.type) {
     case 'FETCH_SOME_ALGOS': 
@@ -19,6 +20,11 @@ export default (state = {
       return {
         ...state,
         selectedAlgo: action.payload
+      }
+    case 'RESET_ALGO':
+      return {
+        ...state,
+        selectedAlgoCreateMode: action.payload
       }
     default:
       return state

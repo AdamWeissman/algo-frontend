@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import AllAlgos from '../components/algorithms/AllAlgorithms';
 import CreateNewKoan from '../components/examples/CreateNewKoan';
 
-
-
 class CreateExample extends Component {
 
   // ui raised padded text container segment

@@ -22,12 +22,12 @@ export default (state = {
     case 'RESET_EXAMPLE_CONTENT':
       return {
         ...state,
-        exampleContent: action.payload
+        exampleContent: action.payload,
       }
-    case 'CREATE_EXAMPLE': 
+    case 'CREATE_EXAMPLE':
       return {
         ...state,
-        examples: action.payload
+        examples: action.payload,
       }
     default:
       return state
