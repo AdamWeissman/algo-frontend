@@ -8,7 +8,7 @@ const AboutPage = () => {
       <div className="ui blue segment" style={ {marginTop: '25px', marginLeft: '15px', marginRight: '15px'} }>
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/CREATE">CREATE</Link></center>
       </div>
-      <center>
+      <center className="animate__animated animate__fadeIn animate__slower">
         <div className="ui blue segment" align="left" style={{ maxHeight: '520px', maxWidth: '500px'}}>
           <strong><p>This is an open app to community source koans of common algorithms and eventually data structures. What is meant by "open app" is that users can anonymously submit koans of predetermined algorithms.</p></strong>
           <br />
