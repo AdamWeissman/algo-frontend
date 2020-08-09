@@ -32,7 +32,7 @@ class AllAlgos extends Component {
         <div className="ui inverted segment" key={algo.id}>
          
             <button 
-              className="ui circular yellow basic button"
+              className="ui circular yellow basic button animate__animated animate__fadeInDown animate__slower"
               onClick={() => {
                 return (
                   this.props.grabThatAlgo(algo.id),
@@ -44,7 +44,7 @@ class AllAlgos extends Component {
               CREATE
             </button>
           
-        <div className="content">{algo.algotype}</div>
+        <div className="content animate__animated animate__fadeInUp animate__slow">{algo.algotype}</div>
         </div>
       );
     });

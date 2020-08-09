@@ -24,7 +24,7 @@ class ExamplesList extends Component {
       return (
         <div className="ui inverted segment" key={example.id}>
             <button 
-              className="ui circular orange basic button"
+              className="ui circular orange basic button animate__animated animate__flip animate__slower"
               onClick={
                 () => {
                   return(
@@ -35,7 +35,7 @@ class ExamplesList extends Component {
             >
               SELECT
             </button>
-        <div className="content">{example.title}</div>
+        <div className="content animate__animated animate__flip animate__slow">{example.title}</div>
         </div>
       );
     });

@@ -15,7 +15,7 @@ class App extends Component {
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/create">CREATE</Link></center>
         </div>
         <center>
-          <div className="ui three column grid container animate__animated animate__fadeIn" style={ {marginTop: '-15px'} }>
+          <div className="ui three column grid container " style={ {marginTop: '-15px'} }>
             <div className="ui column">
               <div className="ui raised yellow segment">
                 <SomeAlgos />
