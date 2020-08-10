@@ -12,10 +12,10 @@ class CreateExample extends Component {
   render() {
     return (
       
-      <div className="ui raised padded text container segment" style={ {marginTop: '35px', marginLeft: '5px', marginRight: '5px'} }>
+      <div className="ui raised padded text container segment" style={ {marginTop: '35px', marginLeft: '15px', marginRight: '15px'} }>
         <div className="ui raised segment">
         <center><h1>CREATE AN ALGORITHM KOAN</h1></center>
-        <div className="ui blue segment" style={ {marginTop: '25px', marginLeft: '5px', marginRight: '5px'} }>
+        <div className="ui blue segment" style={ {marginTop: '25px', marginLeft: '15px', marginRight: '15px'} }>
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/CREATE">CREATE</Link></center>
         </div>
         <center>

@@ -9,10 +9,10 @@ class App extends Component {
   
   render() {
     return (
-      <div className="ui raised text container segment" style={ {marginTop: '35px', marginLeft: '5px', marginRight: '5px'} }>
+      <div className="ui raised text container segment" style={ {marginTop: '35px', marginLeft: '15px', marginRight: '15px'} }>
         <div className="ui raised segment">
         <center><h1>VIEW ALGORITHM KOANS</h1></center>
-        <div className="ui yellow segment" style={ {marginTop: '25px', marginLeft: '5px', marginRight: '5px'} }>
+        <div className="ui yellow segment" style={ {marginTop: '25px', marginLeft: '15px', marginRight: '15px'} }>
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/create">CREATE</Link></center>
         </div>
         <center>
