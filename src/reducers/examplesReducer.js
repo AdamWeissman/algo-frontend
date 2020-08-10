@@ -1,7 +1,8 @@
 export default (state = {
   examples: [],
   selectedExample: null,
-  exampleContent: []
+  exampleContent: [],
+  trigger_switch: ""
   }, action) => {
   switch (action.type) {
     case 'FETCH_EXAMPLES': 
@@ -26,7 +27,8 @@ export default (state = {
       }
     case 'CREATE_EXAMPLE':
       return {
-        ...state
+        ...state,
+        trigger_switch: action.payload
       }
     default:
       return state

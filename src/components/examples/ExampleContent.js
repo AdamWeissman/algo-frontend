@@ -8,15 +8,15 @@ const mapStateToProps = (state) => {
   };
 }
 
-class ExampleContent extends Component {
+const ExampleContent = (props) => {
   
-  render(){
+  // render() {
     return (
     <div className="ui inverted segment">
-      <div className="ui raised segment animate__animated animate__fadeIn animate__slower">{this.props.state.examples.exampleContent.content}</div>
+      <div className="ui raised segment animate__animated animate__fadeIn animate__slower">{props.state.examples.exampleContent.content}</div>
     </div>
     )
-  };
+  // };
 }
 
 

@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
     state
    };
 }
-
+ 
 const mapDispatchToProps = (dispatch) => {
   console.log("this is inside of map dispatch to props on CreateNewKoan", dispatch)
   return {
@@ -27,6 +27,8 @@ class CreateNewKoan extends Component {
     title: '',
     content: ''
   };
+
+  //check for props/state trigger_switch text to load a thank you for submitting component
 
   onFormSubmit = (event) => {
     event.preventDefault();
