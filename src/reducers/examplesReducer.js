@@ -26,8 +26,7 @@ export default (state = {
       }
     case 'CREATE_EXAMPLE':
       return {
-        ...state,
-        examples: action.payload,
+        ...state
       }
     default:
       return state
