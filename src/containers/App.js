@@ -10,7 +10,8 @@ class App extends Component {
   render() {
     return (
       <div className="ui raised text container segment" style={ {marginTop: '35px', marginLeft: '5px', marginRight: '5px'} }>
-        <center><h1>ALGORITHM KOANS</h1></center>
+        <div className="ui raised segment">
+        <center><h1>VIEW ALGORITHM KOANS</h1></center>
         <div className="ui yellow segment" style={ {marginTop: '25px', marginLeft: '5px', marginRight: '5px'} }>
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/create">CREATE</Link></center>
         </div>
@@ -33,6 +34,7 @@ class App extends Component {
             </div>
         </div>
         </center>
+      </div>
       </div>
     )
   }

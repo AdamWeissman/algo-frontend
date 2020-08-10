@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 const AboutPage = () => {
   return(
     <div className="ui raised very padded text container segment" style={ {marginTop: '35px', marginLeft: '15px', marginRight: '15px'} }>
-      <center><h1>ALGORITHM KOANS</h1></center>
+      <div className="ui raised segment">
+      <center><h1>GARDEN OF ALGORITHMS</h1></center>
       <div className="ui blue segment" style={ {marginTop: '25px', marginLeft: '15px', marginRight: '15px'} }>
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/CREATE">CREATE</Link></center>
       </div>
@@ -24,6 +25,7 @@ const AboutPage = () => {
           <li>Add ability to tag data structures with algorithms and vice versa</li>
         </div>
       </center>
+    </div>
     </div>
   )
 }
