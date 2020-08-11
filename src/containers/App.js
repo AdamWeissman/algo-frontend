@@ -18,17 +18,17 @@ class App extends Component {
         <center>
           <div className="ui three column grid container " style={ {marginTop: '-15px'} }>
             <div className="ui column">
-              <div className="ui raised yellow segment">
+              <div className="ui raised yellow segment" style={{ height: '610px', maxHeight: '610px', overflow: 'scroll'}}>
                 <SomeAlgos />
               </div>
             </div>
             <div className="ui column">
-              <div className="ui raised orange segment">
+              <div className="ui raised orange segment" style={{ height: '610px', maxHeight: '610px', overflow: 'scroll'}}>
                 <ExamplesList />
               </div>
             </div>
             <div className="ui column">
-              <div className="ui raised yellow segment">
+              <div className="ui raised yellow segment" style={{ height: '610px', maxHeight: '610px', overflow: 'scroll'}}>
                 <ExampleContent />
               </div>
             </div>

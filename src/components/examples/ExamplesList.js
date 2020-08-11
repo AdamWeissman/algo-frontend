@@ -24,7 +24,7 @@ class ExamplesList extends Component {
       return (
         <div className="ui inverted segment animate__animated animate__flipInY animate__slow" key={example.id}>
             <button 
-              className="ui circular orange basic button animate__animated animate__fadeIn animate__slower"
+              className="ui circular orange inverted button animate__animated animate__fadeIn animate__slower"
               onClick={
                 () => {
                   return(

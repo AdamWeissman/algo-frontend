@@ -36,7 +36,7 @@ class SomeAlgos extends Component {
         <div className="ui inverted segment" key={algo.id}>
 
             <button 
-              className="ui circular yellow basic button animate__animated animate__fadeInDown animate__slower"
+              className="ui circular inverted yellow button animate__animated animate__fadeInDown animate__slower"
               onClick={
                 () => {
                   return (
