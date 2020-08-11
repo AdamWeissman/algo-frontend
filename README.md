@@ -1,5 +1,5 @@
 ## Features
-Anonymous user can search "Algorithm Koans" that were created in the past 48 hours.
+<li>Anonymous user can search "Algorithm Koans" that were created in the past 48 hours.</li>
 System is Self Cleaning... deletes anything older than 48 hours.
 Anonymous user can also add a koan by selecting one of the predtermined algorithms. 
 
@@ -27,7 +27,7 @@ NOTE: Make sure you have NPM installed and all relevant dependencies
 cd into the front end
 run 'npm start' which will run the front end on localhost:3000 
 
-## BELOW THIS LINE IS STANDARD CREATE REACT APP DOCUMENTATION...
+# BELOW THIS LINE IS STANDARD CREATE REACT APP DOCUMENTATION...
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
