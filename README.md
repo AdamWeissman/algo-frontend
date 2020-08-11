@@ -11,7 +11,7 @@
 
 ## Installation
 
-Backend/API:
+### Backend/API:
 <li>Fork, Clone, or Download the backend from github.com/AdamWeissman/algo-backend</li>
 <li>Confirm that you have Postgres installed on your machine</li>
 <li>From the command line, run bundle install</li>
@@ -21,11 +21,13 @@ Backend/API:
 <li>NOTE!! Make sure the puma file in config is altered like so: port ENV.fetch("PORT") { 3001 }</li>
 <li>Run "rails s" to generate a live server</li>
 
-Frontend/Client:
+### Frontend/Client:
 <li>Fork, Clone, or Download the frontend from github.com/AdamWeissman/algo-frontend/</li>
 <li>NOTE: Make sure you have NPM installed and all relevant dependencies</li>
 <li>cd into the front end</li>
 <li>run 'npm start' which will run the front end on localhost:3000 </li>
+
+<br />
 
 # BELOW THIS LINE IS STANDARD CREATE REACT APP DOCUMENTATION...
 
