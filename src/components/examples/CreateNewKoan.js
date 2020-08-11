@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 
 import { fetchPostExample } from '../../actions/'
 import { resetAlgo } from '../../actions/' //this one ought to run after the form is completed
-
+import { exampleHasBeenCreated } from '../../actions/'
+import { exampleHasBeenWiped } from '../../actions/'
+import ThankYou from './ThankYou'
 
 const mapStateToProps = (state) => {
   console.log("this is inside of mapstate to props on CreateNewKoan", state);
@@ -17,6 +19,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchPostExample: (algoId, koanTitle, koanContent) => dispatch(fetchPostExample(algoId, koanTitle, koanContent)),
     resetAlgo: () => dispatch(resetAlgo()),
+    exampleHasBeenCreated: () => dispatch(exampleHasBeenCreated()),
+    exampleHasBeenWiped: () => dispatch(exampleHasBeenWiped())
   };
 }
 
@@ -25,7 +29,7 @@ class CreateNewKoan extends Component {
   
   state = { 
     title: '',
-    content: ''
+    content: '',
   };
 
   //check for props/state trigger_switch text to load a thank you for submitting component
@@ -35,6 +39,7 @@ class CreateNewKoan extends Component {
     console.log("HI, ON FORM SUBMIT WAS CLICKED")
     this.props.fetchPostExample(this.props.state.algorithms.selectedAlgoCreateMode, this.state.title, this.state.content)
     this.props.resetAlgo()
+    this.props.exampleHasBeenCreated()
   }
   
   koanForm = () => {
@@ -42,6 +47,10 @@ class CreateNewKoan extends Component {
       return (
         <div className="ui raised segment animate__animated animate__fadeIn animate__slower">Select An Algorithm</div>
       )
+    // } else if (this.props.state.examples.example_has_been_created === "EXAMPLE HAS BEEN CREATED") {
+    //   return (
+    //     <ThankYou />
+    //   )
     } else 
     return (
       <div className="ui inverted segment animate__animated animate__flipInX animate__slower">

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import AllAlgos from '../components/algorithms/AllAlgorithms';
 import CreateNewKoan from '../components/examples/CreateNewKoan';
+import CreateExampleTitle from '../components/navItems/CreateExampleTitle';
 
 class CreateExample extends Component {
 
@@ -14,8 +15,14 @@ class CreateExample extends Component {
       
       <div className="ui raised padded text container segment" style={ {marginTop: '35px', marginLeft: '15px', marginRight: '15px'} }>
         <div className="ui raised segment">
-        <center><h1>CREATE AN ALGORITHM KOAN</h1></center>
-        <div className="ui blue segment" style={ {marginTop: '25px', marginLeft: '15px', marginRight: '15px'} }>
+
+        <center>
+        <div className="ui inverted segment" style={{ height: '55px', maxHeight: '55px'}}>
+          <CreateExampleTitle />
+        </div>
+        </center>
+
+        <div className="ui blue segment" style={ {marginTop: '15px', marginLeft: '15px', marginRight: '15px'} }>
         <center><Link to="/">ABOUT</Link> | <Link to="/view">VIEW</Link> | <Link to="/CREATE">CREATE</Link></center>
         </div>
         <center>

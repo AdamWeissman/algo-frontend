@@ -64,6 +64,27 @@ export function fetchPostExample (the_algorithm, the_title, the_content) {
   }
 }
 
+export function exampleHasBeenCreated () {
+  return (dispatch) => {
+    dispatch({
+      type: 'EXAMPLE_HAS_BEEN_CREATED',
+      payload: "EXAMPLE HAS BEEN CREATED"
+    })
+  }
+}
+
+export function exampleHasBeenWiped () {
+  return (dispatch) => {
+    dispatch({
+      type: 'EXAMPLE_HAS_BEEN_CREATED',
+      payload: ""
+    })
+  }
+}
+
+
+
+
 // selectExample is for creating koans
 export function selectExample(the_algorithm, the_example) {
   return async (dispatch) => {

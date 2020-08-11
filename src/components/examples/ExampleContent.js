@@ -19,6 +19,4 @@ const ExampleContent = (props) => {
   // };
 }
 
-
-
 export default connect(mapStateToProps)(ExampleContent);
