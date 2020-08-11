@@ -1,3 +1,36 @@
+## Features
+<li>Anonymous user can search "Algorithm Koans" that were created in the past 48 hours.</li>
+<li>System is Self Cleaning... deletes anything older than 48 hours.</li>
+<li>Anonymous user can also add a koan by selecting one of the predtermined algorithms.</li> 
+
+## Technologies Used
+<li>React.js</li>
+<li>Redux for state</li>
+<li>React Router for the illusion of a multipage app </li>
+<li>Rails with Postgres for the backend and data persistence</li>
+
+## Installation
+
+### Backend/API:
+<li>Fork, Clone, or Download the backend from github.com/AdamWeissman/algo-backend</li>
+<li>Confirm that you have Postgres installed on your machine</li>
+<li>From the command line, run bundle install</li>
+<li>Also from the command line: create the database by running rails db:create or rails db:setup</li>
+<li>Also from the CLI: Create migrations by running rails db:migrate</li>
+<li>ALSO: rails db:seed to seed the database with the algorithms</li>
+<li>NOTE!! Make sure the puma file in config is altered like so: port ENV.fetch("PORT") { 3001 }</li>
+<li>Run "rails s" to generate a live server</li>
+
+### Frontend/Client:
+<li>Fork, Clone, or Download the frontend from github.com/AdamWeissman/algo-frontend/</li>
+<li>NOTE: Make sure you have NPM installed and all relevant dependencies</li>
+<li>cd into the front end</li>
+<li>run 'npm start' which will run the front end on localhost:3000 </li>
+
+<br />
+
+# BELOW THIS LINE IS STANDARD CREATE REACT APP DOCUMENTATION...
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
